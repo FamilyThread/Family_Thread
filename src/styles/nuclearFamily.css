@@ -1,0 +1,12 @@
+.trees {
+    background-color: beige;
+    height: 400px;
+    width: inherit;
+}
+
+.individual-tree {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
