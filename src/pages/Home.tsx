@@ -7,7 +7,7 @@ export function Home() {
     return (
         <>
             <style>
-                {document.body.style.backgroundColor = '#9DBC98'};
+                {document.body.style.backgroundColor = '#6EA07F'};
             </style>
 
             <NavigationBar />

@@ -7,7 +7,7 @@ body {
 }
 
 .nav {
-    background-color: seagreen;
+    background-color: #073F3E;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -15,11 +15,13 @@ body {
     gap: 2rem;
     padding: 1rem 1rem 0 1rem;
     height: 6rem;
+    box-shadow: 0 0 4px 0 black;
 }
 
-.nav img {
+.nav img, .logo {
     max-height: 80px;
     max-width: 100px;
+    padding-left: 10px;
 }
 
 .nav a {
@@ -47,4 +49,22 @@ body {
 
 .nav input {
     text-decoration: none;
+}
+
+.search {
+    background-color: inherit;
+    color: white;
+    border: none;
+    border-bottom: white 2px solid;
+    outline: none;
+}
+
+.search::placeholder {
+    color:white;
+}
+
+.search-btn {
+    background-color: inherit;
+    color: white;
+    border: none;
 }
