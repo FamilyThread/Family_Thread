@@ -3,7 +3,7 @@ export function NavigationBar() {
     return (
         <>
             <nav className="nav">
-                <a href="../pages/Home.tsx"> <img src="../assets/logo.png" alt="Family Thread Logo"></img> </a>
+                <a href="/Home"> <img src="../assets/logo.png" alt="Family Thread Logo"></img> </a>
                 <ul>
                     <li><a href="/MyAccount">My Account</a></li>
                     <li><a href="/Home">Home</a></li>
