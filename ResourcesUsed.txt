@@ -1,0 +1,14 @@
+Login:
+    react-oauth:           https://github.com/MomenSherif/react-oauth
+    jwt-decode:            https://www.npmjs.com/package/jwt-decode
+
+
+
+
+
+
+
+
+Online Resources:
+    react-oauth + jwt-decode: https://www.youtube.com/watch?v=UUJfTsn6S_Y
+
