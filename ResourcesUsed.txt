@@ -1,6 +1,19 @@
 Login:
     react-oauth:           https://github.com/MomenSherif/react-oauth
     jwt-decode:            https://www.npmjs.com/package/jwt-decode
+    mongo-db:              npm i mongodb
+    next:                  npm i next
+    axios:                 npm i axios
+
+
+Docker:
+    https://medium.com/@Anas.shahwan/dockerizing-nodejs-react-js-and-mongodb-apps-be67a73c7a7b
+    https://www.youtube.com/watch?v=g0QCZSzEqCY
+
+    1. docker pull mongo:latest
+    2. docker run -d -p 27017:27017 --name mongodbtest mongo:latest
+    3. docker build -t springboot-mongo:1.0 .
+
 
 
 
@@ -11,4 +24,6 @@ Login:
 
 Online Resources:
     react-oauth + jwt-decode: https://www.youtube.com/watch?v=UUJfTsn6S_Y
+    mongo-db + next + axios:  https://www.youtube.com/watch?v=t3UjWbh7mqI
+
 

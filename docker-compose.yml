@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  mongdockodb:
+    image: "mongo"
+    restart: always
+    container_name: "380teamb-db"
+    volumes:
+      - data-node:/data/db
+    ports:
+      - "27017:27017"
+
+  frontend:
+    build: ./
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./src:/app/src
+    stdin_open: true
+    tty: true
+
+volumes:
+  data:
+
+
+
+
+
+
+
