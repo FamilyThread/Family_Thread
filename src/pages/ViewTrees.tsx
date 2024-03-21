@@ -1,7 +1,8 @@
-import {NavigationBar} from "../../../../Desktop/CSC380/Family_Thread-main/src/components/NavigationBar.tsx";
-import {FeaturedTrees} from "../../../../Desktop/CSC380/Family_Thread-main/src/components/FeaturedTrees.tsx";
-import {RecentTree} from "../../../../Desktop/CSC380/Family_Thread-main/src/components/RecentTree.tsx";
-import {MyTrees} from "../../../../Desktop/CSC380/Family_Thread-main/src/components/MyTrees.tsx";
+import {NavigationBar} from "../components/NavigationBar.tsx";
+import {MyTrees} from "../components/MyTrees.tsx";
+import {RecentTree} from "../components/RecentTree.tsx";
+import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
+
 
 export function ViewTrees() {
     return (
