@@ -1,3 +1,4 @@
+# Used for React-App
 FROM node@latest
 
 WORKDIR /react-app
