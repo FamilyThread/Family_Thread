@@ -1,7 +1,7 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import {MyTrees} from "../components/MyTrees.tsx";
 import {RecentTree} from "../components/RecentTree.tsx";
 import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
+import {MyTrees} from "../components/MyTree.tsx";
 
 
 export function ViewTrees() {
@@ -11,12 +11,11 @@ export function ViewTrees() {
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
 
-            <NavigationBar />
-
+            <NavigationBar/>
             <div className="">
-                <MyTrees />
-                <RecentTree />
-                <FeaturedTrees />
+                <MyTrees/>
+                <RecentTree/>
+                <FeaturedTrees/>
             </div>
         </>
     );

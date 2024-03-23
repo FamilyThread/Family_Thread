@@ -1,6 +1,7 @@
 import treeFamilies from "../data/trees.json"
 import {Col, Container, Row} from "react-bootstrap";
 import {NuclearFamily} from "./NuclearFamily.tsx";
+
 export function FeaturedTrees() {
     return (
         <>
