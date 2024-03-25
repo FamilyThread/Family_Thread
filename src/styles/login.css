@@ -1,0 +1,45 @@
+.login-container{
+    margin: 30vh 30vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* Border stuff   */
+    padding: 20px;
+    border: 10px solid #073F3E;
+    background-color: #f0f0f0;
+}
+
+.login-link {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.login-link:hover {
+    color: #073F3E;
+}
+
+.login-btn {
+    background-color: #073F3E;
+    color: #073F3E;
+    border: 1px solid #073F3E;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.login-btn:hover {
+    background-color: white;
+}
+
+/* Button Focus Effect */
+.login-btn:focus {
+    color: #073F3E;
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add focus border */
+}
