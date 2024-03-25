@@ -12,7 +12,7 @@ export function BlankImport({name}: NuclearFamilyProps) {
             <div className="box-container">
                 <div className="templateTrees">
                     <div className="individual-tree">
-                        <img src={UploadButton} alt="UploadButton"></img> </div>
+                        <img src={UploadButton} alt="Upload"></img> </div>
                 </div>
                 <div className="lower-sub-box">
                         <div className="individual-tree"> {name} </div>
