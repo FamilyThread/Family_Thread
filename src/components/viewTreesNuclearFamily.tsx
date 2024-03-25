@@ -1,4 +1,4 @@
-import '../styles/nuclearFamily.css';
+import '../styles/viewTreeTreesScroll.css';
 
 
 type NuclearFamilyProps = {
@@ -7,7 +7,7 @@ type NuclearFamilyProps = {
     famMem: number
 };
 
-export function NuclearFamily({ id, name, famMem }: NuclearFamilyProps) {
+export function ViewTreeTreesScroll({ id, name, famMem }: NuclearFamilyProps) {
     return (
         <>
             <div className="trees">

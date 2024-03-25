@@ -1,5 +1,6 @@
 import "../styles/nav.css";
 import logo from "../assets/logo.png"
+
 export function NavigationBar() {
     return (
         <>
