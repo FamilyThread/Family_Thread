@@ -1,18 +1,18 @@
 import '../styles/importTemplate.css';
-import DownloadButton from "../assets/DownloadButton.png"
+import UploadButton from "../assets/UploadButton.png"
 
 type NuclearFamilyProps = {
     name: string
 
 };
 
-export function ImportTemplate({name}: NuclearFamilyProps) {
+export function BlankImport({name}: NuclearFamilyProps) {
     return (
         <>
             <div className="box-container">
                 <div className="templateTrees">
                     <div className="individual-tree">
-                        <img src={DownloadButton} alt="Download Button"></img> </div>
+                        <img src={UploadButton} alt="UploadButton"></img> </div>
                 </div>
                 <div className="lower-sub-box">
                         <div className="individual-tree"> {name} </div>

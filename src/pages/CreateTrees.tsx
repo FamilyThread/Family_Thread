@@ -1,7 +1,9 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import {ImportText} from "../components/ImportText.tsx";
-import {Template} from "../components/Template.tsx";
-import {RecentTree} from "../components/RecentTree.tsx";
+import {Col, Container, Row} from "react-bootstrap";
+import treeFamilies from "../data/previewFile.json";
+import Empty from "../data/templateTrees.json";
+import {BlankImport} from "../components/BlankImport.tsx";
 
 export function CreateTrees() {
     return (
@@ -14,8 +16,38 @@ export function CreateTrees() {
                 <ImportText />
             </h2>
             <div className="">
-                <Template />
-                <RecentTree />
+                <Container>
+                <h1>Blank Tree/Import Files</h1>
+                    <Row className="g-0">
+                        {Empty.map(item => (
+                                <Col key={item.name}>
+                                    <BlankImport {...item} />
+                                </Col>
+                            )
+                        )}
+                    </Row>
+                </Container>
+                <Container>
+                    <h1>Template</h1>
+                    <Row className="g-0">
+                        {treeFamilies.map(item => (
+                                <Col key={item.name}>
+                                    <BlankImport {...item} />
+                                </Col>
+                            )
+                        )}
+                    </Row>
+                </Container>
+                <Container>
+                    <Row className="g-0">
+                        {treeFamilies.map(item => (
+                                <Col key={item.name}>
+                                    <BlankImport {...item} />
+                                </Col>
+                            )
+                        )}
+                    </Row>
+                </Container>
             </div>
         </>
     );
