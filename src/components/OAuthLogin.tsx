@@ -1,22 +1,51 @@
-import {GoogleOAuthProvider, GoogleLogin} from "@react-oauth/google";
-import {jwtDecode} from "jwt-decode";
+
 
 // TODO: Note: I did suppress to ignore an error for jwtDecode. Look into it later.
+
+import {backend_url} from "../assets/constant.ts";
+import {useEffect, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
+import "../styles/login.css";
+
 export function OAuthLogin() {
+    const [logInStatus, setLogInStatus] = useState(false);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+        const checkLoginStatus = async () => {
+            try {
+                const isLoggedIn = await checkUserLogInStatus();
+                setLogInStatus(isLoggedIn);
+                if (logInStatus) {
+                    navigate("/home")
+                }
+            } catch (error) {
+                console.error("Error checking login status:", error);
+            }
+        };
+        checkLoginStatus();
+    })
+
+
+
     return (
         <>
-            <GoogleOAuthProvider clientId='245334724280-b6df2ra63vbbbpftib4hgcgmc8r18dpr.apps.googleusercontent.com'>
-                <GoogleLogin onSuccess={(credentialResponse) => {
-                    // @ts-ignore
-                    const credentialResponseDecoded= jwtDecode(credentialResponse.credential);
-                    console.log(credentialResponseDecoded);
-                }} onError={() => {
-                    console.log('OAuthLogin Failed');
-                }}/>
-            </GoogleOAuthProvider>
-            {/*<div id="signin">*/}
-            {/*    <GoogleLogin onSuccess={}*/}
-            {/*</div>*/}
+
+            {logInStatus ?
+                <p>Already logged in</p>
+                :
+                <>
+                    <div className="login-container">
+                        <h2>Family Thread</h2>
+                        <h3>Login/Register</h3>
+                        <button className={"login-btn"}>
+                            <a className={"login-link"} href={backend_url + "/oauth2/authorization/google"}>Login with Google</a>
+                        </button>
+                    </div>
+                </>
+            }
         </>
     );
 }
