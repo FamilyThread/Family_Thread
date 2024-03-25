@@ -1,4 +1,4 @@
-import '../../styles/Separator.css'
+import '../styles/Separator.css'
 
 
 export function Separator(){

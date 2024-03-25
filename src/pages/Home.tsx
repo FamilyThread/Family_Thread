@@ -1,8 +1,8 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import {FeaturedTrees} from "../components/home components/FeaturedTrees.tsx";
-import {RecentTree} from "../components/home components/RecentTree.tsx";
-import {WelcomeMessage} from "../components/home components/WelcomeMessage.tsx";
-import {Separator} from "../components/viewTrees Components/separator.tsx";
+import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
+import {RecentTree} from "../components/RecentTree.tsx";
+import {WelcomeMessage} from "../components/WelcomeMessage.tsx";
+import {Separator} from "../components/separator.tsx";
 
 export function Home() {
     return (

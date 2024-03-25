@@ -1,6 +1,6 @@
-import treeFamilies from "../../data/trees.json"
+import treeFamilies from "../data/trees.json"
 import {Col, Container, Row} from "react-bootstrap";
-import {ViewTreeTreesScroll} from "./viewTreesNuclearFamily.tsx";
+import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
 export function MyTreesViewTrees() {
     return (
         <>
@@ -10,7 +10,7 @@ export function MyTreesViewTrees() {
                 <Row className="g-0">
                     {treeFamilies.map(item => (
                             <Col key={item.id}>
-                                < ViewTreeTreesScroll {...item}/>
+                                < HomeNuclearFamily {...item}/>
                             </Col>
                         )
                     )}
