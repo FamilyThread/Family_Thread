@@ -1,4 +1,4 @@
-import '../styles/HomeNuclearFamily.css';
+import '../../styles/HomeNuclearFamily.css';
 
 
 type NuclearFamilyProps = {

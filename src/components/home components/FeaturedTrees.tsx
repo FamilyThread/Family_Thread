@@ -1,4 +1,4 @@
-import treeFamilies from "../data/trees.json"
+import treeFamilies from "../../data/trees.json"
 import {Col, Container, Row} from "react-bootstrap";
 import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
 export function FeaturedTrees() {

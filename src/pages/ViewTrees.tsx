@@ -1,7 +1,8 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
-import {RecentTree} from "../components/RecentTree.tsx";
-import {MyTreesViewTrees} from "../components/MyTreesViewTrees.tsx";
+import {MyTreesViewTrees} from "../components/viewTrees Components/MyTreesViewTrees.tsx";
+import {FeaturedTreesViewTrees} from "../components/viewTrees Components/FeaturedTreesViewTrees.tsx";
+import {RecentTreesViewTrees} from "../components/viewTrees Components/RecentTreesViewTrees.tsx";
+import {Separator} from "../components/viewTrees Components/separator.tsx";
 
 export function ViewTrees() {
     return (
@@ -14,8 +15,10 @@ export function ViewTrees() {
 
             <div className="">
                 <MyTreesViewTrees />
-                <RecentTree />
-                <FeaturedTrees />
+                <Separator/>
+                <RecentTreesViewTrees />
+                <Separator/>
+                <FeaturedTreesViewTrees />
             </div>
         </>
     );

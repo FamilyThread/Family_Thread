@@ -1,7 +1,8 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
-import {RecentTree} from "../components/RecentTree.tsx";
-import {WelcomeMessage} from "../components/WelcomeMessage.tsx";
+import {FeaturedTrees} from "../components/home components/FeaturedTrees.tsx";
+import {RecentTree} from "../components/home components/RecentTree.tsx";
+import {WelcomeMessage} from "../components/home components/WelcomeMessage.tsx";
+import {Separator} from "../components/viewTrees Components/separator.tsx";
 
 export function Home() {
     return (
@@ -16,6 +17,7 @@ export function Home() {
             </h2>
             <div className="">
                 <FeaturedTrees />
+                <Separator/>
                 <RecentTree />
             </div>
         </>

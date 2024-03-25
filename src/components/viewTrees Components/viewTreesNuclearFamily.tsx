@@ -1,4 +1,4 @@
-import '../styles/viewTreeTreesScroll.css';
+import '../../styles/viewTreesNuclearFamily.css';
 
 
 type NuclearFamilyProps = {
