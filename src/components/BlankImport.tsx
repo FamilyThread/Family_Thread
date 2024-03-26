@@ -1,23 +1,34 @@
 import '../styles/importTemplate.css';
-import UploadButton from "../assets/UploadButton.png"
+import UploadButton from "../assets/UploadButton.png";
+import ThumbsUp from "../assets/ThumbsUp.png";
+import PreviewFile from "../assets/PreviewPlaceHolder.png";
 
-type NuclearFamilyProps = {
-    name: string
-
+const images = {
+    EmptyPage: UploadButton,
+    ThumbsUp: ThumbsUp,
+    PreviewFile: PreviewFile
 };
 
-export function BlankImport({name}: NuclearFamilyProps) {
+
+
+type NuclearFamilyProps = {
+    name: string;
+    imgSrc: string;
+};
+
+export function BlankImport({ name, imgSrc }: NuclearFamilyProps) {
+    const imageSrc = images[imgSrc];
+
     return (
-        <>
-            <div className="box-container">
-                <div className="templateTrees">
-                    <div className="individual-tree">
-                        <img src={UploadButton} alt="Upload"></img> </div>
+        <div className="box-container">
+            <div className="UploadTree">
+                <div className="individual-tree">
+                    <img src={imageSrc} alt="Picture" />
                 </div>
-                <div className="lower-sub-box">
-                        <div className="individual-tree"> {name} </div>
-                    </div>
             </div>
-        </>
-);
+            <div className="lower-sub-box">
+                <div className="individual-tree">{name}</div>
+            </div>
+        </div>
+    );
 }

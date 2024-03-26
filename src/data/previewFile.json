@@ -1,15 +1,22 @@
 
   [
     {
-      "name": "(Preview)"
+      "name": "(Preview)",
+      "imgSrc": "PreviewFile"
     },
     {
-      "name": "(Preview)"
+      "name": "(Preview)",
+      "imgSrc": "PreviewFile"
+
     },
     {
-      "name": "(Preview)"
+      "name": "(Preview)",
+      "imgSrc": "PreviewFile"
+
     },
     {
-      "name": "(Preview)"
+      "name": "(Preview)",
+      "imgSrc": "PreviewFile"
+
     }
   ]
