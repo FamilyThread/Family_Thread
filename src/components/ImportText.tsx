@@ -1,0 +1,3 @@
+export function ImportText() {
+    return ' ';
+}
