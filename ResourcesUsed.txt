@@ -17,11 +17,6 @@ Docker:
 
 
 
-
-
-
-
-
 Online Resources:
     react-oauth + jwt-decode: https://www.youtube.com/watch?v=UUJfTsn6S_Y
     mongo-db + next + axios:  https://www.youtube.com/watch?v=t3UjWbh7mqI
