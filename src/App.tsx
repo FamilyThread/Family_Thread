@@ -4,20 +4,18 @@ import {ViewTrees} from "./pages/ViewTrees.tsx";
 import {CreateTrees} from "./pages/CreateTrees.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
 import {Login} from "./pages/Login.tsx";
+import {DisplayTrees} from "./pages/DisplayTrees.tsx";
 
 function App() {
     return (
         <>
             <Routes>
                 <Route path="/" element={<Login />}/>
-                <Route path="/Home" element={<Home />}/>
-                <Route path="/ViewTrees" element={<ViewTrees />}/>
-                <Route path="/CreateTrees" element={<CreateTrees />}/>
-                <Route path="/MyAccount" element={<MyAccount />}/>
-                <Route path="/DisplayTrees" Component={() => {
-                    window.open('http://localhost:3000/');
-                    return null;
-                }} element={<Home />}> </Route>
+                <Route path="/home" element={<Home />}/>
+                <Route path="/viewtrees" element={<ViewTrees />}/>
+                <Route path="/createtrees" element={<CreateTrees />}/>
+                <Route path="/myaccount" element={<MyAccount />}/>
+                <Route path="/displaytrees" element={<DisplayTrees/>}/>
             </Routes>
         </>
     );

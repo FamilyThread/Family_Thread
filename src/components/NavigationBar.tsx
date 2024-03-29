@@ -27,10 +27,10 @@ export function NavigationBar() {
             <nav className="nav">
                 <a className="logo" href="/Home"> <img src={logo} alt="Family Thread Logo"></img> </a>
                 <ul>
-                    <li><a href="/MyAccount">My Account</a></li>
-                    <li><a href="/Home">Home</a></li>
-                    <li><a href="/ViewTrees">View Trees</a></li>
-                    <li><a href="/CreateTrees">Create Trees</a></li>
+                    <li><a href="/myaccount">My Account</a></li>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/viewtrees">View Trees</a></li>
+                    <li><a href="/createtrees">Create Trees</a></li>
                 </ul>
                 <div className="search-container">
                     <input className="search" type="search" placeholder="Search For Tree"
