@@ -23,7 +23,8 @@ export function BlankImport({ name, imgSrc }: NuclearFamilyProps) {
         <div className="box-container">
             <div className="UploadTree">
                 <div className="individual-tree">
-                    <img src={imageSrc} alt="Picture" />
+                    {/*<img src={imageSrc} alt="Tree preview"/>*/}
+                    <a className="treePreview" href="../pages/inside%20view%20trees/EditTree.tsx"> <img src={imageSrc} alt="Preview of tree"></img> </a>
                 </div>
             </div>
             <div className="lower-sub-box">
