@@ -10,7 +10,7 @@ export function MyTreesViewTrees() {
                 <Row className="g-0">
                     {treeFamilies.map(item => (
                             <Col key={item.id}>
-                                < HomeNuclearFamily {...item}/>
+                                <HomeNuclearFamily {...item} />
                             </Col>
                         )
                     )}
