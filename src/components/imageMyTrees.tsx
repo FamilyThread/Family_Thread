@@ -2,7 +2,8 @@
 import {Col, Container, Row} from "react-bootstrap";
 // import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
 import previewFile from "../data/ViewTreesTreePreview.json";
-import {BlankImport} from "./BlankImport.tsx";
+// import {BlankImport} from "./BlankImport.tsx";
+import {ViewTreesScroll} from "./ViewTreesTreesScroll.tsx";
 export function ImageMyTrees() {
     return (
         <>
@@ -12,7 +13,7 @@ export function ImageMyTrees() {
                 <Row className="g-0">
                     {previewFile.map(item => (
                             <Col key={item.name}>
-                                <BlankImport {...item} />
+                                <ViewTreesScroll {...item} />
                             </Col>
                         )
                     )}
