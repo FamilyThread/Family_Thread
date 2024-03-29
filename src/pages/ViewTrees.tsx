@@ -3,6 +3,7 @@ import {MyTreesViewTrees} from "../components/MyTreesViewTrees.tsx";
 import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
 import {RecentTree} from "../components/RecentTree.tsx";
 import {Separator} from "../components/separator.tsx";
+// import {ImageMyTrees} from "../components/imageMyTrees.tsx";
 
 export function ViewTrees() {
     return (
@@ -14,9 +15,14 @@ export function ViewTrees() {
             <NavigationBar />
 
             <div className="">
-                <MyTreesViewTrees />
+
+                {/*<ImageMyTrees/>*/}
+                {/*<Separator/>*/}
+
+
+                <MyTreesViewTrees/>
                 <Separator/>
-                <RecentTree />
+                <RecentTree/>
                 <Separator/>
                 <FeaturedTrees/>
             </div>

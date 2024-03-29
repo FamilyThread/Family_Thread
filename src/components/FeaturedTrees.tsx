@@ -1,6 +1,8 @@
-import treeFamilies from "../data/trees.json"
+// import treeFamilies from "../data/trees.json"
 import {Col, Container, Row} from "react-bootstrap";
-import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
+// import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
+import previewFile from "../data/ViewTreesTreePreview.json";
+import {BlankImport} from "./BlankImport.tsx";
 export function FeaturedTrees() {
     return (
         <>
@@ -8,9 +10,9 @@ export function FeaturedTrees() {
                 <h2></h2>
                 <h1>Featured Trees</h1>
                 <Row className="g-0">
-                    {treeFamilies.map(item => (
-                            <Col key={item.id}>
-                                <HomeNuclearFamily {...item} />
+                    {previewFile.map(item => (
+                            <Col key={item.name}>
+                                <BlankImport {...item} />
                             </Col>
                         )
                     )}

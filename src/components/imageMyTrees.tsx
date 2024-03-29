@@ -3,7 +3,7 @@ import {Col, Container, Row} from "react-bootstrap";
 // import {HomeNuclearFamily} from "./HomeNuclearFamily.tsx";
 import previewFile from "../data/ViewTreesTreePreview.json";
 import {BlankImport} from "./BlankImport.tsx";
-export function MyTreesViewTrees() {
+export function ImageMyTrees() {
     return (
         <>
             <Container>

@@ -12,12 +12,11 @@ export function CreateTrees() {
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
             <NavigationBar />
-            <h2>
+            <h1>
                 <ImportText />
-            </h2>
+            </h1>
             <div className="">
                 <Container>
-                <h1>Blank Tree/Import Files</h1>
                     <Row className="g-0">
                         {Empty.map(item => (
                                 <Col key={item.name}>
