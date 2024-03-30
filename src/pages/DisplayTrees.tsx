@@ -1,7 +1,27 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import FamilyTreeChart from "../components/FamilyTreeChart.ts";
+import {useEffect} from "react";
+import axios from "axios";
+import {backend_url} from "../assets/constant.ts";
+
 
 export function DisplayTrees() {
+
+
+    useEffect(() => {
+           axios.get(backend_url + "/tree/66079b1fc0c0612c4c0479aa", {withCredentials: true})
+               .then (r => {
+                   console.log(r.data);
+               })
+               .catch(error => {
+                   console.error("Error fetching data (CUstom) " + error);
+                   window.location.href = backend_url + "/oauth2/authorization/google";
+               })
+
+    }, []);
+
+
+
     return (
         <>
             <NavigationBar/>
@@ -19,7 +39,6 @@ export function DisplayTrees() {
                     { id: 8, pids: [5], name: 'Henry3', gender: 'male', img: 'https://cdn.britannica.com/34/254634-050-C62ACCB9/British-Actor-Henry-Cavill-February-2024.jpg'  },
                     { id: 9, pids: [5], name: 'Henry4', gender: 'male', img: 'https://cdn.britannica.com/34/254634-050-C62ACCB9/British-Actor-Henry-Cavill-February-2024.jpg'  },
                     { id: 10, pids: [5], name: 'Henry5', gender: 'male', img: 'https://cdn.britannica.com/34/254634-050-C62ACCB9/British-Actor-Henry-Cavill-February-2024.jpg'  },
-                    // { id: 5, mid: 1, fid: 2, name: 'Emma Stevens', gender: 'female', img: 'https://cdn.balkan.app/shared/w10/3.jpg' }
                 ]} />
             </div>
 

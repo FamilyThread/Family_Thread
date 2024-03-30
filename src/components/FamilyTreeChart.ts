@@ -22,7 +22,10 @@ export default class FamilyTreeChart extends Component<ChartProps> {
     componentDidMount() {
         if (this.divRef.current) {
             this.family = new FamilyTree (this.divRef.current , {
+                mouseScrool: FamilyTree.action.none,
                 nodes: this.props.nodes,
+                enableSearch: false,
+                template: "john",
 
                 nodeBinding: {
                     field_0: 'name',
