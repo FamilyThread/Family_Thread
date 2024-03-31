@@ -4,6 +4,9 @@ Login:
     mongo-db:              npm i mongodb
     next:                  npm i next
     axios:                 npm i axios
+    MaterialUI             npm install @mui/material @emotion/react @emotion/styled
+    react-crop             npm i react-image-crop --save
+
 
 
 Docker:
@@ -13,6 +16,11 @@ Docker:
     1. docker pull mongo:latest
     2. docker run -d -p 27017:27017 --name mongodbtest mongo:latest
     3. docker build -t springboot-mongo:1.0 .
+
+
+
+
+
 
 
 
