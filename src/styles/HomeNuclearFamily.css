@@ -1,7 +1,12 @@
+.trees {
+    background-color: #6ea07f;
+    height: 400px;
+    width: inherit;
+}
 
 .templateTrees {
-    width: inherit;
-    height: 200px;
+    width: 300px;
+    height: 100px;
     background-color: #f0f0f0;
     position: relative;
     border: 1px solid #ccc;
@@ -10,8 +15,13 @@
     align-items: flex-end; /* Align the sub-box to the bottom */
 }
 
+img{
+    width: 150px;
+    height: 150px;
+}
+
 .lower-sub-box {
-    width: inherit;
+    width: 53.8%;
     height: 50px;
     background-color: #ddd;
     border: 1px solid #bbb;
@@ -22,10 +32,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.box-container {
-    width: inherit;
-    justify-content: center;
-
 }
