@@ -9,6 +9,7 @@ import {Error_404} from "./pages/error/Error404.tsx";
 import {Error_403} from "./pages/error/Error403.tsx";
 import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
+import {EditTree} from "./pages/insideViewTrees/EditTree.tsx";
 function App() {
     return (
         <>
@@ -24,6 +25,8 @@ function App() {
                 <Route path="/displaytrees/:treeId" element={<DisplayTrees/>}/>
                 <Route path="/403" element={<Error_403/>}/>
                 <Route path="*" element={<Error_404/>}/>
+                <Route path="/EditTree" element={<EditTree />}/>
+
             </Routes>
         </>
     );
