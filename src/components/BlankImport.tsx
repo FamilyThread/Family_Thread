@@ -1,16 +1,13 @@
 import '../styles/importTemplate.css';
-import UploadButton from "../assets/uploadButton.png";
-import ThumbsUp from "../assets/thumbsUp.png";
-import PreviewFile from "../assets/previewPlaceHolder.png";
+import UploadButton from "../assets/UploadButton.png";
+import ThumbsUp from "../assets/ThumbsUp.png";
+import PreviewFile from "../assets/PreviewPlaceHolder.png";
 
 const images = {
     EmptyPage: UploadButton,
     ThumbsUp: ThumbsUp,
     PreviewFile: PreviewFile
 };
-
-
-
 type NuclearFamilyProps = {
     name: string;
     imgSrc: string;

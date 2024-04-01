@@ -4,15 +4,19 @@ import {Col, Container, Row} from "react-bootstrap";
 import previewFile from "../data/ViewTreesTreePreview.json";
 // import {BlankImport} from "./BlankImport.tsx";
 import {ViewTreesScroll} from "./ViewTreesTreeScroll.tsx";
-export function RecentTree() {
+<<<<<<< Updated upstream
+=======
+import "../styles/sectionTitle.css"
+>>>>>>> Stashed changes
+export function MyTreesViewTrees() {
     return (
         <>
             <Container>
                 <h2></h2>
 <<<<<<< Updated upstream
-                <h1>Recent Trees</h1>
+                <h1>My Trees</h1>
 =======
-                <h2>Recent Trees</h2>
+                <h2>My Trees</h2>
 >>>>>>> Stashed changes
                 <Row className="g-0">
                     {previewFile.map(item => (

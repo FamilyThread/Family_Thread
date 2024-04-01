@@ -1,10 +1,12 @@
+
 [
+
+{
+  "name": "Upload",
+  "imgSrc": "EmptyPage"
+},
   {
-    "name": "Upload",
-    "imgSrc": "EmptyPage"
-  },
-  {
-    "name": "(Empty) Tree",
+  "name": "(Empty) Tree",
     "imgSrc": "ThumbsUp"
-  }
+}
 ]

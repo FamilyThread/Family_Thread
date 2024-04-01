@@ -7,4 +7,8 @@ export function WelcomeMessage() {
             </h1>
         </>
     );
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
