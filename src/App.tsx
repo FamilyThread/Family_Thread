@@ -7,7 +7,7 @@ import {Login} from "./pages/Login.tsx";
 import {DisplayTrees} from "./pages/DisplayTrees.tsx";
 import {Error_404} from "./pages/error/Error404.tsx";
 import {Error_403} from "./pages/error/Error403.tsx";
-import {CreateTreeTest} from "./pages/CreateTreeTest.tsx";
+import {CreateTreeTest} from "./test/CreateTreeTest.tsx";
 
 function App() {
     return (
