@@ -1,3 +1,8 @@
+.trees {
+    background-color: beige;
+    height: 400px;
+    width: inherit;
+}
 
 .templateTrees {
     width: inherit;
@@ -25,7 +30,5 @@
 }
 
 .box-container {
-    width: inherit;
-    justify-content: center;
-
+    width: 300px;
 }

@@ -19,6 +19,10 @@ body {
 }
 
 .nav img {
+<<<<<<< Updated upstream
+=======
+    margin-left: 20px;
+>>>>>>> Stashed changes
     max-height: 80px;
     max-width: 100px;
 }
@@ -30,10 +34,15 @@ body {
 
 .nav ul {
     padding: 0;
-    margin: 0;
+    margin-bottom: -10px;
     list-style: none;
+<<<<<<< Updated upstream
     font-size: 2rem;
     /*font: ;*/
+=======
+    font-size: 2.5rem;
+    font-family: Baskerville, sans-serif;
+>>>>>>> Stashed changes
     display: flex;
     flex:1;
     justify-content: space-between;
@@ -49,4 +58,8 @@ body {
 
 .nav input {
     text-decoration: none;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

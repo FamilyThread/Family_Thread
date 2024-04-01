@@ -9,7 +9,7 @@ import {TestingGrounds} from "./pages/TestingGrounds.tsx";
 
 function App() {
     return (
-    <>
+        <>
             <Routes>
                 <Route path="/" element={<Login />}/>
                 <Route path="/home" element={<Home />}/>
@@ -18,10 +18,13 @@ function App() {
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
                 <Route path="/tests" element={<TestingGrounds />} />
+<<<<<<< Updated upstream
                 <Route path="/edittree" element={<EditTree />}/>
 
+=======
+>>>>>>> Stashed changes
             </Routes>
-    </>
+        </>
     );
 }
 

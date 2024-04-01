@@ -9,7 +9,11 @@ export function RecentTree() {
         <>
             <Container>
                 <h2></h2>
+<<<<<<< Updated upstream
                 <h1>Recent Trees</h1>
+=======
+                <h2>Recent Trees</h2>
+>>>>>>> Stashed changes
                 <Row className="g-0">
                     {previewFile.map(item => (
                             <Col key={item.name}>
