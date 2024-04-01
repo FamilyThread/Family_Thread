@@ -13,9 +13,6 @@ export function DisplayTrees() {
     const treeId = location.pathname.split("displayTrees/")[1];
 
 
-
-
-
     useEffect(() => {
 
         getTreeData(treeId).then(r => {
@@ -30,7 +27,7 @@ export function DisplayTrees() {
             <NavigationBar/>
 
             <div style={{height: "100%"}}>
-                {nodes? <FamilyTreeChart nodes={nodes} />: <h1>You don't have access to this tree</h1>}
+                {nodes? <FamilyTreeChart nodes={nodes} />: <h1>Loading ...</h1>}
 
             </div>
 
