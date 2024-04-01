@@ -1,4 +1,4 @@
-import '../styles/HomeNuclearFamily.css';
+import '../styles/nuclearFamily.css';
 
 
 type NuclearFamilyProps = {
@@ -7,7 +7,7 @@ type NuclearFamilyProps = {
     famMem: number
 };
 
-export function HomeNuclearFamily({ id, name, famMem }: NuclearFamilyProps) {
+export function NuclearFamily({ id, name, famMem }: NuclearFamilyProps) {
     return (
         <>
             <div className="trees">

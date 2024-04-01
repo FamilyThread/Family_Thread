@@ -1,5 +1,9 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-
+import {ImportText} from "../components/ImportText.tsx";
+import {Col, Container, Row} from "react-bootstrap";
+import previewFile from "../data/previewFile.json";
+import Empty from "../data/UploadTree.json";
+import {BlankImport} from "../components/BlankImport.tsx";
 
 export function CreateTrees() {
     return (
@@ -8,9 +12,6 @@ export function CreateTrees() {
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
             <NavigationBar />
-<<<<<<< Updated upstream
-
-=======
             <h2>
                 <ImportText />
             </h2>
@@ -48,7 +49,6 @@ export function CreateTrees() {
                     </Row>
                 </Container>
             </div>
->>>>>>> Stashed changes
         </>
     );
 }

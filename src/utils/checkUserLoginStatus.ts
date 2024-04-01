@@ -7,10 +7,6 @@ export const checkUserLogInStatus = async () => {
             {method: "GET", credentials: "include"}
         );
 
-<<<<<<< Updated upstream
-        console.log(response)
-=======
->>>>>>> Stashed changes
 
         const data = await response.json();
         if(data.authorizedClientRegistrationId) {

@@ -18,11 +18,6 @@ function App() {
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
                 <Route path="/tests" element={<TestingGrounds />} />
-<<<<<<< Updated upstream
-                <Route path="/edittree" element={<EditTree />}/>
-
-=======
->>>>>>> Stashed changes
             </Routes>
         </>
     );
