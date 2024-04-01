@@ -1,0 +1,75 @@
+.accContainer{
+    display: flex;
+    background-color: #6EA07F;
+}
+
+.userinfo{
+    margin-top: 45px;
+    margin-left: 20px;
+    height: 250px;
+    width: 200px;
+    padding: 10px;
+    background-color: #cfcecc;
+    text-align: center;
+}
+
+.options{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 5px;
+    margin-top: 45px;
+    margin-left: 150px;
+    height: 350px;
+    width: 500px;
+    padding: 10px;
+    background-color: #cfcecc;
+}
+
+.header-options{
+    color: white;
+    border-style: solid;
+    border-color: #262626;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-width: 1px;
+    background-color: black;
+    height: 70px;
+    width: 499px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px; /* for text */
+    margin-left: -10px; /* adjust for options padding */
+    margin-top: -10px; /* adjust for options padding */
+}
+
+.optionstxt{
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.adjust {
+    margin-left: -200px;
+    margin-top: 300px;
+}
+
+.infoboxes{
+    margin-top: 50px;
+    background-color: #cfcecc;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #262626;
+    padding: 10px;
+    height: 40px;
+    width: 200px;
+}
+
+.infoboxestxt{
+    margin-top: -40px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+
