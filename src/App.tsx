@@ -1,10 +1,10 @@
 import {Routes, Route} from "react-router-dom"
 import {ViewTrees} from "./pages/ViewTrees.tsx";
-import {CreateTrees} from "./pages/CreateTrees.tsx";
+// import {CreateTrees} from "./pages/CreateTrees.tsx";
 import {Backend_MyAccount} from "./pages/Backend_MyAccount.tsx";
 import {Login} from "./pages/Login.tsx";
 import {DisplayTrees} from "./pages/DisplayTrees.tsx";
-import {TestingGrounds} from "./testpages/TestingGrounds.tsx";
+import {TestingGrounds} from "./pages/test/TestingGrounds.tsx";
 import {Error_404} from "./pages/error/Error404.tsx";
 import {Error_403} from "./pages/error/Error403.tsx";
 import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
