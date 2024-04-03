@@ -8,7 +8,7 @@ export function Template() {
             <Container>
                 <Row className="g-0">
                     {treeFamilies.map(item => (
-                            <Col key={item.id}>
+                            <Col key={item.name}>
                                 <ImportTemplate {...item} />
                             </Col>
                         )
