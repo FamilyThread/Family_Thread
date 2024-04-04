@@ -1,13 +1,29 @@
-import {EditPersonPopup} from "../components/EditPersonPopup.tsx";
-import {NavigationBar} from "../components/NavigationBar.tsx";
+import { useEffect } from 'react';
+import { EditPersonPopup } from "../components/EditPersonPopup.tsx";
+import { NavigationBar } from "../components/NavigationBar.tsx";
+import { Family } from './Familytree.tsx';
+
 export function TestingGrounds() {
+    useEffect(() => {
+        const familyTreeContainer = document.getElementById('tree');
+        if (familyTreeContainer) {
+            Family(familyTreeContainer);
+        } else {
+            console.error("Element with ID 'tree' not found.");
+        }
+    }, []);
+
     return (
         <>
-            <NavigationBar />
-            <EditPersonPopup />
+            <NavigationBar/>
+            <EditPersonPopup/>
+            <div id="tree"></div>
+            <div id="tree2">
+                <button> Fit to Tree</button>
+                <button> Fit to Height</button>
+                <button> Fit to Width</button>
+            </div>
 
-            <a href='/myaccounttest'> My Account Backend Test</a>
         </>
-
     );
 }

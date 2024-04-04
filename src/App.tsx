@@ -7,9 +7,8 @@ import {DisplayTrees} from "./pages/DisplayTrees.tsx";
 import {TestingGrounds} from "./testpages/TestingGrounds.tsx";
 import {Error_404} from "./pages/error/Error404.tsx";
 import {Error_403} from "./pages/error/Error403.tsx";
-import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
+// import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
-import {EditTree} from "./pages/insideViewTrees/EditTree.tsx";
 function App() {
     return (
         <>
@@ -20,13 +19,11 @@ function App() {
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
                 <Route path="/tests" element={<TestingGrounds />} />
-                <Route path="/createtrees" element={<CreateTreeTest/>}/>
+                <Route path="/createtrees" element={<CreateTrees/>}/>
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
                 <Route path="/displaytrees/:treeId" element={<DisplayTrees/>}/>
                 <Route path="/403" element={<Error_403/>}/>
                 <Route path="*" element={<Error_404/>}/>
-                <Route path="/EditTree" element={<EditTree />}/>
-
             </Routes>
         </>
     );
