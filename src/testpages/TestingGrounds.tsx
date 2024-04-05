@@ -8,7 +8,8 @@ export function TestingGrounds() {
 
             <br/>
             <a href='/myaccounttest'> My Account Backend Test</a><br/>
-            <a href='/treefunctiontest'>Tree Function Test</a>
+            <a href='/treefunctiontest'>Tree Function Test</a> <br/>
+            <a href='/available-trees'>Available Trees</a>
         </>
 
     );

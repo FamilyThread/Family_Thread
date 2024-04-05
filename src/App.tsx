@@ -10,6 +10,7 @@ import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
 import {EditTree} from "./pages/insideViewTrees/EditTree.tsx";
 import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
+import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
 function App() {
     return (
         <>
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/tests" element={<TestingGrounds />} />
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
                 <Route path="/treefunctiontest" element={<TreeFunctionTest />}/>
+                <Route path="/available-trees" element={<AvailableTreeTest/>}/>
 
 
             </Routes>
