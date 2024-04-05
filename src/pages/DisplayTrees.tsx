@@ -3,12 +3,14 @@ import FamilyTreeChart from "../components/FamilyTreeChart.ts";
 
 export function DisplayTrees() {
     return (
+
         <>
             <NavigationBar/>
 
             <div style={{height: "100%"}}>
 
                 <FamilyTreeChart nodes={[
+
                     { id: 1, pids: [2], name: 'Lia', gender: 'female', img: 'https://i.ibb.co/NCrWCBr/IMG-5982.jpg'},
                     { id: 2, pids: [1], name: 'Soney', gender: 'male', img: 'https://i.ibb.co/h8s31DY/Screenshot-2024-03-28-at-11-53-13-PM.png' },
                     { id: 3, mid: 1, pids: [4], fid: 2, name: 'Saurav', gender: 'male', img: 'https://i.ibb.co/j3Y9cDW/Screenshot-2024-03-29-at-12-05-46-AM.png' },

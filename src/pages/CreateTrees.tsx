@@ -7,6 +7,7 @@ import importLogo from "../assets/import.png";
 import ThumbsUp from "../assets/ThumbsUp.png";
 import "../styles/createTrees.css";
 
+
 export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
 
@@ -19,6 +20,7 @@ export function CreateTrees() {
         return data
     }
 
+    // @ts-ignore
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
         // Process the file upload here
@@ -51,7 +53,7 @@ export function CreateTrees() {
                 <Separator/>
 
                 <div className="external">
-                    <a className="rect-container" href="../createAEmptyTree">
+                    <a className="rect-container" href="../CreateAEmptyTree">
                         <div className="white-box">
                             <img src={ThumbsUp} alt="Import A Tree"/>
                         </div>
@@ -86,14 +88,14 @@ export function CreateTrees() {
                         </div>
                     </a>
                     <div className="grid-col">
-                        <div className="rect-container">
+                        <a className="rect-container" href={"../JoestarTemplate"}>
                             <div className="white-box">
-                                No Preview Available
+                                Joestar Family Tree
                             </div>
                             <div className="box-caption">
                                 Template 2
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="grid-col">
                         <div className="rect-container">
