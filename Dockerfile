@@ -1,5 +1,5 @@
 # Used for React-App
-FROM node@latest
+FROM node
 
 WORKDIR /react-app
 

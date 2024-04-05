@@ -1,8 +1,10 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import {MyTrees} from "../components/MyTrees.tsx";
-import {RecentTree} from "../components/RecentTree.tsx";
+import {MyTreesViewTrees} from "../components/MyTreesViewTrees.tsx";
 import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
-
+import {RecentTree} from "../components/RecentTree.tsx";
+import {Separator} from "../components/separator.tsx";
+import "../styles/sectionTitle.css"
+// import {ImageMyTrees} from "../components/imageMyTrees.tsx";
 
 export function ViewTrees() {
     return (
@@ -14,9 +16,16 @@ export function ViewTrees() {
             <NavigationBar />
 
             <div className="">
-                <MyTrees />
-                <RecentTree />
-                <FeaturedTrees />
+
+                {/*<ImageMyTrees/>*/}
+                {/*<Separator/>*/}
+
+
+                <MyTreesViewTrees/>
+                <Separator/>
+                <RecentTree/>
+                <Separator/>
+                <FeaturedTrees/>
             </div>
         </>
     );
