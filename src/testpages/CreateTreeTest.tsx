@@ -1,24 +1,39 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
 import {backend_url} from "../assets/constant.ts";
-import {useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import Empty from "../data/UploadTree.json";
 import {BlankImport} from "../components/BlankImport.tsx";
 import previewFile from "../data/previewFile.json";
+import {useNavigate} from "react-router-dom";
+import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 
 export function CreateTreeTest() {
 
     const [treeName, setTreeName] = useState("");
+    const navigate = useNavigate();
 
-    const createNewTree = async () => {
+    const createNewTree = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
         const response = await axios.post(backend_url + "/tree/new", {
             "treeName": treeName
         },{ withCredentials: true })
         const data = response.data;
-        console.log(data);
-        return data
+
+        navigate("/displayTrees/" + data.redirect);
+
     }
+
+    useEffect(() => {
+        checkUserLogInStatus().then(isLoggedIn => {
+            if (!isLoggedIn) {
+                navigate("/")
+                alert("Please Login First");
+            }
+        })
+
+    }, []);
 
     return (
         <>
@@ -27,8 +42,8 @@ export function CreateTreeTest() {
             </style>
             <NavigationBar/>
             <h2>Create a tree</h2>
-            <form onSubmit={() => {
-                createNewTree().then(r => console.log("data here" + r))
+            <form onSubmit={(event) => {
+                createNewTree(event)
             }}>
                 <label>
                     <input

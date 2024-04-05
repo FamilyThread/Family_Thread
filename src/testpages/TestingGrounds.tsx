@@ -6,7 +6,9 @@ export function TestingGrounds() {
             <NavigationBar />
             <EditPersonPopup />
 
-            <a href='/myaccounttest'> My Account Backend Test</a>
+            <br/>
+            <a href='/myaccounttest'> My Account Backend Test</a><br/>
+            <a href='/treefunctiontest'>Tree Function Test</a>
         </>
 
     );
