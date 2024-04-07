@@ -23,7 +23,7 @@ export default class FamilyTreeChart extends Component<ChartProps> {
         if (this.divRef.current) {
             this.family = new FamilyTree (this.divRef.current , {
                 nodes: this.props.nodes,
-
+                nodeTreeMenu: true,
                 nodeBinding: {
                     field_0: 'name',
                     img_0: 'img'

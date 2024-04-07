@@ -1,3 +1,4 @@
+
 .login-container{
     margin: 30vh 30vw;
     border-radius: 20px;
@@ -43,3 +44,22 @@
     outline: none; /* Remove focus outline */
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add focus border */
 }
+
+.goals {
+    background-color: lightgray;
+    height: 30vw;
+}
+
+.team {
+    background-color: red;
+    height: 30vw;
+}
+
+.text {
+    display: inline-block;
+    margin: 2vw 10vw 2vw 10vw;
+    width: 80%;
+    height: 90%;
+    border: 1px black solid;
+}
+
