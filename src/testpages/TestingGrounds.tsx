@@ -7,10 +7,8 @@ import { Family } from './Familytree.tsx';
 export function TestingGrounds() {
     useEffect(() => {
         const familyTreeContainer = document.getElementById('tree');
-        const familyTreeContainer2 = document.getElementById('tree3');
         if (familyTreeContainer) {
             Family(familyTreeContainer);
-            Family(familyTreeContainer2);
         } else {
             console.error("Element with ID 'tree' not found.");
         }
@@ -20,6 +18,11 @@ export function TestingGrounds() {
         <>
             <NavigationBar/>
             <EditPersonPopup/>
+            <br/>
+            <a href='/myaccounttest'> My Account Backend Test</a><br/>
+            <a href='/treefunctiontest'>Tree Function Test</a> <br/>
+            <a href='/available-trees'>Available Trees</a>
+
             <div id="tree"></div>
             <div id="tree2">
                 <button> Fit to Tree</button>
@@ -28,7 +31,10 @@ export function TestingGrounds() {
             </div>
             <div id="tree3"></div>
 
-
+            <br/>
+            <a href='/myaccounttest'> My Account Backend Test</a><br/>
+            <a href='/treefunctiontest'>Tree Function Test</a> <br/>
+            <a href='/available-trees'>Available Trees</a>
         </>
     );
 }
