@@ -40,8 +40,8 @@ export function NavigationBar() {
                         Search
                     </button>
                 </div>
-                {loggedIn?
-                    <a href={backend_url + "/logout"}>Logout</a>: null}
+                {loggedIn ?
+                    <a href={backend_url + "/logout"}>Logout</a> : <a href={backend_url + "/"}>Login</a>}
             </nav>
         </>
     )
