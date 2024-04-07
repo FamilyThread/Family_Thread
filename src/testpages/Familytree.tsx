@@ -1,22 +1,21 @@
 import FamilyTree from "@balkangraph/familytree.js";
-import {useState} from "react";
 // import css from './teststyles/personCreation.css'
 
 export function Family(container: HTMLElement) {
 
     // const [scale, setScale] = useState(1);
 
-    let scale = 1;
-    const fitTreeScale = () => {
-        scale = (FamilyTree.match.boundary);
-        root.render(treeFunction());
-    };
-    const fitTreeHeight = () => {
-        scale = (FamilyTree.match.height);
-    };
-    const fitTreeWidth = () => {
-        scale = (FamilyTree.match.width);
-    };
+    // let scale = 1;
+    // const fitTreeScale = () => {
+    //     scale = (FamilyTree.match.boundary);
+    //     root.render(treeFunction());
+    // };
+    // const fitTreeHeight = () => {
+    //     scale = (FamilyTree.match.height);
+    // };
+    // const fitTreeWidth = () => {
+    //     scale = (FamilyTree.match.width);
+    // };
 
 
     // Templates: https://balkan.app/FamilyTreeJS/Docs/CSSCustomization
@@ -54,7 +53,7 @@ export function Family(container: HTMLElement) {
             nodeMenu: {
                 scale: {
                     text: "Change Scaling",
-                    onClick: fitTreeScale
+                    // onClick: fitTreeScale
                 }
 
             },
@@ -79,56 +78,10 @@ export function Family(container: HTMLElement) {
         family.load([]);
     }
 
-    const treeFunction2 = () => {
-
-        var family2 = new FamilyTree(container, {
-            // state: {
-            //     // readFromLocalStorage: true,
-            //     // writeToLocalStorage: true,
-            // },
-            mouseScrool: FamilyTree.action.ctrlZoom,
-            scaleInitial: 1,
-            template: 'john',
-            searchDisplayField: 'name',
-            searchFieldsWeight: {
-                "name": 100, //percent
-                "friends": 20 //percent
-            },
-            menu: {
-                pdf: {text: "Export PDF"},
-                json: {text: "Export JSON"}
-            },
-            mode: "light",
-            nodeTreeMenu: true,
-            editForm: {
-                elements: [
-                    {type: 'textbox', label: 'Full Name', binding: 'name'},
-                    [
-                        {type: 'date', label: 'Birth Date', binding: 'Date of Birth'},
-                        {type: 'date', label: 'Death Date', binding: 'Date of Death'},
-                        {type: 'checkbox', label: 'Still Alive?', binding: 'Checkbox'}
-                    ],
-                    {type: 'textbox', label: 'Place of Birth'},
-                    {type: 'textbox', label: 'Description'
-                    }
-                ],
-            }
-        });
-
-        family2.onInit(() => {
-        });
-
-        family2.load([]);
-    }
-
-
-
     return (
         <>
             <div style={{height: "100%"}}>
                 {treeFunction()}
-                {treeFunction2()}
-
             </div>
         </>
     );
