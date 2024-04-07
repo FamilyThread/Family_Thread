@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    /*border: 1px black solid;*/
+}
+
+.createTreesBody {
+    margin: 2rem;
+}
+
+.external {
+   display: flex;
+    justify-content: space-around;
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+.white-box {
+    display: flex;
+    background-color: white;
+    box-sizing: inherit;
+    width: 15rem;
+    height: 10rem;
+    max-height:100%; max-width:100%;
+    justify-content: center;
+}
+
+/*.white-box img { height: 100%; }*/
+
+.box-caption {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    background-color: #5a856a;
+    font-size: 18px;
+}
+
+.template-grid {
+    display: flex;
+    margin: 2rem;
+}
+
+.grid-col {
+    flex: 1;
+    background-color: white;
+    justify-content: space-around;
+    margin: 2rem;
+    width: 15rem;
+    height: 10rem;
+}
+
+.grid-col > .rect-container > .white-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
