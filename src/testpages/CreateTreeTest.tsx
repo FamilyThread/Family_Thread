@@ -1,14 +1,14 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
 import {backend_url} from "../assets/constant.ts";
+
 import {FormEvent, useEffect, useState} from "react";
-import {Separator} from "../components/separator.tsx";
-import importLogo from "../assets/import.png";
-import "../styles/createTrees.css";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
+import {Separator} from "../components/separator.tsx";
 
-export function CreateTrees() {
+
+export function CreateTreeTest() {
 
     const [treeName, setTreeName] = useState("");
     const navigate = useNavigate();
@@ -17,7 +17,7 @@ export function CreateTrees() {
         event.preventDefault();
         const response = await axios.post(backend_url + "/tree/new", {
             "treeName": treeName
-        },{ withCredentials: true })
+        }, {withCredentials: true})
         const data = response.data;
 
         navigate("/displayTrees/" + data.redirect);
@@ -34,27 +34,28 @@ export function CreateTrees() {
 
     }, []);
 
+    let importLogo;
     return (
         <>
             <style>
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
             <NavigationBar/>
-            <div className="createTreesBody">
-                <h2 className="title">Create a tree</h2>
-                <form onSubmit={(event) => {
-                    createNewTree(event)
-                }}>
-                    <label>
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="TreeName"
-                            value={treeName}
-                            onChange={(e) => setTreeName(e.target.value)}
-                        />
-                    </label>
-                    <input type="submit" value="Submit"/>
+
+            <h2>Create a tree</h2>
+            <form onSubmit={(event) => {
+                createNewTree(event)
+            }}>
+                <label>
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="TreeName"
+                        value={treeName}
+                        onChange={(e) => setTreeName(e.target.value)}
+                    />
+                </label>
+                <input type="submit" value="Submit"/>
 
                 </form>
 
@@ -168,7 +169,6 @@ export function CreateTrees() {
                         </div>
                     </div>
                 </div>
-            </div>
         </>
     );
 }

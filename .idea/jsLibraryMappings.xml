@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-<<<<<<< Updated upstream
     <excludedPredefinedLibrary name="Family_Thread/DisplayFamilyTree/node_modules" />
   </component>
 </project>
-=======
-    <includedPredefinedLibrary name="Node.js Core" />
-  </component>
-</project>
->>>>>>> Stashed changes

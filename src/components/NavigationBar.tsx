@@ -25,10 +25,9 @@ export function NavigationBar() {
     return (
         <>
             <nav className="nav">
-                <a className="logo" href="/home"> <img src={logo} alt="Family Thread Logo"></img> </a>
+                <a className="logo" href="/viewtrees"> <img src={logo} alt="Family Thread Logo"></img> </a>
                 <ul>
                     <li><a href="/myaccount">My Account</a></li>
-                    <li><a href="/home">Home</a></li>
                     <li><a href="/viewtrees">View Trees</a></li>
                     <li><a href="/createtrees">Create Trees</a></li>
                     <li><a href="/tests">Tests</a></li>
@@ -41,8 +40,8 @@ export function NavigationBar() {
                         Search
                     </button>
                 </div>
-                {loggedIn?
-                    <a href={backend_url + "/logout"}>Logout</a>: null}
+                {loggedIn ?
+                    <a href={backend_url + "/logout"}>Logout</a> : <a href={backend_url + "/"}>Login</a>}
             </nav>
         </>
     )
