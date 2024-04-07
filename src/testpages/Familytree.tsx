@@ -78,7 +78,6 @@ export function Family(container: HTMLElement) {
         family.load([]);
     }
 
-
     return (
         <>
             <div style={{height: "100%"}}>
