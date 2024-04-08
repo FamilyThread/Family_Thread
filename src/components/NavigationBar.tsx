@@ -1,6 +1,6 @@
 import "../styles/nav.css";
 import logo from "../assets/logo.png"
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useEffect, useState} from "react";
 

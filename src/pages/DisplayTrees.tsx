@@ -3,6 +3,8 @@ import FamilyTreeChart from "../components/FamilyTreeChart.ts";
 import {useEffect, useState} from "react";
 import {getTreeData} from "../utils/getTree.ts";
 import {useLocation} from "react-router-dom";
+import "../styles/displayTrees.css";
+import {SharePopUpBox} from "../components/SharePopUpBox.tsx";
 
 
 export function DisplayTrees() {
@@ -25,10 +27,9 @@ export function DisplayTrees() {
     return (
         <>
             <NavigationBar/>
-
             <div style={{height: "100%"}}>
-                {nodes? <FamilyTreeChart nodes={nodes} />: <h1>Loading ...</h1>}
-
+                <SharePopUpBox/>
+                {nodes ? <FamilyTreeChart nodes={nodes}/> : <h1>Loading ...</h1>}
             </div>
 
         </>

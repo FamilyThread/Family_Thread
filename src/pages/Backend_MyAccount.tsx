@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavigationBar } from "../components/NavigationBar.tsx";
-import { backend_url } from "../assets/constant.ts";
+import { backend_url } from "../config/constant.ts";
 
 
 export function Backend_MyAccount() {

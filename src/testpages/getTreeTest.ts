@@ -1,5 +1,5 @@
 import axios from "axios";
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 
 export const getTreeDataTest = async (treeId: string) => {
     try {

@@ -1,6 +1,6 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 import {useEffect, useState} from "react";
 
 
