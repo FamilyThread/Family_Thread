@@ -10,6 +10,7 @@ import {SharePopUpBox} from "../components/SharePopUpBox.tsx";
 export function DisplayTrees() {
 
     const [nodes, setNodes] = useState()
+    const [isOwner, setIsOwner] = useState<Boolean>(false);
 
     const location = useLocation();
     const treeId = location.pathname.split("displayTrees/")[1];
@@ -18,7 +19,10 @@ export function DisplayTrees() {
     useEffect(() => {
 
         getTreeData(treeId).then(r => {
-            setNodes(r)
+            setIsOwner(r.owner);
+            const jsonData = r.jsonData;
+            const nodes = jsonData.map((jsonString: string) => JSON.parse(jsonString));
+            setNodes(nodes);
         })
 
     }, []);
@@ -28,7 +32,7 @@ export function DisplayTrees() {
         <>
             <NavigationBar/>
             <div style={{height: "100%"}}>
-                <SharePopUpBox/>
+                {isOwner? <SharePopUpBox treeId={treeId}/>: null}
                 {nodes ? <FamilyTreeChart nodes={nodes}/> : <h1>Loading ...</h1>}
             </div>
 

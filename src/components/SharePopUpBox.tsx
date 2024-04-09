@@ -5,17 +5,14 @@ import {FormEvent, useEffect, useState} from "react";
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
-import {useLocation, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 
-export function SharePopUpBox() {
+export function SharePopUpBox({ treeId }: { treeId: string }) {
 
     const [popup, setPopup] = useState<boolean>(false);
     const [email, setEmail] = useState<string>("");
     const [role, setRole] = useState<string>("");
-
-    const location = useLocation();
-    const treeId = location.pathname.split("displayTrees/")[1];
 
     const navigate = useNavigate();
 
@@ -48,15 +45,27 @@ export function SharePopUpBox() {
         const data = {
             email, role
         }
-        const response = await axios.post(
-            backend_url + "/share/" + treeId,
-            data,
-            { withCredentials: true })
+        try {
+            const response = await axios.post(
+                backend_url + "/share/" + treeId,
+                data,
+                { withCredentials: true })
 
-        setEmail("");
-        setRole("");
+            setEmail("");
+            setRole("");
 
-        console.log(response.data);
+            if (response.data === "Added user's account is not created, but will be able to access the tree after registration"){
+
+            }
+            console.log(response);
+            console.log(response.data);
+        } catch (e: any) {
+            // Log the error for debugging purposes
+            console.error(e);
+            console.error('An error occurred:', e.response.data);
+
+        }
+
 
     }
 
