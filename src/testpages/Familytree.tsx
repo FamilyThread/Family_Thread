@@ -1,21 +1,28 @@
 import FamilyTree from "@balkangraph/familytree.js";
+import {useState} from "react";
 // import css from './teststyles/personCreation.css'
 
 export function Family(container: HTMLElement) {
 
     // const [scale, setScale] = useState(1);
+    // const scales = [];
 
-    // let scale = 1;
-    // const fitTreeScale = () => {
-    //     scale = (FamilyTree.match.boundary);
-    //     root.render(treeFunction());
+    // const [scale, setScale] = useState({
+    //     initial: 1,
+    //     boundary: FamilyTree.match.boundary,
+    //     height: FamilyTree.match.height,
+    //     width: FamilyTree.match.width
+    // });
+    //
+    // // Function to update the scale value
+    // const updateScale = (newScaleValue: number) => {
+    //     setScale(currentScale => ({
+    //         ...currentScale,
+    //         initial: newScaleValue
+    //     }));
     // };
-    // const fitTreeHeight = () => {
-    //     scale = (FamilyTree.match.height);
-    // };
-    // const fitTreeWidth = () => {
-    //     scale = (FamilyTree.match.width);
-    // };
+
+
 
 
     // Templates: https://balkan.app/FamilyTreeJS/Docs/CSSCustomization
@@ -77,6 +84,7 @@ export function Family(container: HTMLElement) {
 
         family.load([]);
     }
+
 
     return (
         <>

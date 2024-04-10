@@ -27,8 +27,7 @@ export function CreateTrees() {
     useEffect(() => {
         checkUserLogInStatus().then(isLoggedIn => {
             if (!isLoggedIn) {
-                navigate("/")
-                alert("Please Login First");
+                navigate("/error")
             }
         })
 

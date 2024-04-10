@@ -12,6 +12,7 @@ import {MyAccount} from "./pages/MyAccount.tsx";
 import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
 import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
 import {CreateTrees} from "./pages/CreateTrees.tsx";
+import {ErrorPage} from "./pages/ErrorPage.tsx";
 
 function App() {
     return (
@@ -19,15 +20,15 @@ function App() {
             <Routes>
                 <Route path="/" element={<Login />}/>
                 <Route path="/viewtrees" element={<ViewTrees />}/>
-                {/*<Route path="/createtrees" element={<CreateTrees />}/>*/}
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
                 <Route path="/createtrees" element={<CreateTrees/>}/>
                 <Route path="/displaytrees/:treeId" element={<DisplayTrees/>}/>
                 <Route path="/403" element={<Error_403/>}/>
                 <Route path="*" element={<Error_404/>}/>
+                <Route path="/error" element={<ErrorPage />} />
 
-            {/*    Testing Routes*/}
+                {/*Testing Routes*/}
                 <Route path="/tests" element={<TestingGrounds />} />
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
                 <Route path="/treefunctiontest" element={<TreeFunctionTest />}/>
