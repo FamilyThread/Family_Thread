@@ -6,7 +6,7 @@ import { PermissionError } from '../components/Errors/PermissionError';
 import "../styles/error.css"
 
 export function ErrorPage() {
-    const [errorType, setErrorType] = useState(1);
+    const [errorType] = useState(1);
 
     function displayError() {
         switch (errorType) {

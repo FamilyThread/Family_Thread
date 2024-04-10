@@ -52,3 +52,7 @@ body {
     text-decoration: none;
 }
 
+.search-container {
+    border: white 1px solid;
+    border-radius: 30px;
+}

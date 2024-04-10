@@ -23,8 +23,6 @@ export function Family(container: HTMLElement) {
     // };
 
 
-
-
     // Templates: https://balkan.app/FamilyTreeJS/Docs/CSSCustomization
     FamilyTree.templates.myTemplate = Object.assign({}, FamilyTree.templates.tommy);
     FamilyTree.templates.myTemplate.field_0 = '<text style="font-size: 24px;" fill="#ffffff" x="100" y="90" text-anchor="middle">{val}</text>';
@@ -38,7 +36,7 @@ export function Family(container: HTMLElement) {
         FamilyTree.templates.tommy_female.field_0 =
             '<text width="600px" style="font-size: 28px;" fill="#ffffff" x="125" y="95" text-anchor="middle" class="field_0">{val}</text>';
 
-        var family = new FamilyTree(container, {
+        let family = new FamilyTree(container, {
             // state: {
             //     // readFromLocalStorage: true,
             //     // writeToLocalStorage: true,
@@ -79,12 +77,15 @@ export function Family(container: HTMLElement) {
             }
         });
 
+        // family.onUpdateNode() => {
+        //
+        // }
+
         family.onInit(() => {
         });
 
         family.load([]);
     }
-
 
     return (
         <>
