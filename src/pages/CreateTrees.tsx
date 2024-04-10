@@ -98,14 +98,14 @@ export function CreateTrees() {
                         </a>
                     </div>
                     <div className="grid-col">
-                        <div className="rect-container">
+                        <a className="rect-container" href={"../DonaldTemplate"}>
                             <div className="white-box">
-                                No Preview Available
+                                Donald Duck Family Tree
                             </div>
                             <div className="box-caption">
                                 Template 3
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="grid-col">
                         <div className="rect-container">

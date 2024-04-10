@@ -10,7 +10,8 @@ import {Error_404} from "./pages/error/Error404.tsx";
 import {Error_403} from "./pages/error/Error403.tsx";
 // import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
-import {JoestarTemplate} from "./pages/JoestarTemplate.tsx";
+import {JoestarTemplate} from "./pages/Featured Trees/Joestar Tree/JoestarTemplate.tsx";
+import {DonaldTemplate} from "./pages/Featured Trees/Donald Duck Family/DonaldTemplate.tsx";
 
 function App() {
     return (
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/createtrees" element={<CreateTrees/>}/>
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
                 <Route path="/displaytrees/:treeId" element={<DisplayTrees/>}/>
+                <Route path="/DonaldTemplate" element={<DonaldTemplate/>}/>
                 <Route path="/403" element={<Error_403/>}/>
                 <Route path="*" element={<Error_404/>}/>
             </Routes>

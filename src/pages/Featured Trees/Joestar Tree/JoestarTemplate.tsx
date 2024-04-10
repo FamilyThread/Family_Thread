@@ -1,5 +1,5 @@
-import {NavigationBar} from "../components/NavigationBar.tsx";
-import FamilyTreeChart from "../components/FamilyTreeChart.ts";
+import {NavigationBar} from "../../../components/NavigationBar.tsx";
+import FamilyTreeChart from "../../../components/FamilyTreeChart.ts";
 
 export function JoestarTemplate() {
     return (

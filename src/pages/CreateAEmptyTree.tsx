@@ -1,6 +1,7 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import FamilyTreeChart from "../components/FamilyTreeChart.ts";
 
+
 export function CreateAEmptyTree(){
     return (
         <>
