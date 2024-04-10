@@ -21,7 +21,8 @@ export function TestingGrounds() {
             <br/>
             <a href='/myaccounttest'> My Account Backend Test</a><br/>
             <a href='/treefunctiontest'>Tree Function Test</a> <br/>
-            <a href='/available-trees'>Available Trees</a>
+            <a href='/available-trees'>User Created Trees</a> <br/>
+            <a href='/shared-trees'>Shared Trees</a>
 
             <div id="tree"></div>
             <div id="tree2">
