@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 
 export function AvailableTreeTest() {
 
+    const [names, setNames] = useState([]);
     const [ids, setIds] = useState([]);
 
 
@@ -33,7 +34,8 @@ export function AvailableTreeTest() {
 
     useEffect(() => {
         getTreesID().then(r => {
-            setIds(r)
+            setNames(r.map((obj: { treeName: string; }) => obj.treeName));
+            setIds(r.map((obj: { treeId: string; }) => obj.treeId));
         })
     }, []);
 
@@ -42,9 +44,9 @@ export function AvailableTreeTest() {
         <>
             <NavigationBar />
 
-            {ids ? ids.map((item, index) => (
+            {names ? names.map((item, index) => (
                 <>
-                    <a href={`/displayTrees/${item}`} id={String(index)}>{item}</a><br/>
+                    <a href={`/displayTrees/${ids[index]}`} id={String(index)}>{item}</a><br/>
                 </>
             )): null}
         </>

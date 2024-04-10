@@ -31,8 +31,9 @@ export function DisplayTrees() {
     return (
         <>
             <NavigationBar/>
+
             <div style={{height: "100%"}}>
-                {isOwner? <SharePopUpBox treeId={treeId}/>: null}
+                {isOwner ? <SharePopUpBox treeId={treeId}/> : null}
                 {nodes ? <FamilyTreeChart nodes={nodes}/> : <h1>Loading ...</h1>}
             </div>
 

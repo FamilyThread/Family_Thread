@@ -3,6 +3,7 @@ import logo from "../assets/logo.png"
 import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useEffect, useState} from "react";
+import {ProfileInfo} from "./navigationBar/ProfileInfo.tsx";
 
 export function NavigationBar() {
     const [loggedIn, setLoggedIn] = useState(false);
@@ -40,6 +41,7 @@ export function NavigationBar() {
                         Search
                     </button>
                 </div>
+                <ProfileInfo/>
                 {loggedIn ?
                     <a href={backend_url + "/logout"}>Logout</a> : <a href={backend_url + "/"}>Login</a>}
             </nav>
