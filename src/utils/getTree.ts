@@ -1,13 +1,10 @@
 import axios from "axios";
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 
 export const getTreeData = async (treeId: string) => {
     try {
         const response = await axios.get(backend_url + "/tree/" + treeId, { withCredentials: true });
-        const jsonData = response.data.jsonData;
-        const ans = jsonData.map((jsonString: string) => JSON.parse(jsonString));
-        console.log(ans);
-        return ans; // Return the data
+        return response.data;
     } catch (error) {
         console.log(error)
         // @ts-ignore

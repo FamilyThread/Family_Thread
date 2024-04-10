@@ -12,6 +12,7 @@ import {MyAccount} from "./pages/MyAccount.tsx";
 import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
 import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
 import {CreateTrees} from "./pages/CreateTrees.tsx";
+import {SharedTreeTest} from "./testpages/SharedTreeTest.tsx";
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
                 <Route path="/treefunctiontest" element={<TreeFunctionTest />}/>
                 <Route path="/available-trees" element={<AvailableTreeTest/>}/>
+                <Route path="/shared-trees" element={<SharedTreeTest/>}/>
 
             </Routes>
         </>

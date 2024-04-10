@@ -1,6 +1,6 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 
 import {FormEvent, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";

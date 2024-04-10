@@ -2,7 +2,7 @@
 
 // TODO: Note: I did suppress to ignore an error for jwtDecode. Look into it later.
 
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";

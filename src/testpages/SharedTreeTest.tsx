@@ -1,10 +1,10 @@
-import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {useEffect, useState} from "react";
+import {NavigationBar} from "../components/NavigationBar.tsx";
 
 
-export function AvailableTreeTest() {
+export function SharedTreeTest() {
 
     const [names, setNames] = useState([]);
     const [ids, setIds] = useState([]);
@@ -12,7 +12,7 @@ export function AvailableTreeTest() {
 
     const getTreesID = async () => {
         try {
-            const response = await axios.get(backend_url + "/user/trees", {withCredentials: true})
+            const response = await axios.get(backend_url + "/user/trees/shared", {withCredentials: true})
             const jsonData = response.data;
             console.log(jsonData)
             return jsonData;
