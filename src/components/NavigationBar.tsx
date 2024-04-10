@@ -3,10 +3,12 @@ import logo from "../assets/logo.png"
 import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useEffect, useState} from "react";
+import {SearchPopup} from "./SearchPopup.tsx";
 import {ProfileInfo} from "./navigationBar/ProfileInfo.tsx";
 
 export function NavigationBar() {
     const [loggedIn, setLoggedIn] = useState(false);
+    // const [openSearch, setSearchFunction] = useState(false);
 
     const checkLoginStatus = async () => {
         try {
@@ -34,12 +36,7 @@ export function NavigationBar() {
                     <li><a href="/tests">Tests</a></li>
                 </ul>
                 <div className="search-container">
-                    <input className="search" type="search" placeholder="Search For Tree"
-                           aria-label="Search for trees..."/>
-                    {/*<img src={search} alt=""> </img>*/}
-                    <button className="search-btn" type="submit">
-                        Search
-                    </button>
+                    <SearchPopup />
                 </div>
                 <ProfileInfo/>
                 {loggedIn ?

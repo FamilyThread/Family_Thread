@@ -6,9 +6,9 @@ React Related Things:
 
 Docker Related Things:
     Build the DockerFile [You only have to do this once]
-        docker build -t 380teamb-ft .
+        docker build -t 380sp24-teambft .
     Run the docker container [You have to run this every time you want to preview it]
-        docker run -d --rm -p 5173:5173 --name FamilyThreadContainer 380teamb-ft
+        docker run -d --rm -p 5173:5173 --name FamilyThreadContainer 380sp24-teambft
     Stop the container
         docker container stop [name]
 

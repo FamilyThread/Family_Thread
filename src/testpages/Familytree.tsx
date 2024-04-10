@@ -1,20 +1,25 @@
 import FamilyTree from "@balkangraph/familytree.js";
+import {useState} from "react";
 // import css from './teststyles/personCreation.css'
 
 export function Family(container: HTMLElement) {
 
     // const [scale, setScale] = useState(1);
+    // const scales = [];
 
-    // let scale = 1;
-    // const fitTreeScale = () => {
-    //     scale = (FamilyTree.match.boundary);
-    //     root.render(treeFunction());
-    // };
-    // const fitTreeHeight = () => {
-    //     scale = (FamilyTree.match.height);
-    // };
-    // const fitTreeWidth = () => {
-    //     scale = (FamilyTree.match.width);
+    // const [scale, setScale] = useState({
+    //     initial: 1,
+    //     boundary: FamilyTree.match.boundary,
+    //     height: FamilyTree.match.height,
+    //     width: FamilyTree.match.width
+    // });
+    //
+    // // Function to update the scale value
+    // const updateScale = (newScaleValue: number) => {
+    //     setScale(currentScale => ({
+    //         ...currentScale,
+    //         initial: newScaleValue
+    //     }));
     // };
 
 
@@ -31,7 +36,7 @@ export function Family(container: HTMLElement) {
         FamilyTree.templates.tommy_female.field_0 =
             '<text width="600px" style="font-size: 28px;" fill="#ffffff" x="125" y="95" text-anchor="middle" class="field_0">{val}</text>';
 
-        var family = new FamilyTree(container, {
+        let family = new FamilyTree(container, {
             // state: {
             //     // readFromLocalStorage: true,
             //     // writeToLocalStorage: true,
@@ -71,6 +76,10 @@ export function Family(container: HTMLElement) {
                 ],
             }
         });
+
+        // family.onUpdateNode() => {
+        //
+        // }
 
         family.onInit(() => {
         });
