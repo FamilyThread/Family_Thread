@@ -10,8 +10,7 @@ export function LoginError() {
     return (
         <>
             <h1>You are not logged in!</h1>
-            <h2>Please head to the login screen.</h2>
-            <button onClick={routeChange}> Login </button>
+            <h2 onClick={routeChange}>Please head to the login screen.</h2>
         </>
     )
 }

@@ -1,21 +1,23 @@
-import React, { useState, Suspense } from 'react';
-import { NavigationBar } from "../components/NavigationBar";
-import { LoginError } from '../components/Errors/LoginError.tsx'; // Import the error components
-import { PageNotFound } from '../components/Errors/PageNotFound.tsx';
-import { PermissionError } from '../components/Errors/PermissionError';
+import {NavigationBar} from "../components/NavigationBar";
+import {LoginError} from '../components/Errors/LoginError.tsx'; // Import the error components
+import {PermissionError} from '../components/Errors/PermissionError';
 import "../styles/error.css"
-
+import logo from "../assets/csc380logoL.png"
+import {useLocation} from "react-router-dom";
+import {Suspense} from "react";
 export function ErrorPage() {
-    const [errorType] = useState(1);
+    const location = useLocation();
+    const errorType = location.pathname.split("/")[1];
+
 
     function displayError() {
         switch (errorType) {
-            case 1:
+            case "error":
                 return <LoginError/>;
-            case 2:
+            case "403":
                 return <PermissionError/>;
-            case 3:
-                return <PageNotFound/>; // Corrected NotFoundError to PageNotFound
+            case "404":
+                return <div>Page Not Found</div>;
             default:
                 return <div>Unknown Error</div>;
         }
@@ -28,10 +30,16 @@ export function ErrorPage() {
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
             <div className="error-body">
-                <h1>Oh, you've encountered an error!</h1>
-                <Suspense fallback={<div>Loading...</div>}>
-                    {displayError()}
-                </Suspense>
+                <div className="left-error">
+                    <h1 className="oops"> Oops! </h1>
+                    You seem to have ran into an error.
+                    <Suspense fallback={<div>Loading...</div>}>
+                        {displayError()}
+                    </Suspense>
+                </div>
+                <div className="right-error">
+                    <img src={logo} alt="Family Thread Tree" />
+                </div>
             </div>
         </>
     );
