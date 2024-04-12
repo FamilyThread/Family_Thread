@@ -4,12 +4,13 @@ import {backend_url} from "../assets/constant.ts";
 import {useState} from "react";
 import {Separator} from "../components/separator.tsx";
 import importLogo from "../assets/import.png";
-import ThumbsUp from "../assets/ThumbsUp.png";
 import "../styles/createTrees.css";
+
 
 
 export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
+    const [importValue, setImportValue] = useState("");
 
     const createNewTree = async () => {
         const response = await axios.post(backend_url + "/tree/new", {
@@ -23,9 +24,28 @@ export function CreateTrees() {
     // @ts-ignore
     const handleFileUpload = (e) => {
         const file = e.target.files[0];
-        // Process the file upload here
-        console.log(file);
+        if (file && file.name.endsWith('.tsx')) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const content = e.target.result;
+                console.log(content); // Debug: See the file content
+
+                // Assuming the file name dictates the navigation logic
+                const pageName = file.name.replace('.tsx', '');
+                navigateToPage(pageName);
+            };
+            reader.readAsText(file);
+        } else {
+            alert('Please upload a .tsx file');
+        }
     };
+
+    const navigateToPage = (pageName) => {
+        // Logic to determine the correct URL based on pageName
+        // For example, if pageName is 'JoestarTemplate', navigate to '../JoestarTemplate'
+        window.location.href = `../${pageName}`;
+    };
+
 
     return (
         <>
@@ -55,18 +75,17 @@ export function CreateTrees() {
                 <div className="external">
                     <a className="rect-container" href="../CreateAEmptyTree">
                         <div className="white-box">
-                            <img src={ThumbsUp} alt="Import A Tree"/>
+                            <img src={null} alt="Import A Tree"/>
                         </div>
-                        <div className="box-caption" >
+                        <div className="box-caption">
                             Create an empty tree
                         </div>
                     </a>
 
-                    {/* Upload button replacing the second rect-container */}
                     <label className="rect-container">
                         <div className="white-box">
-                            <input type="file" onChange={handleFileUpload} style={{ display: 'none' }} />
-                            <img src={importLogo} alt="Import A Tree" style={{ cursor: 'pointer' }} />
+                            <input value={importValue} type="file" onChange={handleFileUpload} style={{display: 'none'}}/>
+                            <img src={importLogo} alt="Import A Tree" style={{cursor: 'pointer'}}/>
                         </div>
                         <div className="box-caption">
                             Import Data
@@ -83,7 +102,7 @@ export function CreateTrees() {
                                 Soney & Lia
                             </div>
                             <div className="box-caption">
-                                Template 1
+                            Template 1
                             </div>
                         </div>
                     </a>

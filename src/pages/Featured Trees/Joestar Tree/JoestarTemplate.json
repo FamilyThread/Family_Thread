@@ -1,5 +1,6 @@
 import { NavigationBar } from "../../../components/NavigationBar.tsx";
 import FamilyTreeChart from "../../../components/FamilyTreeChart.ts";
+
 export function JoestarTemplate() {
     // Family tree data
     const nodes = [
@@ -28,45 +29,22 @@ export function JoestarTemplate() {
     ];
 
     // Function to download the data as JSON
-    const downloadTsx = () => {
-        // Assuming nodes is an array of objects, prepare it as a TSX component
-        const tsxContent = `import React from 'react';
-
-const nodes = ${JSON.stringify(nodes, null, 2)};
-
-const FamilyTreeData = () => (
-    <div>
-        {JSON.stringify(nodes, null, 2)}
-    </div>
-);
-
-export default FamilyTreeData;`;
-
-        // Encode the TSX content for the download link
-        const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(tsxContent);
-
-        // Create an anchor element for downloading the file
+    const downloadJson = () => {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(nodes));
         const downloadAnchorNode = document.createElement('a');
         downloadAnchorNode.setAttribute("href", dataStr);
-
-        // Get the current file name and use it as the download file name
-        const currentFileName = window.location.pathname.split('/').pop().replace(/\.[^/.]+$/, "") + ".tsx";
-        downloadAnchorNode.setAttribute("download", currentFileName);
-
-        // Append to the document, trigger the download, then remove the element
+        downloadAnchorNode.setAttribute("download", "familyTree.json");
         document.body.appendChild(downloadAnchorNode);
         downloadAnchorNode.click();
         downloadAnchorNode.remove();
     }
-
-
 
     return (
         <>
             <NavigationBar />
 
             <div style={{ height: "100%" }}>
-                <button onClick={downloadTsx} style={{ margin: '10px' }}>Download File</button>
+                <button onClick={downloadJson} style={{ margin: '10px' }}>Download JSON</button>
                 <FamilyTreeChart nodes={nodes} />
             </div>
         </>

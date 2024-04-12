@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route} from "react-router-dom";
 import {ViewTrees} from "./pages/ViewTrees.tsx";
 import {CreateTrees} from "./pages/CreateTrees.tsx";
 import {Backend_MyAccount} from "./pages/Backend_MyAccount.tsx";
@@ -12,6 +12,7 @@ import {Error_403} from "./pages/error/Error403.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
 import {JoestarTemplate} from "./pages/Featured Trees/Joestar Tree/JoestarTemplate.tsx";
 import {DonaldTemplate} from "./pages/Featured Trees/Donald Duck Family/DonaldTemplate.tsx";
+
 
 function App() {
     return (
