@@ -1,4 +1,4 @@
-import {Button, FormGroup, IconButton, styled} from "@mui/material";
+import {Button, CircularProgress, FormGroup, IconButton, Snackbar, styled} from "@mui/material";
 import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
 import {Form} from "react-bootstrap";
 import {FormEvent, useEffect, useState} from "react";
@@ -6,6 +6,7 @@ import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useNavigate} from "react-router-dom";
+import React from "react";
 
 
 export function SharePopUpBox({ treeId }: { treeId: string }) {
@@ -13,6 +14,9 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
     const [popup, setPopup] = useState<boolean>(false);
     const [email, setEmail] = useState<string>("");
     const [role, setRole] = useState<string>("");
+    const [snackBarOpen, setSnackBarOpen] = useState<boolean>(false);
+    const [shareMessageResponse, setShareMessageResponse] = useState<string>("");
+    const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const navigate = useNavigate();
 
@@ -45,6 +49,7 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
         const data = {
             email, role
         }
+        setIsLoading(true);
         try {
             const response = await axios.post(
                 backend_url + "/share/" + treeId,
@@ -58,16 +63,35 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
 
             }
             console.log(response);
+            setSnackBarOpen(true);
+            setShareMessageResponse(response.data);
             console.log(response.data);
         } catch (e: any) {
             // Log the error for debugging purposes
             console.error(e);
             console.error('An error occurred:', e.response.data);
 
+        } finally {
+            setIsLoading(false);
         }
-
-
     }
+
+    const snackBarClose = () => {
+        setSnackBarOpen(false);
+    }
+
+    const action = (
+        <React.Fragment>
+            <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={snackBarClose}
+            >
+                <CloseIcon/>
+            </IconButton>
+        </React.Fragment>
+    );
 
     useEffect(() => {
         checkUserLogInStatus().then(isLoggedIn => {
@@ -80,8 +104,18 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
 
     return (
      <>
+
          <div className="shareButtonContainer">
              <StyledButton onClick={togglePopUp}>Share</StyledButton>
+             <Snackbar
+                 anchorOrigin={{vertical: "bottom" ,
+                     horizontal: "center"}}
+                 open={snackBarOpen}
+                 autoHideDuration={6000}
+                 onClose={snackBarClose}
+                 message={shareMessageResponse}
+                 action={action}
+             />
              {popup && (
                  <div className="share-popup">
 
@@ -132,19 +166,30 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
                              </Form.Select>
                          </Form.Group>
 
-                         <StyledButton
-                             type="submit"
-                             style = {{
-                                 display: "flex",
-                                 justifyContent: "center",
-                                 margin: "0 5rem"
-                             }}
-                         >
-                             Submit
-                         </StyledButton>
+                         <div style={{
+                             display: "flex",
+                             flexDirection: "row",
+                             justifyContent: "center",
+                             alignContent: "center"
+                         }}>
+                             <StyledButton
+                                 type="submit"
+                                 style = {{
+                                     display: "flex",
+                                     justifyContent: "center",
+                                     margin: "0"
+                                 }}
+                             >
+                                 Submit
+                             </StyledButton>
+                             {isLoading && <CircularProgress/>}
+
+                         </div>
+
                      </Form>
                  </div>
              )}
+
          </div>
      </>
     )
