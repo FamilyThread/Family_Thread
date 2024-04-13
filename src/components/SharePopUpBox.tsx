@@ -97,7 +97,6 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
         checkUserLogInStatus().then(isLoggedIn => {
             if (!isLoggedIn) {
                 navigate("/")
-                alert("Please Login First");
             }
         })
 

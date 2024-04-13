@@ -7,7 +7,6 @@ body {
 }
 
 .nav {
-
     background-color: #073f3e;
     color: white;
     display: flex;
@@ -22,6 +21,7 @@ body {
     margin-left: 20px;
     max-height: 80px;
     max-width: 100px;
+    /*filter: drop-shadow(0 0 5px #79FFDE);*/
 }
 
 .nav a {
@@ -52,3 +52,7 @@ body {
     text-decoration: none;
 }
 
+.search-container {
+    border: white 1px solid;
+    border-radius: 30px;
+}

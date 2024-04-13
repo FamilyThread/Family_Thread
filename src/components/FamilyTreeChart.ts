@@ -2,6 +2,7 @@ import React, {Component, RefObject} from "react";
 import FamilyTree from "@balkangraph/familytree.js";
 import {removeNode, sendNewNodes, updateNode} from "../utils/nodeOperations.ts";
 
+
 interface ChartProps {
     nodes: any[];
 }
@@ -69,3 +70,4 @@ export default class FamilyTreeChart extends Component<ChartProps> {
         return React.createElement('div', {id: 'tree', ref: this.divRef});
     }
 }
+

@@ -9,7 +9,6 @@ export const getTreeData = async (treeId: string) => {
         console.log(error)
         // @ts-ignore
         if (error.response && error.response.status === 403) {
-            alert("You don't have permission to view the page");
             window.location.href = "/403";
         } else { // @ts-ignore
             if (error.message === "Network Error") {

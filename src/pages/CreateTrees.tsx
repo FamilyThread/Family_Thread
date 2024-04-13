@@ -13,6 +13,7 @@ export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
     const navigate = useNavigate();
 
+
     const createNewTree = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const response = await axios.post(backend_url + "/tree/new", {
@@ -21,14 +22,12 @@ export function CreateTrees() {
         const data = response.data;
 
         navigate("/displayTrees/" + data.redirect);
-
     }
 
     useEffect(() => {
         checkUserLogInStatus().then(isLoggedIn => {
             if (!isLoggedIn) {
-                navigate("/")
-                alert("Please Login First");
+                navigate("/error")
             }
         })
 
