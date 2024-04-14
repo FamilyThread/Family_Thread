@@ -7,7 +7,8 @@ body {
 }
 
 .nav {
-    background-color: #073f3e;
+    /*background-color: #073f3e;*/
+    background-color: #3b945e;
     color: white;
     display: flex;
     justify-content: space-between;

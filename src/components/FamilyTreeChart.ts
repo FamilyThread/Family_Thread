@@ -2,12 +2,12 @@ import React, {Component, RefObject} from "react";
 import FamilyTree from "@balkangraph/familytree.js";
 import {removeNode, sendNewNodes, updateNode} from "../utils/nodeOperations.ts";
 
-
 interface ChartProps {
     nodes: any[];
 }
 
 export default class FamilyTreeChart extends Component<ChartProps> {
+
     private readonly divRef: RefObject<HTMLDivElement>;
     private family: FamilyTree | undefined;
 
@@ -32,23 +32,25 @@ export default class FamilyTreeChart extends Component<ChartProps> {
 
                 nodeTreeMenu: true,
 
-                editForm : {
+                editForm: {
                     generateElementsFromFields: false,
                     elements: [
                         {type: "textbox", label: "Name", binding: "name"},
-                        {type: "select", options: [
+                        {
+                            type: "select", options: [
                                 {value: "male", text: "Male"},
                                 {value: "female", text: "Female"}
-                            ], label: "Gender", binding: "gender"}
+                            ], label: "Gender", binding: "gender"
+                        }
                     ]
                 },
-
-
                 nodeBinding: {
                     field_0: 'name',
                     img_0: 'img'
                 },
             });
+
+
             this.family.onUpdateNode((args) => {
                 const treeId = window.location.href.split("/displayTrees/")[1];
                 console.log(args)

@@ -26,7 +26,6 @@ export function AvailableTreeTest() {
             }
             throw error;
         }
-
     }
 
     useEffect(() => {
