@@ -15,12 +15,12 @@ export function ViewTrees() {
             <NavigationBar />
 
             <div className="">
+                <FeaturedTrees/>
+                <Separator/>
                 <MyTreesViewTrees/>
                 <Separator/>
                 <RecentTree/>
-                <Separator/>
-                <FeaturedTrees/>
-            </div>
+                </div>
         </>
     );
 }
