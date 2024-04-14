@@ -8,7 +8,12 @@ import {CreateAEmptyTree} from "./pages/CreateAEmptyTree.tsx";
 import {TestingGrounds} from "./testpages/TestingGrounds.tsx";
 // import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
-import {EditTree} from "./pages/insideViewTrees/EditTree.tsx";
+import {DonaldTemplate} from "./pages/Featured Trees/Donald Duck Family/DonaldTemplate.tsx";
+import {JoestarTemplate} from "./pages/Featured Trees/Joestar Tree/JoestarTemplate.tsx";
+import {ErrorPage} from "./pages/ErrorPage.tsx";
+import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
+import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
+import {SharedTreeTest} from "./testpages/SharedTreeTest.tsx";
 function App() {
     return (
         <>
