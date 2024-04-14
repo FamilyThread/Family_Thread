@@ -5,7 +5,7 @@ type NuclearFamilyProps = {
     name: string;
 };
 
-export function ViewTreesScroll({ name }: NuclearFamilyProps) {
+export function ViewTreesScroll({}: NuclearFamilyProps) {
 
     return (
         <div className="box-container">
@@ -13,9 +13,6 @@ export function ViewTreesScroll({ name }: NuclearFamilyProps) {
                 <div className="individual-tree">
                     <a className="treePreview" href="../EditTree"> <img src={image} alt="Preview of tree"></img> </a>
                 </div>
-            </div>
-            <div className="lower-sub-box">
-                <div className="individual-tree">{name}</div>
             </div>
         </div>
     );
