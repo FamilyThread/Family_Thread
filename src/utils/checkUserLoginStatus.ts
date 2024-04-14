@@ -1,4 +1,4 @@
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 
 export const checkUserLogInStatus = async () => {
     try {

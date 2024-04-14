@@ -5,37 +5,45 @@
 
 .userinfo{
     margin-top: 45px;
-    margin-left: 20px;
+    margin-left: 100px;
     height: 250px;
     width: 200px;
     padding: 10px;
-    background-color: #cfcecc;
+    /*
+    background-color: lightgray;
+     */
     text-align: center;
 }
 
 .options{
+    /*
     border-style: solid;
     border-width: 1px;
     border-color: black;
     border-radius: 5px;
+     */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     margin-top: 45px;
     margin-left: 150px;
-    height: 350px;
-    width: 500px;
+    height: 330px;
+    width: 445px;
     padding: 10px;
-    background-color: #cfcecc;
+    background-color: #5a856a;
 }
 
 .header-options{
     color: white;
+    /*
     border-style: solid;
     border-color: #262626;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+     */
     border-width: 1px;
-    background-color: black;
+    background-color: #073f3e;
     height: 70px;
-    width: 499px;
+    width: 445px;
     font-size: 30px;
     text-align: center;
     padding: 10px; /* for text */
@@ -45,7 +53,7 @@
 
 .optionstxt{
     font-size: 20px;
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 25px;
     margin-top: 25px;
 }
@@ -56,14 +64,17 @@
 }
 
 .infoboxes{
-    margin-top: 50px;
+    margin-top: 55px;
     background-color: #cfcecc;
+    /*
     border-style: solid;
     border-width: 1px;
     border-color: #262626;
-    padding: 10px;
-    height: 40px;
-    width: 200px;
+     */
+    padding: 5px;
+    height: 35px;
+    width: 195px;
+    margin-bottom: 60px;
 }
 
 .infoboxestxt{

@@ -2,7 +2,7 @@
 
 // TODO: Note: I did suppress to ignore an error for jwtDecode. Look into it later.
 
-import {backend_url} from "../assets/constant.ts";
+import {backend_url} from "../config/constant.ts";
 import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
@@ -19,7 +19,7 @@ export function OAuthLogin() {
                 const isLoggedIn = await checkUserLogInStatus();
                 setLogInStatus(isLoggedIn);
                 if (logInStatus) {
-                    navigate("/home")
+                    navigate("/viewtrees")
                 }
             } catch (error) {
                 console.error("Error checking login status:", error);
@@ -32,7 +32,6 @@ export function OAuthLogin() {
 
     return (
         <>
-
             {logInStatus ?
                 <p>Already logged in</p>
                 :
