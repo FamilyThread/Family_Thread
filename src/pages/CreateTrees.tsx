@@ -8,9 +8,11 @@ import "../styles/createTrees.css";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 
-export function CreateTrees() {
 
+
+export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
+    const [importValue, setImportValue] = useState("");
     const navigate = useNavigate();
 
 
@@ -23,6 +25,31 @@ export function CreateTrees() {
 
         navigate("/displayTrees/" + data.redirect);
     }
+
+    // @ts-ignore
+    const handleFileUpload = (e) => {
+        const file = e.target.files[0];
+        if (file && file.name.endsWith('.tsx')) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const content = e.target.result;
+                console.log(content); // Debug: See the file content
+
+                // Assuming the file name dictates the navigation logic
+                const pageName = file.name.replace('.tsx', '');
+                navigateToPage(pageName);
+            };
+            reader.readAsText(file);
+        } else {
+            alert('Please upload a .tsx file');
+        }
+    };
+
+    const navigateToPage = (pageName) => {
+        // Logic to determine the correct URL based on pageName
+        // For example, if pageName is 'JoestarTemplate', navigate to '../JoestarTemplate'
+        window.location.href = `../${pageName}`;
+    };
 
     useEffect(() => {
         checkUserLogInStatus().then(isLoggedIn => {
@@ -54,65 +81,63 @@ export function CreateTrees() {
                         />
                     </label>
                     <input type="submit" value="Submit"/>
-
                 </form>
 
                 <Separator/>
 
                 <div className="external">
-
-                    <div className="rect-container">
+                    <a className="rect-container" href="../CreateAEmptyTree">
                         <div className="white-box">
-                            {/*<img src={importLogo} alt="Import A Tree"/>*/}
+                            <img src={null} alt="Import A Tree"/>
                         </div>
                         <div className="box-caption">
                             Create an empty tree
                         </div>
-                    </div>
+                    </a>
 
-                    <div className="rect-container">
+                    <label className="rect-container">
                         <div className="white-box">
-                            <img src={importLogo} alt="Import A Tree"/>
+                            <input value={importValue} type="file" onChange={handleFileUpload} style={{display: 'none'}}/>
+                            <img src={importLogo} alt="Import A Tree" style={{cursor: 'pointer'}}/>
                         </div>
                         <div className="box-caption">
                             Import Data
                         </div>
-                    </div>
+                    </label>
                 </div>
                 <Separator/>
 
-                <h2 className="title"> Templates </h2>
-
+                <h2 className="title">Templates</h2>
                 <div className="template-grid">
-                    <div className="grid-col">
+                    <a className="grid-col" href="../displayTrees">
                         <div className="rect-container">
                             <div className="white-box">
-                                No Preview Available
+                                Soney & Lia
                             </div>
                             <div className="box-caption">
-                                Template 1
+                            Template 1
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div className="grid-col">
-                        <div className="rect-container">
+                        <a className="rect-container" href={"../JoestarTemplate"}>
                             <div className="white-box">
-                                No Preview Available
+                                Joestar Family Tree
                             </div>
                             <div className="box-caption">
                                 Template 2
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="grid-col">
-                        <div className="rect-container">
+                        <a className="rect-container" href={"../DonaldTemplate"}>
                             <div className="white-box">
-                                No Preview Available
+                                Donald Duck Family Tree
                             </div>
                             <div className="box-caption">
                                 Template 3
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="grid-col">
                         <div className="rect-container">
@@ -125,12 +150,15 @@ export function CreateTrees() {
                         </div>
                     </div>
                 </div>
+                    <Separator/>
                 <div className="template-grid">
+
                     <div className="grid-col">
                         <div className="rect-container">
                             <div className="white-box">
                                 No Preview Available
                             </div>
+
                             <div className="box-caption">
                                 Template 5
                             </div>
