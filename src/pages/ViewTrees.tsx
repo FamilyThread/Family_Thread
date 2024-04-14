@@ -20,13 +20,12 @@ export function ViewTrees() {
                 {/*<ImageMyTrees/>*/}
                 {/*<Separator/>*/}
 
-
+                <FeaturedTrees/>
+                <Separator/>
                 <MyTreesViewTrees/>
                 <Separator/>
                 <RecentTree/>
-                <Separator/>
-                <FeaturedTrees/>
-            </div>
+                </div>
         </>
     );
 }

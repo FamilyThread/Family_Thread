@@ -20,7 +20,6 @@ function App() {
             <Routes>
                 <Route path="/" element={<Login />}/>
                 <Route path="/viewtrees" element={<ViewTrees />}/>
-                {/*<Route path="/createtrees" element={<CreateTrees />}/>*/}
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
                 <Route path="/CreateAEmptyTree" element={<CreateAEmptyTree/>}/>
