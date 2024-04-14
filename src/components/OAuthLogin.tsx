@@ -19,7 +19,7 @@ export function OAuthLogin() {
                 const isLoggedIn = await checkUserLogInStatus();
                 setLogInStatus(isLoggedIn);
                 if (logInStatus) {
-                    navigate("/home")
+                    navigate("/viewtrees")
                 }
             } catch (error) {
                 console.error("Error checking login status:", error);
@@ -32,7 +32,6 @@ export function OAuthLogin() {
 
     return (
         <>
-
             {logInStatus ?
                 <p>Already logged in</p>
                 :

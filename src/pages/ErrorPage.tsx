@@ -27,7 +27,7 @@ export function ErrorPage() {
         <>
             <NavigationBar/>
             <style>
-                {document.body.style.backgroundColor = '#6EA07F'};
+                {document.body.style.backgroundColor = '#479761'};
             </style>
             <div className="error-body">
                 <div className="left-error">

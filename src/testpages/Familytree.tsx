@@ -86,7 +86,7 @@ export function Family(container: HTMLElement) {
         // family.onUpdateNode((args) => {
         //     const {updateNodesData} = args;
         //
-        //     // Assuming each object in updateNodesData contains an `id` property
+        //
         //     updateNodesData.forEach((node: any) => {
         //         // You might need to cast or extract the `id` and other necessary properties properly based on your data structure
         //         const nodeId = node.id;
