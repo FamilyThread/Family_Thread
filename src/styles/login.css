@@ -91,7 +91,7 @@ blockquote p {
     background-color: #F0E7D8;
 }
 
-.title{
+.name{
     font-family: Perpetua, Serif;
     font-size: 200pt;
     color: #4D2E08;
@@ -103,4 +103,10 @@ blockquote p {
 
 .vision{
     background-color: #87A55D;
+}
+
+.comingSoon {
+    color: white;
+    text-align: center;
+    font-size: 80pt;
 }
