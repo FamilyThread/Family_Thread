@@ -1,48 +1,41 @@
 .accContainer{
+    margin-left: 20px;
+    margin-top: -30px;
+    margin-bottom: 100px; /* extra scroll */
     display: flex;
     background-color: #6EA07F;
 }
+.accheader{
+    margin-left: 100px; /* align text header */
+}
 
-.userinfo{
+.userinfo {
     margin-top: 45px;
     margin-left: 100px;
     height: 250px;
     width: 200px;
     padding: 10px;
-    /*
-    background-color: lightgray;
-     */
     text-align: center;
 }
 
 .options{
-    /*
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    border-radius: 5px;
-     */
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     margin-top: 45px;
     margin-left: 150px;
-    height: 330px;
+    height: 315px;
     width: 445px;
     padding: 10px;
-    background-color: #5a856a;
+    background-color: lightgrey; /* previous: #5a856a */
 }
 
 .header-options{
     color: white;
-    /*
-    border-style: solid;
-    border-color: #262626;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-     */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     border-width: 1px;
-    background-color: #073f3e;
-    height: 70px;
+    background-color: #5a856a; /* previous: #073f3e */
+    height: 65px;
     width: 445px;
     font-size: 30px;
     text-align: center;
@@ -54,8 +47,16 @@
 .optionstxt{
     font-size: 20px;
     padding: 8px;
-    margin-bottom: 25px;
-    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.optionstxt:active {
+    color:#5a856a;
+}
+
+.optionstxt:hover {
+    color: #5a856a;
 }
 
 .adjust {
@@ -64,18 +65,15 @@
 }
 
 .infoboxes{
-    margin-top: 55px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    margin-left: 5px;
     background-color: #cfcecc;
-    /*
-    border-style: solid;
-    border-width: 1px;
-    border-color: #262626;
-     */
     padding: 5px;
     height: 35px;
-    width: 195px;
-    margin-bottom: 60px;
+    width: 185px;
 }
+
 
 .infoboxestxt{
     margin-top: -40px;
