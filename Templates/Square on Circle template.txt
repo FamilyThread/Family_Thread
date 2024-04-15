@@ -1,0 +1,129 @@
+import FamilyTree from "@balkangraph/familytree.js";
+
+// import css from './teststyles/personCreation.css'
+
+export function Family(container: HTMLElement) {
+
+    // const [scale, setScale] = useState(1);
+
+    // let scale = 1;
+    // const fitTreeScale = () => {
+    //     scale = (FamilyTree.match.boundary);
+    //     root.render(treeFunction());
+    // };
+    // const fitTreeHeight = () => {
+    //     scale = (FamilyTree.match.height);
+    // };
+    // const fitTreeWidth = () => {
+    //     scale = (FamilyTree.match.width);
+    // };
+
+
+    // Templates: https://balkan.app/FamilyTreeJS/Docs/CSSCustomization
+
+    FamilyTree.templates.myTemplate = Object.assign({}, FamilyTree.templates.hugo);
+    FamilyTree.templates.myTemplate.size = [200, 200];
+    FamilyTree.templates.myTemplate.node = '<rect x="0" y="0" width="200" height="200" fill="grey" stroke-width="1" stroke="#aeaeae"></rect>';
+    FamilyTree.templates.myTemplate.field_0 = '<text style="font-size: 16px;" fill="#FFFFF" x="45" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate.field_1 = '<text style="font-size: 24px;" fill="#FFFFF" x="100" y="60" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate.field_2 = '<text style="font-size: 16px;" fill="#FFFFF" x="155" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate.img_0 =
+        '<clipPath id="ulaImg">'
+        + '<circle cx="100" cy="150" r="40"></circle>'
+        + '</clipPath>'
+        + '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#ulaImg)" xlink:href="{val}" x="60" y="110" width="80" height="80">'
+        + '</image>';
+
+    FamilyTree.templates.myTemplate_male = Object.assign({}, FamilyTree.templates.hugo);
+    FamilyTree.templates.myTemplate_male.size = [200, 200];
+    FamilyTree.templates.myTemplate_male.node = '<rect x="0" y="0" width="200" height="200" fill="blue" stroke-width="1" stroke="#aeaeae"></rect>';
+    FamilyTree.templates.myTemplate_male.field_0 = '<text style="font-size: 16px;" fill="#FFFFF" x="45" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_male.field_1 = '<text style="font-size: 24px;" fill="#FFFFF" x="100" y="60" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_male.field_2 = '<text style="font-size: 16px;" fill="#FFFFF" x="155" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_male.img_0 =
+        '<clipPath id="ulaImg">'
+        + '<circle cx="100" cy="150" r="40"></circle>'
+        + '</clipPath>'
+        + '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#ulaImg)" xlink:href="{val}" x="60" y="110" width="80" height="80">'
+        + '</image>';
+
+    FamilyTree.templates.myTemplate_female = Object.assign({}, FamilyTree.templates.hugo);
+    FamilyTree.templates.myTemplate_female.size = [200, 200];
+    FamilyTree.templates.myTemplate_female.node = '<rect x="0" y="0" width="200" height="200" fill="pink" stroke-width="1" stroke="#aeaeae"></rect>';
+    FamilyTree.templates.myTemplate_female.field_0 = '<text style="font-size: 16px;" fill="#FFFFF" x="45" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_female.field_1 = '<text style="font-size: 24px;" fill="#FFFFF" x="100" y="60" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_female.field_2 = '<text style="font-size: 16px;" fill="#FFFFF" x="155" y="90" text-anchor="middle">{val}</text>';
+    FamilyTree.templates.myTemplate_female.img_0 =
+        '<clipPath id="ulaImg">'
+        + '<circle cx="100" cy="150" r="40"></circle>'
+        + '</clipPath>'
+        + '<image preserveAspectRatio="xMidYMid slice" clip-path="url(#ulaImg)" xlink:href="{val}" x="60" y="110" width="80" height="80">'
+        + '</image>';
+    const treeFunction = () => {
+
+
+        var family = new FamilyTree(container, {
+
+            // state: {
+            //     // readFromLocalStorage: true,
+            //     // writeToLocalStorage: true,
+            // },
+            mouseScrool: FamilyTree.action.ctrlZoom,
+            scaleInitial: 1,
+            template: 'myTemplate',
+            nodeBinding: {field_1: "name", field_0: "Date of Birth", field_2: "Date of Death"  ,img_0: "img"},
+            searchDisplayField: 'name',
+            searchFieldsWeight: {
+                "name": 100, //percent
+                "friends": 20 //percent
+            },
+            menu: {
+                pdf: {text: "Export PDF"},
+                json: {text: "Export JSON"}
+            },
+
+            mode: "light",
+            nodeTreeMenu: true,
+
+            nodeMenu: {
+                scale: {
+                    text: "Change Scaling",
+
+                    // onClick: fitTreeScale
+                }
+
+            },
+            editForm: { titleBinding: "name",
+                photoBinding: "img",
+                elements: [
+                    {type: 'textbox', label: 'Full Name', binding: 'name'},
+                    [
+                        {type: 'date', label: 'Birth Date', binding: 'Date of Birth'},
+                        {type: 'date', label: 'Death Date', binding: 'Date of Death'},
+                        {type: 'checkbox', label: 'Still Alive?', binding: 'Checkbox'}
+                    ],
+                    {type: 'textbox', label: 'Place of Birth'},
+                    {
+                        type: 'textbox', label: 'Description'
+                    },
+                    { type: 'textbox', label: 'Photo Url', binding: 'img', btn: 'Upload' },
+                ],
+            }
+        });
+
+        family.onInit(() => {
+        });
+
+        family.load([{ id: 1, pids: [2], name: '', gender: '', img: "" }]);
+    }
+
+    return (
+        <>
+            <div style={{height: "100%"}}>
+                {treeFunction()}
+            </div>
+        </>
+    );
+
+
+}
