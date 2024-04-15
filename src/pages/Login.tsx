@@ -10,7 +10,7 @@ export function Login() {
             <div className="top">
                 <OAuthLogin/>
                 <img src={image} alt="Family Thread logo"></img>
-                <h1 className="title">Family Thread</h1>
+                <h1 className="name">Family Thread</h1>
             </div>
             {/*<NavigationBar/>*/}
 
@@ -50,7 +50,7 @@ export function Login() {
                     <h2 className="text-start" style={{fontSize: 60, marginLeft:10}}>The Family Thread Team</h2>
 
                     <div className="form">
-
+                        <h2 className={"comingSoon"}>COMIN SUN AND HOT</h2>
                     </div>
                 </div>
             </div>

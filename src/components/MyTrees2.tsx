@@ -4,10 +4,10 @@ import {backend_url} from "../config/constant.ts";
 import {useEffect, useState, } from "react";
 import image from "../assets/ViewTreesPlaceholder.png"
 import {useNavigate} from "react-router-dom";
-import {Slider} from "@mui/material";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import {Row,Col, Container} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 
 interface Tree{
     treeId : string;
@@ -34,39 +34,42 @@ export function MyTreesViewTrees() {
         dot: true,
         speed: 500,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
     };
 
 
+
     return (
         <>
-
-            <div>
+            <Container>
+                <h1>My Trees</h1>
                 <div>
-                    <Container>
-                        <h1>My Trees</h1>
-                        {/*<Slider {...settings}>*/}
-                        <Row className="gap-2">
-                            {treeArray.map((tree) => (
-                                <Col className="align-items-center">
-                                    {/*tree preview. Need to be*/}
-                                    <div className=" text-center">
-                                        <img src={image} alt="Place holder image"></img>
+                    <div>
+                        <Slider {...settings}>
+                            {treeArray.map((tree => (
+                                <div>
+                                    <div style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center"
+                                    }}>
+                                        <img src={image} alt={"placeholder"}></img>
                                     </div>
-                                    {/*tree name*/}
-                                    <div className="text-center">
-                                        <button className="py-0 rounded-2 px-lg-5"
-                                                onClick={() => handleTreeClick(tree.treeId)}> {tree.treeName} </button>
+                                    <div style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center"
+                                    }}>
+                                        <button className=" rounded-2 px-lg-5" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
+                                    </div>
+                                </div>
 
-                                    </div>
-                                </Col>
-                            ))}
-                        </Row>
-                        {/*</Slider>*/}
-                    </Container>
+                            )))}
+                        </Slider>
+                    </div>
                 </div>
-            </div>
+            </Container>
         </>
     );
 }
