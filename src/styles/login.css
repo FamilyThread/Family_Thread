@@ -40,6 +40,7 @@
 
 /* Button Focus Effect */
 .login-btn:focus {
+    justify-content: end;
     color: #073F3E;
     outline: none; /* Remove focus outline */
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add focus border */
@@ -51,7 +52,7 @@
 }
 
 .team {
-    background-color: red;
+    background-color: #5C7A31;
     height: 30vw;
 }
 
@@ -60,6 +61,8 @@
     margin: 2vw 10vw 2vw 10vw;
     width: 80%;
     height: 90%;
+    font-family: Baskerville, Serif;
+    text-align: justify;
 }
 
 blockquote {
@@ -68,9 +71,36 @@ blockquote {
 
 blockquote p {
     padding: 15px;
-    background: #eee;
+    background: #B8CF98;
     border-radius: 5px;
-    font-size: 3rem;
+    font-size: 2rem;
+
 }
 
+.vision-blockquote {
+    background-color: #87A55D;
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 15px;
+}
 
+.top {
+    text-align: center;
+    margin-bottom: 0px;
+    height: 65vw;
+    background-color: #F0E7D8;
+}
+
+.title{
+    font-family: Perpetua, Serif;
+    font-size: 200pt;
+    color: #4D2E08;
+}
+
+.mission{
+    background-color: #B8CF98;
+}
+
+.vision{
+    background-color: #87A55D;
+}
