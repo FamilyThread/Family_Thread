@@ -2,6 +2,8 @@
 import {OAuthLogin} from "../components/logInButton.tsx";
 import '../styles/login.css'
 import image from "../assets/loginLogo.png";
+import {CardFlip} from "../components/Credits/cardFlip.tsx";
+
 // import {Separator} from "../components/separator.tsx";
 
 export function Login() {
@@ -11,8 +13,10 @@ export function Login() {
                 <OAuthLogin/>
                 <img src={image} alt="Family Thread logo"></img>
                 <h1 className="name">Family Thread</h1>
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center", paddingTop: 0, paddingBottom: 20}}>
+                    <OAuthLogin/>
+                </div>
             </div>
-            {/*<NavigationBar/>*/}
 
 
 
@@ -31,6 +35,8 @@ export function Login() {
                 </div>
             </div>
 
+
+
             <div className="vision">
                 <div className="text">
                     <h2 className="text-end" style={{fontSize: 60, marginRight:10}}>Our Vision</h2>
@@ -45,12 +51,12 @@ export function Login() {
             </div>
 
 
+
             <div className="team">
                 <div className="text">
-                    <h2 className="text-start" style={{fontSize: 60, marginLeft:10}}>The Family Thread Team</h2>
-
-                    <div className="form">
-                        <h2 className={"comingSoon"}>COMIN SUN AND HOT</h2>
+                    <h2 className="text-start" style={{fontSize: 60, marginLeft: 20}}>The Family Thread Team</h2>
+                    <div style={{paddingTop: 20, paddingBottom:20}}>
+                        <CardFlip/>
                     </div>
                 </div>
             </div>

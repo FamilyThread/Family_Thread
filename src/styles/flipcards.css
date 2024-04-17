@@ -1,0 +1,52 @@
+/*CARD BASICS*/
+.card-front{
+    margin-left: 45px;
+    width: 300px;
+    height: 380px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+}
+
+.card-back{
+    margin-left: 45px;
+    width: 300px;
+    height: 380px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: darkgreen;
+}
+
+.card-front:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+    text-shadow: #4D2E08;
+}
+
+.card-back:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+    text-shadow: #4D2E08;
+}
+/*INFORMATION ON THE CARDS*/
+.memberName{
+    text-align: center;
+    font-family: Baskerville;
+    font-size: 17pt;
+    margin-bottom: 0px;
+}
+
+.email{
+    font-family: Baskerville;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+
+/*BUTTON*/
+.button{
+}
+.button:hover{
+    transform: translateY(-0.5rem);
+    box-shadow: 5px 5px 4rem #918d8d;
+}

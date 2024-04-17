@@ -16,6 +16,10 @@ body {
     gap: 40px;
     padding: 1rem 2rem 0.5rem 3rem;
     height: 7rem;
+    position: sticky;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
 .nav img {

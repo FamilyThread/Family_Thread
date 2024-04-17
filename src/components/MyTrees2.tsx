@@ -13,6 +13,7 @@ interface Tree{
     treeId : string;
     treeName : string;
 }
+
 export function MyTreesViewTrees() {
     const [treeArray, setTreeData]   = useState<Tree[]>([]);
     const navigate = useNavigate();
@@ -36,6 +37,7 @@ export function MyTreesViewTrees() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+
     };
 
 
@@ -43,7 +45,9 @@ export function MyTreesViewTrees() {
     return (
         <>
             <Container>
-                <h1>My Trees</h1>
+                <h2 style={{marginTop: 90, marginBottom: 20}}>
+                    My Trees
+                </h2>
                 <div>
                     <div>
                         <Slider {...settings}>
@@ -52,14 +56,15 @@ export function MyTreesViewTrees() {
                                     <div style={{
                                         display: "flex",
                                         justifyContent: "center",
-                                        alignItems: "center"
+                                        alignItems: "center",
                                     }}>
                                         <img src={image} alt={"placeholder"}></img>
                                     </div>
                                     <div style={{
                                         display: "flex",
                                         justifyContent: "center",
-                                        alignItems: "center"
+                                        alignItems: "center",
+                                        paddingTop: 10
                                     }}>
                                         <button className=" rounded-2 px-lg-5" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
                                     </div>
