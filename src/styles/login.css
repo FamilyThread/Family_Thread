@@ -39,6 +39,8 @@
 /* Button Hover Effect */
 .login-btn:hover {
     background-color: white;
+    transform: scale3d(1.1, 1.1, 1.1);
+    box-shadow: 0px 0px 10px #8f8e8d;
 }
 
 /* Button Focus Effect */

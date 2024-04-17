@@ -39,7 +39,7 @@ export function Login() {
 
             <div className="vision">
                 <div className="text">
-                    <h2 className="text-end" style={{fontSize: 60, marginRight:10}}>Our Vision</h2>
+                    <h2 className="text-lg-end" style={{fontSize: 60, marginRight:10}}>Our Vision</h2>
 
                     <blockquote>
                         <p className={"vision-blockquote"}>
@@ -54,7 +54,7 @@ export function Login() {
 
             <div className="team">
                 <div className="text">
-                    <h2 className="text-start" style={{fontSize: 60, marginLeft: 20}}>The Family Thread Team</h2>
+                    <h2 className="text-lg-start" style={{fontSize: 60, marginLeft: 20}}>The Family Thread Team</h2>
                     <div style={{paddingTop: 20, paddingBottom:20}}>
                         <CardFlip/>
                     </div>

@@ -1,6 +1,7 @@
 import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
+import image from "../../assets/cardImages/soneyImage.jpg"
 
 export function SoneyCard(){
 
@@ -18,7 +19,11 @@ export function SoneyCard(){
 
                 {/*FRONT OF THE CARD*/}
                 <div className={"card-front"}>
-                    {/*<img src={crisImage} alt="picture"></img>*/}
+                    <div className={"image-container"}>
+                        <div className="image">
+                            <img src={image} alt="Soney's picture" className="img" ></img>
+                        </div>
+                    </div>
                     <h1 className={"memberName"}>
                         Phone Pyae Sone Phyo (Soney)
                     </h1>
@@ -40,11 +45,14 @@ export function SoneyCard(){
             <div style={{paddingTop: 10, paddingBottom: 10}}>
                 {/*BACK OF THE CARD*/}
                 <div className={"card-back"} onClick={flipCard}>
-                    <h1>
+                    <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3>
-                        dksjvn
+                    <h3 className={"summary-text"}>
+                        Computer Science as a passion.
+
+                        Computer Science major at SUNY Oswego
+
                     </h3>
                 </div>
             </div>
