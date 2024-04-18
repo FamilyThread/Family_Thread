@@ -13,6 +13,7 @@
     background-color: #f0f0f0;
 }
 
+
 .login-link {
     color: white;
     padding: 10px 20px;
@@ -31,11 +32,15 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Button Hover Effect */
 .login-btn:hover {
     background-color: white;
+    transform: scale3d(1.1, 1.1, 1.1);
+    box-shadow: 0px 0px 10px #8f8e8d;
 }
 
 /* Button Focus Effect */
@@ -53,7 +58,7 @@
 
 .team {
     background-color: #5C7A31;
-    height: 30vw;
+    height: inherit;
 }
 
 .text {
@@ -87,7 +92,7 @@ blockquote p {
 .top {
     text-align: center;
     margin-bottom: 0px;
-    height: 65vw;
+    height: inherit;
     background-color: #F0E7D8;
 }
 
@@ -95,7 +100,10 @@ blockquote p {
     font-family: Perpetua, Serif;
     font-size: 200pt;
     color: #4D2E08;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
+
 
 .mission{
     background-color: #B8CF98;
@@ -103,6 +111,7 @@ blockquote p {
 
 .vision{
     background-color: #87A55D;
+    height: inherit;
 }
 
 .comingSoon {

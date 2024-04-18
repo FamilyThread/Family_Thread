@@ -3,14 +3,14 @@ import Slider from 'react-slick';
 import { Container } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../styles/nav.css';
+// import '../styles/nav.css';
 
 export function FeaturedTrees() {
     const settings = {
-        dots: true,
+        // dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 4,
         slidesToScroll: 1,
         adaptiveHeight: true
     };
@@ -21,12 +21,12 @@ export function FeaturedTrees() {
             <Slider {...settings}>
                 <div className="template-grid">
                     <a className="grid-col" href="../displayTrees">
-                            <div className="white-box">
-                                Soney & Lia
-                            </div>
-                            <div className="box-caption">
-                                Template 1
-                            </div>
+                        <div className="white-box">
+                            Soney & Lia
+                        </div>
+                        <div className="box-caption">
+                            Template 1
+                        </div>
                     </a>
                 </div>
                 <div className="template-grid">
