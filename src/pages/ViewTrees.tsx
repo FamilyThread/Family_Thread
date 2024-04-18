@@ -13,7 +13,6 @@ export function ViewTrees() {
                 {document.body.style.backgroundColor = '#6EA07F'};
             </style>
 
-
             <NavigationBar />
             <div>
                 <MyTreesViewTrees/>
