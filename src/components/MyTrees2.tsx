@@ -62,7 +62,7 @@ export function MyTreesViewTrees() {
                                         justifyContent: "center",
                                         alignItems: "center",
                                     }}>
-                                        <img src={'data:image/png;base64,' + 'tree.image64'} alt={"placeholder"}></img>
+                                        <img src={'data:image/png;base64,' + tree.image64} alt={"placeholder"}></img>
                                     </div>
                                     <div style={{
                                         display: "flex",
