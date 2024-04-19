@@ -3,10 +3,11 @@ import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/
 import {Form} from "react-bootstrap";
 import {FormEvent, useEffect, useState} from "react";
 import axios from "axios";
-import {backend_url} from "../config/constant.ts";
-import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
+import {backend_url} from "../../config/constant.ts";
+import {checkUserLogInStatus} from "../../utils/checkUserLoginStatus.ts";
 import {useNavigate} from "react-router-dom";
 import React from "react";
+import {OwnerEditUsersDialog} from "./OwnerEditUsersDialog.tsx";
 
 
 export function SharePopUpBox({ treeId }: { treeId: string }) {
@@ -165,6 +166,7 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
                                  <option value="Viewer">Viewer</option>
                              </Form.Select>
                          </Form.Group>
+                         <OwnerEditUsersDialog treeId={treeId}/>
 
                          <div style={{
                              display: "flex",
