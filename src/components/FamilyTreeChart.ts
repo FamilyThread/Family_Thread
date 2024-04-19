@@ -27,7 +27,7 @@ export default class FamilyTreeChart extends Component<ChartProps> {
 
     componentDidMount() {
         if (this.divRef.current) {
-            const userPermssion = this.props.permissions;
+            const userPermission = this.props.permissions;
             this.family = new FamilyTree(this.divRef.current, {
                 mouseScrool: FamilyTree.action.none,
                 nodes: this.props.nodes,
@@ -36,10 +36,10 @@ export default class FamilyTreeChart extends Component<ChartProps> {
                 nodeMouseClick: FamilyTree.action.details,
                 // editForm: {titleBinding: "Name", photoBinding: "ImgUrl"},
 
-                ...(userPermssion.canEdit && {nodeTreeMenu: true}),
+                ...(userPermission.canEdit && {nodeTreeMenu: true}),
 
                 editForm: {
-                    readOnly: userPermssion.canView && !userPermssion.canEdit,
+                    readOnly: userPermission.canView && !userPermission.canEdit,
 
 
                     generateElementsFromFields: false,
