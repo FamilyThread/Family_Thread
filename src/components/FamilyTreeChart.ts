@@ -57,6 +57,7 @@ export default class FamilyTreeChart extends Component<ChartProps> {
                 menu: {
                     pdf: { text: "Export PDF" },
                     png: { text: "Export PNG" },
+                    svg: { text: "Export SVG" },
                     json: { text: "Export JSON" },
                     importJSON: {text: "Import JSON", icon: FamilyTree.icon.json(24,24,'red'), onClick: this.family?.importJSON},
                 },

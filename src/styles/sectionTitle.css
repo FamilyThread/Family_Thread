@@ -11,3 +11,8 @@ h2 {
     font-size: 24px;
     font-family: Perpetua, serif;
 }
+
+.tree-preview {
+    width: 240px;
+    height: 260px;
+}
