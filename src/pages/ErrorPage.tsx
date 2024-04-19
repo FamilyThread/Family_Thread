@@ -2,7 +2,7 @@ import {NavigationBar} from "../components/NavigationBar";
 import {LoginError} from '../components/Errors/LoginError.tsx'; // Import the error components
 import {PermissionError} from '../components/Errors/PermissionError';
 import "../styles/error.css"
-import logo from "../assets/csc380logoL.png"
+import logo from "../assets/csc380Logo_Logo-31.svg"
 import {useLocation} from "react-router-dom";
 import {Suspense} from "react";
 export function ErrorPage() {
@@ -38,7 +38,7 @@ export function ErrorPage() {
                     </Suspense>
                 </div>
                 <div className="right-error">
-                    <img src={logo} alt="Family Thread Tree" />
+                    <img src={logo} alt="Family Thread Tree" className="error-img" />
                 </div>
             </div>
         </>
