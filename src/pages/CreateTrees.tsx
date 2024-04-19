@@ -107,12 +107,12 @@ export function CreateTrees() {
                 </div>
                 <Separator/>
 
-                <h2 className="title">Templates</h2>
+                <h2 className="Templates">Templates</h2>
                 <div className="template-grid">
-                    <a className="grid-col" href="../displayTrees">
+                    <a className="grid-col" href="../blank">
                         <div className="rect-container">
                             <div className="white-box">
-                                Soney & Lia
+                                No Preview Available
                             </div>
                             <div className="box-caption">
                             Template 1
@@ -120,9 +120,9 @@ export function CreateTrees() {
                         </div>
                     </a>
                     <div className="grid-col">
-                        <a className="rect-container" href={"../JoestarTemplate"}>
+                        <a className="rect-container" href={"../blank"}>
                             <div className="white-box">
-                                Joestar Family Tree
+                                No Preview Available
                             </div>
                             <div className="box-caption">
                                 Template 2
@@ -130,9 +130,9 @@ export function CreateTrees() {
                         </a>
                     </div>
                     <div className="grid-col">
-                        <a className="rect-container" href={"../DonaldTemplate"}>
+                        <a className="rect-container" href={"../blank"}>
                             <div className="white-box">
-                                Donald Duck Family Tree
+                                No Preview Available
                             </div>
                             <div className="box-caption">
                                 Template 3
@@ -140,14 +140,14 @@ export function CreateTrees() {
                         </a>
                     </div>
                     <div className="grid-col">
-                        <div className="rect-container">
+                        <a className="rect-container" href={"../blank"}>
                             <div className="white-box">
                                 No Preview Available
                             </div>
                             <div className="box-caption">
                                 Template 4
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                     <Separator/>

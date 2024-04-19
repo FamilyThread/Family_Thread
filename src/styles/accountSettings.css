@@ -1,0 +1,19 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.settingsContainer {
+    width: 1000px;
+    height: 500px;
+    background-color: lightgray;
+}
+
+.btnOnPageSetting{
+    background-color: #5a856a;
+    border: 0;
+    font-size: 20px;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}

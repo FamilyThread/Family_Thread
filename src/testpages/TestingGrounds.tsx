@@ -3,6 +3,8 @@ import { EditPersonPopup } from "../components/EditPersonPopup.tsx";
 import { NavigationBar } from "../components/NavigationBar.tsx";
 import {useEffect} from "react";
 import { Family } from './Familytree.tsx';
+import {MyAccountEditProfile} from "../components/MyAccountEditProfile.tsx";
+
 // import SearchFunction from "../components/SearchPopup.tsx";
 
 export function TestingGrounds() {
@@ -41,6 +43,9 @@ export function TestingGrounds() {
             <br/>
             <br/>
             <br/>
+
+            <MyAccountEditProfile/>
+
         </>
     );
 }
