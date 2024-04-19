@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {getTreeData} from "../utils/getTree.ts";
 import {useLocation} from "react-router-dom";
 import "../styles/displayTrees.css";
-import {SharePopUpBox} from "../components/SharePopUpBox.tsx";
+import {SharePopUpBox} from "../components/SharingPermissions/SharePopUpBox.tsx";
 
 
 export function DisplayTrees() {
