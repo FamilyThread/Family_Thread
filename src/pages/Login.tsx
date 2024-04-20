@@ -9,9 +9,10 @@ import {CardFlip} from "../components/Credits/cardFlip.tsx";
 export function Login() {
     return (
         <>
+
             <div className="top">
                 <OAuthLogin/>
-                <img src={image} alt="Family Thread logo"></img>
+                <img src={image} alt="Family Thread logo" id="login-logo"></img>
                 <h1 className="name">Family Thread</h1>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", paddingTop: 0, paddingBottom: 20}}>
                     <OAuthLogin/>
