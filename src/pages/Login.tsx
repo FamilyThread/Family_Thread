@@ -7,7 +7,6 @@ import {CardFlip} from "../components/Credits/cardFlip.tsx";
 // import {Separator} from "../components/separator.tsx";
 
 export function Login() {
-    localStorage.setItem(document.getElementById("login-logo"),);
     return (
         <>
 

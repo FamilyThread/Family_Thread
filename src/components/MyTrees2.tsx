@@ -26,12 +26,12 @@ export function MyTreesViewTrees() {
 
     const navigate = useNavigate();
 
-    function checkForImage(image64, treeid):string {
+    function checkForImage(image64, treeid) {
         switch (image64) {
             case null:
                 return <ImageConversion parameter={treeid} />;
             default:
-                return <img src={'data:image/png;base64,' + image64} alt={"placeholder"} className="tree-preview"></img>
+                return <img src={'data:image/png;base64,' + image64} alt={"No Image Found"} className="tree-preview"></img>
         }
     }
 

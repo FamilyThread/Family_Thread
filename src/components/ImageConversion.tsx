@@ -29,7 +29,7 @@ export function ImageConversion(treeID) {
             return;
         }
         try {
-            const response = await axios.post(`${backend_url}/tree/${id}/updateImage`, {
+            const response = await axios.post(`${backend_url}/tree/66168ee318880411c453bcde/add-img`, {
                 image64: image
             });
             setUploadStatus("Image uploaded successfully: " + response.data);
