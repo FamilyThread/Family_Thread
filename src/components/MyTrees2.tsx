@@ -19,8 +19,6 @@ interface Tree{
 
 export function MyTreesViewTrees() {
     const [treeArray, setTreeData]   = useState<Tree[]>([]);
-    const [treetest, setTreeTest] = useState(null);
-
     const navigate = useNavigate();
 
     function checkForImage(image64, treeid) {

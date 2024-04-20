@@ -38,8 +38,12 @@ h2 {
 .tree-picture{
     margin-top: 20px;
     box-shadow: 0 0 7px #b2a99a;
+    height: inherit;
+    width: 100%;
+    border: solid 1px black;
 }
 
 .tree-container {
     height: 250px;
+    width: 300px;
 }
