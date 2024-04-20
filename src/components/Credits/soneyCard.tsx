@@ -2,6 +2,8 @@ import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
 import image from "../../assets/cardImages/soneyImage.jpg"
+import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg"
+import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg"
 
 export function SoneyCard(){
 
@@ -48,17 +50,24 @@ export function SoneyCard(){
                     <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3 className={"summary-text"}>
+                    <div className={"summary-text"}>
                         Computer Science as a passion.
 
-                        Computer Science major at SUNY Oswego
-
-                    </h3>
+                        Designing as a craftsmanship.
+                        <div className={"socialLogosContainer"} style={{marginTop:10}}>
+                            <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
+                            <h1 className={"socialName"}>sonephyo</h1>
+                        </div>
+                        <div className={"socialLogosContainer"}>
+                            <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>Phone Pyae Sone Phyo</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </ReactCardFlip>
 
 
-);
+    );
 }

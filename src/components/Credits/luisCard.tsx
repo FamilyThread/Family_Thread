@@ -1,6 +1,9 @@
 import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
+import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
+import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
+import image from "../../assets/cardImages/luisImage.jpg"
 
 export function LuisCard(){
 
@@ -18,7 +21,11 @@ export function LuisCard(){
 
                 {/*FRONT OF THE CARD*/}
                 <div className={"card-front"}>
-                    {/*<img src={crisImage} alt="picture"></img>*/}
+                    <div className={"image-container"}>
+                        <div className="image">
+                            <img src={image} alt="Soney's picture" className="img" ></img>
+                        </div>
+                    </div>
                     <h1 className={"memberName"}>
                         Luis Medina
                     </h1>
@@ -40,11 +47,23 @@ export function LuisCard(){
             <div style={{paddingTop: 10, paddingBottom: 10}}>
                 {/*BACK OF THE CARD*/}
                 <div className={"card-back"} onClick={flipCard}>
-                    <h1>
+                    <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3>
-                        dksjvn
+                    <h3 className={"summary-text"} style={{textAlign: "start"}}>
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Software Engineer BS</h3>
+
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Applied Mathematics minor</h3>
+
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Logic minor</h3>
+                        <div className={"socialLogosContainer"} style={{marginTop:10}}>
+                            <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
+                            <h1 className={"socialName"}>LuisMed674</h1>
+                        </div>
+                        <div className={"socialLogosContainer"}>
+                            <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>Luis Medina</h1>
+                        </div>
                     </h3>
                 </div>
             </div>

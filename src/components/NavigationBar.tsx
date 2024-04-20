@@ -1,5 +1,5 @@
 import "../styles/nav.css";
-import logo from "../assets/logo.png"
+import logo from "../assets/navLogo.png"
 import {backend_url} from "../config/constant.ts";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useEffect, useState} from "react";
@@ -28,7 +28,7 @@ export function NavigationBar() {
     return (
         <>
             <nav className="nav">
-                <a className="logo" href="/viewtrees"> <img src={logo} alt="Family Thread Logo"></img> </a>
+                <a className="nav-logo" href="/viewtrees"> <img src={logo} alt="Family Thread Logo"></img> </a>
                 <ul>
                     <li><a href="/myaccount">My Account</a></li>
                     <li><a href="/viewtrees">View Trees</a></li>

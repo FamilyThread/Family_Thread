@@ -1,7 +1,7 @@
 // import {NavigationBar} from "../components/NavigationBar.tsx";
 import {OAuthLogin} from "../components/logInButton.tsx";
 import '../styles/login.css'
-import image from "../assets/loginLogo.png";
+import image from "../assets/loginLogo.svg";
 import {CardFlip} from "../components/Credits/cardFlip.tsx";
 
 // import {Separator} from "../components/separator.tsx";
