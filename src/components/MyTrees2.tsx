@@ -8,11 +8,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import {Container} from "react-bootstrap";
-import {tree} from "next/dist/build/templates/app-page";
 import {ImageConversion} from "./ImageConversion.tsx";
-import {LoginError} from "./Errors/LoginError.tsx";
-import {PermissionError} from "./Errors/PermissionError.tsx";
-import {treeId} from "../assets/treeId.ts";
+
 
 interface Tree{
     treeId : string;
@@ -31,7 +28,7 @@ export function MyTreesViewTrees() {
             case null:
                 return <ImageConversion parameter={treeid} />;
             default:
-                return <img src={'data:image/png;base64,' + image64} alt={"No Image Found"} className="tree-preview"></img>
+                return <img src={image64} alt={"No Image Found"} className="tree-picture"></img>
         }
     }
 
@@ -77,11 +74,9 @@ export function MyTreesViewTrees() {
                                         justifyContent: "center",
                                         alignItems: "center",
                                     }}>
-                                        <img src={image} alt={"placeholder"} className={"tree-picture"}></img>
-                                        <div className="tree-preview">
+                                        <div className="tree-container">
                                             {checkForImage(tree.image64, tree.treeId)}
                                         </div>
-                                        {/*<img src={'data:image/png;base64,' + tree.image64} alt={"placeholder"} className="tree-preview"></img>*/}
                                     </div>
                                     <div style={{
                                         display: "flex",
