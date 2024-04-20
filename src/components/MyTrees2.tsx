@@ -1,4 +1,4 @@
-import "../styles/sectionTitle.css"
+import "../styles/sectionsInViewTrees.css"
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {useEffect, useState, } from "react";
@@ -58,7 +58,7 @@ export function MyTreesViewTrees() {
                                         justifyContent: "center",
                                         alignItems: "center",
                                     }}>
-                                        <img src={image} alt={"placeholder"}></img>
+                                        <img src={image} alt={"placeholder"} className={"tree-picture"}></img>
                                     </div>
                                     <div style={{
                                         display: "flex",
@@ -66,7 +66,7 @@ export function MyTreesViewTrees() {
                                         alignItems: "center",
                                         paddingTop: 10
                                     }}>
-                                        <button className=" rounded-2 px-lg-5" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
+                                        <button className="button-view-trees" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
                                     </div>
                                 </div>
 

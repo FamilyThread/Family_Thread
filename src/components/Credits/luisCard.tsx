@@ -51,11 +51,11 @@ export function LuisCard(){
                         Summary
                     </h1>
                     <h3 className={"summary-text"} style={{textAlign: "start"}}>
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Software Engineer B.S.</h3>
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Software Engineer BS</h3>
 
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Applied Mathematics minor.</h3>
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Applied Mathematics minor</h3>
 
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Logic minor.</h3>
+                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Logic minor</h3>
                         <div className={"socialLogosContainer"} style={{marginTop:10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
                             <h1 className={"socialName"}>LuisMed674</h1>

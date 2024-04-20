@@ -1,16 +1,15 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import {MyTreesViewTrees} from "../components/MyTrees2.tsx";
 import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
-// import {RecentTree} from "../components/RecentTree.tsx";
 import {Separator} from "../components/separator.tsx";
-import "../styles/sectionTitle.css"
+import "../styles/sectionsInViewTrees.css"
 
 export function ViewTrees() {
     return (
         <>
 
             <style>
-                {document.body.style.backgroundColor = '#6EA07F'};
+                {document.body.style.backgroundColor = '#e5ded5'};
             </style>
 
             <NavigationBar />
@@ -18,8 +17,6 @@ export function ViewTrees() {
                 <MyTreesViewTrees/>
                 <Separator/>
                 <FeaturedTrees/>
-                {/*<Separator/>*/}
-                {/*<RecentTree/>*/}
             </div>
         </>
     );
