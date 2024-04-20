@@ -25,8 +25,8 @@ export function MyTreesViewTrees() {
 
     function checkForImage(image64, treeid) {
         switch (image64) {
-            case null:
-                return <ImageConversion parameter={treeid} />;
+            case "":
+                return <ImageConversion treeId={treeid} />;
             default:
                 return <img src={image64} alt={"No Image Found"} className="tree-picture"></img>
         }

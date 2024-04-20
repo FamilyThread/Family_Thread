@@ -5,9 +5,7 @@ import { backend_url } from "../config/constant.ts";
 export function ImageConversion(treeID) {
     const [image, setImage] = useState("");
     const [uploadStatus, setUploadStatus] = useState("");
-    const id = treeID;
 
-    console.log(id);
     const handleFileRead = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -28,10 +26,11 @@ export function ImageConversion(treeID) {
             setUploadStatus("Please select an image to upload.");
             return;
         }
+        console.log(treeID);
         try {
-            const response = await axios.post(`${backend_url}/tree/66168ee318880411c453bcde/add-img`, {
+            const response = await axios.post(`${backend_url}/tree/${treeID.treeId}/add-img`, {
                 image64: image
-            });
+            }, {withCredentials: true});
             setUploadStatus("Image uploaded successfully: " + response.data);
         } catch (error) {
             console.error("Error uploading image:", error);
