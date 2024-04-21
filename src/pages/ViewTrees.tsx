@@ -3,6 +3,7 @@ import {MyTreesViewTrees} from "../components/MyTrees2.tsx";
 import {FeaturedTrees} from "../components/FeaturedTrees.tsx";
 import {Separator} from "../components/separator.tsx";
 import "../styles/sectionsInViewTrees.css"
+import {SharedTrees} from "../components/SharedTrees.tsx";
 
 export function ViewTrees() {
     return (
@@ -15,6 +16,8 @@ export function ViewTrees() {
             <NavigationBar />
             <div>
                 <MyTreesViewTrees/>
+                <Separator/>
+                <SharedTrees />
                 <Separator/>
                 <FeaturedTrees/>
             </div>

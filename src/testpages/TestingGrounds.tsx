@@ -4,6 +4,7 @@ import { NavigationBar } from "../components/NavigationBar.tsx";
 import {useEffect} from "react";
 import { Family } from './Familytree.tsx';
 import {MyAccountEditProfile} from "../components/MyAccountEditProfile.tsx";
+import {ImageConversion} from "../components/ImageConversion.tsx";
 
 // import SearchFunction from "../components/SearchPopup.tsx";
 
@@ -39,6 +40,8 @@ export function TestingGrounds() {
             <a href='/myaccounttest'> My Account Backend Test</a><br/>
             <a href='/treefunctiontest'>Tree Function Test</a> <br/>
             <a href='/available-trees'>Available Trees</a>
+
+            <ImageConversion />
 
             <br/>
             <br/>

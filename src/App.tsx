@@ -4,12 +4,9 @@ import {CreateTrees} from "./pages/CreateTrees.tsx";
 import {Backend_MyAccount} from "./pages/Backend_MyAccount.tsx";
 import {Login} from "./pages/Login.tsx";
 import {DisplayTrees} from "./pages/DisplayTrees.tsx";
-import {CreateAEmptyTree} from "./pages/CreateAEmptyTree.tsx";
 import {TestingGrounds} from "./testpages/TestingGrounds.tsx";
 // import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
 import {MyAccount} from "./pages/MyAccount.tsx";
-import {DonaldTemplate} from "./pages/Featured Trees/Donald Duck Family/DonaldTemplate.tsx";
-import {JoestarTemplate} from "./pages/Featured Trees/Joestar Tree/JoestarTemplate.tsx";
 import {ErrorPage} from "./pages/ErrorPage.tsx";
 import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
 import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
@@ -22,12 +19,9 @@ function App() {
                 <Route path="/viewtrees" element={<ViewTrees />}/>
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
-                <Route path="/CreateAEmptyTree" element={<CreateAEmptyTree/>}/>
-                <Route path="/JoestarTemplate" element={<JoestarTemplate/>}/>
                 <Route path="/tests" element={<TestingGrounds />} />
                 <Route path="/createtrees" element={<CreateTrees/>}/>
                 <Route path="/displaytrees/:treeId" element={<DisplayTrees/>}/>
-                <Route path="/DonaldTemplate" element={<DonaldTemplate/>}/>
                 <Route path="/403" element={<ErrorPage />}/>
                 <Route path="*" element={<ErrorPage />}/>
                 <Route path="/error" element={<ErrorPage />} />

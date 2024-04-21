@@ -6,6 +6,7 @@ Login:
     axios:                 npm i axios
     MaterialUI             npm install @mui/material @emotion/react @emotion/styled
     react-crop             npm i react-image-crop --save
+    LZ-String              npm install -g lz-string
 
 
 

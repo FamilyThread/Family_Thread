@@ -9,9 +9,10 @@ import {CardFlip} from "../components/Credits/cardFlip.tsx";
 export function Login() {
     return (
         <>
+
             <div className="top">
                 <OAuthLogin/>
-                <img src={image} alt="Family Thread logo"></img>
+                <img src={image} alt="Family Thread logo" id="login-logo"></img>
                 <h1 className="name">Family Thread</h1>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", paddingTop: 0, paddingBottom: 20}}>
                     <OAuthLogin/>
@@ -26,8 +27,7 @@ export function Login() {
                     <blockquote>
                         <p>
                             The Family Thread is a system software that family members can use to create a family tree.
-                            Unlike
-                            other family tree products, ours allows users to add custom portraits, and work with other
+                            Unlike other family tree products, ours allows users to add custom portraits, and work with other
                             collaborators to create a more accurate representation while being user-friendly and
                             visually appealing.
                         </p>
