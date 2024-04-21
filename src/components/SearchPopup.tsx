@@ -86,11 +86,13 @@ export function SearchPopup() {
             <BootstrapDialog
                 onClose={handleClose}
                 open={open}
-                maxWidth='lg'
+                maxWidth='md'
                 fullWidth
             >
                 <DialogTitle className="search-title">
-                    Search results for: {searchInput}
+                    <p className="search-title">
+                        Search results for: {searchInput}
+                    </p>
                 </DialogTitle>
                 <DialogContent dividers>
                     {filteredTrees.map((tree) => (
@@ -99,6 +101,7 @@ export function SearchPopup() {
                             gutterBottom
                             onClick={() => handleTreeClick(tree.treeId)}
                             style={{ cursor: 'pointer' }}
+                            className=" font-monospace"
                         >
                             {tree.treeName}
                         </Typography>

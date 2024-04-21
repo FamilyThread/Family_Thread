@@ -27,8 +27,7 @@ export function Login() {
                     <blockquote>
                         <p>
                             The Family Thread is a system software that family members can use to create a family tree.
-                            Unlike
-                            other family tree products, ours allows users to add custom portraits, and work with other
+                            Unlike other family tree products, ours allows users to add custom portraits, and work with other
                             collaborators to create a more accurate representation while being user-friendly and
                             visually appealing.
                         </p>
