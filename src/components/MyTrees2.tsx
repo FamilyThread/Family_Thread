@@ -56,12 +56,12 @@ export function MyTreesViewTrees() {
 
     };
     if (treeArray.length >= 5){
-    return (
-        <>
-            <Container>
-                <h2 style={{marginTop: 90, marginBottom: 20}}>
-                    My Trees
-                </h2>
+        return (
+            <>
+                <Container>
+                    <h2 style={{marginTop: 90, marginBottom: 20}}>
+                        My Trees
+                    </h2>
                     <div>
                         <Slider {...settings}>
                             {treeArray.map((tree => (
@@ -87,9 +87,9 @@ export function MyTreesViewTrees() {
                             )))}
                         </Slider>
                     </div>
-            </Container>
-        </>
-    );
+                </Container>
+            </>
+        );
     }
     if ((treeArray.length >=1) && (treeArray.length <=4) ){
         return (

@@ -51,9 +51,9 @@ export function SoneyCard(){
                         Summary
                     </h1>
                     <div className={"summary-text"}>
-                        Computer Science as a passion.
+                        <p className={"summary-text"}>Computer Science as a passion.</p>
 
-                        Designing as a craftsmanship.
+                        <p className={"summary-text"}>Designing as a craftsmanship.</p>
                         <div className={"socialLogosContainer"} style={{marginTop:10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
                             <h1 className={"socialName"}>sonephyo</h1>

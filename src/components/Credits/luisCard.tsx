@@ -50,12 +50,12 @@ export function LuisCard(){
                     <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3 className={"summary-text"} style={{textAlign: "start"}}>
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Software Engineer BS</h3>
+                    <div className={"summary-text"}>
+                        <p className={"summary-text"}>Software Engineer BS.</p>
 
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Applied Mathematics minor</h3>
+                        <p className={"summary-text"}>Applied Mathematics minor.</p>
 
-                        <h3 className={"summary-text"} style={{textAlign: "end"}}>Logic minor</h3>
+                        <p className={"summary-text"}>Logic minor.</p>
                         <div className={"socialLogosContainer"} style={{marginTop:10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
                             <h1 className={"socialName"}>LuisMed674</h1>
@@ -64,7 +64,7 @@ export function LuisCard(){
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
                             <h1 className={"socialName"} style={{marginTop: 24}}>Luis Medina</h1>
                         </div>
-                    </h3>
+                    </div>
                 </div>
             </div>
 
