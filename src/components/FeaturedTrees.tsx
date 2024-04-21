@@ -44,33 +44,33 @@ export function FeaturedTrees() {
         slidesToScroll: 1,
         adaptiveHeight: true,
     };
-        return (
-            <Container>
-                <h2>Featured Trees</h2>
-                <Slider {...settings}>
-                    {treeArray.map((tree => (
-                        <div>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                            }}>
-                                <div className="tree-container">
-                                    {checkForImage(tree.image64, tree.treeId)}
-                                </div>
-                            </div>
-                            <div style={{
-                                display: "flex",
-                                justifyContent: "center",
-                                alignItems: "center",
-                                paddingTop: 10
-                            }}>
-                                <button className="button-view-trees"
-                                        onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
+
+    return (
+        <Container>
+            <h2>Featured Trees</h2>
+            <Slider {...settings}>
+                {treeArray.map((tree => (
+                    <div>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}>
+                            <div className="tree-container">
+                                {checkForImage(tree.image64, tree.treeId)}
                             </div>
                         </div>
-                    )))}
-                </Slider>
-            </Container>
-        );
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            paddingTop: 10
+                        }}>
+                            <button className="button-view-trees" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
+                        </div>
+                    </div>
+                )))}
+            </Slider>
+        </Container>
+    );
 }

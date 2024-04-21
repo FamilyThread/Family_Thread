@@ -7,7 +7,7 @@ import {useNavigate} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-import {Container} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import {ImageConversion} from "./ImageConversion.tsx";
 
 
@@ -55,7 +55,7 @@ export function MyTreesViewTrees() {
         slidesToScroll: 1,
 
     };
-
+    if (treeArray.length >= 5){
     return (
         <>
             <Container>
@@ -90,4 +90,72 @@ export function MyTreesViewTrees() {
             </Container>
         </>
     );
+    }
+    if ((treeArray.length >=1) && (treeArray.length <=4) ){
+        return (
+            <Container>
+                <h2 style={{marginTop: 90, marginBottom: 20}}>
+                    My Trees
+                </h2>
+                <div>
+                    <div>
+                        <Row>
+                            {treeArray.map((tree => (
+                                <Col>
+                                    <div>
+                                        <div style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                        }}>
+                                            {checkForImage(tree.image64, tree.treeId)}
+                                        </div>
+                                        <div style={{
+                                            display: "flex",
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            paddingTop: 10
+                                        }}>
+                                            <button className="button-view-trees"
+                                                    onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
+                                        </div>
+                                    </div>
+                                </Col>
+                            )))}
+                        </Row>
+                    </div>
+                </div>
+            </Container>
+        );
+    }
+    if (treeArray.length < 1){
+        return (
+            <Container>
+                <h2 style={{marginTop: 90, marginBottom: 20}}>
+                    My Trees
+                </h2>
+
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    paddingTop: 10
+                }}>
+                    <h1>You should make some trees!! Head over to the Create Trees tab!</h1>
+                </div>
+
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                }}>
+                    <a href={"/createtrees"}>
+                        <button className="button-view-trees" >
+                            Create Trees
+                        </button>
+                    </a>
+                </div>
+            </Container>
+        );
+    }
 }

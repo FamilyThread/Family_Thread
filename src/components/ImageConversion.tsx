@@ -39,7 +39,7 @@ export function ImageConversion(treeID) {
     };
 
     return (
-        <div className="bg-white align-content-center justify-content-center tree-picture">
+        <div className="bg-white align-content-center justify-content-center tree-picture" style={{width: 300, height:250}}>
             <div className="align-content-center justify-content-center text-center">
                 <p>{uploadStatus || "No Image Loaded"}</p>
                 <input
