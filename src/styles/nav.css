@@ -18,6 +18,8 @@ body {
     padding: 1rem 2rem 0.5rem 3rem;
     height: 7rem;
     position: sticky;
+    /*z-index stops make the nav bar to be completely on top of all the other elements, preventing overlap*/
+    z-index: 9999999;
     left: 0;
     top: 0;
     right: 0;
@@ -27,6 +29,7 @@ body {
     margin-left: 20px;
     max-height: 80px;
     max-width: 100px;
+    /*position: ;*/
     /*filter: drop-shadow(0 0 5px #79FFDE);*/
 }
 
@@ -51,7 +54,7 @@ body {
 }
 
 .nav li:hover {
-    color:#5a856a;
+    color: #4e672c;
 }
 
 .nav input {

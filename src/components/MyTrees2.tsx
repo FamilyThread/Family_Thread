@@ -62,7 +62,6 @@ export function MyTreesViewTrees() {
                 <h2 style={{marginTop: 90, marginBottom: 20}}>
                     My Trees
                 </h2>
-                <div>
                     <div>
                         <Slider {...settings}>
                             {treeArray.map((tree => (
@@ -72,7 +71,7 @@ export function MyTreesViewTrees() {
                                         justifyContent: "center",
                                         alignItems: "center",
                                     }}>
-                                        <div className="tree-container">
+                                        <div className="tree-container" >
                                             {checkForImage(tree.image64, tree.treeId)}
                                         </div>
                                     </div>
@@ -80,7 +79,7 @@ export function MyTreesViewTrees() {
                                         display: "flex",
                                         justifyContent: "center",
                                         alignItems: "center",
-                                        paddingTop: 10
+                                        paddingTop: 10,
                                     }}>
                                         <button className="button-view-trees" onClick={() => handleTreeClick(tree.treeId)}>{tree.treeName}</button>
                                     </div>
@@ -88,7 +87,6 @@ export function MyTreesViewTrees() {
                             )))}
                         </Slider>
                     </div>
-                </div>
             </Container>
         </>
     );
