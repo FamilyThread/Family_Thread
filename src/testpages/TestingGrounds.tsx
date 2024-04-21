@@ -9,14 +9,14 @@ import {ImageConversion} from "../components/ImageConversion.tsx";
 // import SearchFunction from "../components/SearchPopup.tsx";
 
 export function TestingGrounds() {
-    // useEffect(() => {
-    //     const familyTreeContainer = document.getElementById('tree');
-    //     if (familyTreeContainer) {
-    //         Family(familyTreeContainer);
-    //     } else {
-    //         console.error("Element with ID 'tree' not found.");
-    //     }
-    // }, []);
+    useEffect(() => {
+        const familyTreeContainer = document.getElementById('tree');
+        if (familyTreeContainer) {
+            Family(familyTreeContainer);
+        } else {
+            console.error("Element with ID 'tree' not found.");
+        }
+    }, []);
 
     return (
         <>

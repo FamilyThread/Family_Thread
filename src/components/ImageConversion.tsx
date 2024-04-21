@@ -1,6 +1,6 @@
-import { useState } from "react";
+import {useState} from "react";
 import axios from "axios";
-import { backend_url } from "../config/constant.ts";
+import {backend_url} from "../config/constant.ts";
 
 export function ImageConversion(treeID) {
     const [image, setImage] = useState("");
@@ -39,14 +39,18 @@ export function ImageConversion(treeID) {
     };
 
     return (
-        <div className="white-box flex-column text-center h-100">
-            <p>{uploadStatus || "No Image Loaded"}</p>
-            <input
-                accept="image/*"
-                type="file"
-                onChange={handleFileRead}
-            />
-            <button onClick={handleSubmit}>Upload Image</button>
+        <div className="bg-white align-content-center justify-content-center tree-picture">
+            <div className="align-content-center justify-content-center text-center">
+                <p>{uploadStatus || "No Image Loaded"}</p>
+                <input
+                    accept="image/*"
+                    type="file"
+                    onChange={handleFileRead}
+                    className="w-75"
+                />
+                <br />
+                <button onClick={handleSubmit}>Upload Image</button>
+            </div>
         </div>
     );
 }

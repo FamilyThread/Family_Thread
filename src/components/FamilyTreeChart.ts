@@ -3,6 +3,7 @@ import FamilyTree from "@balkangraph/familytree.js";
 import {removeNode, sendNewNodes, updateNode} from "../utils/nodeOperations.ts";
 import {backend_url} from "../config/constant.ts";
 
+
 interface ChartProps {
     nodes: any[];
     permissions: {
@@ -37,7 +38,7 @@ export default class FamilyTreeChart extends Component<ChartProps> {
                 mouseScrool: FamilyTree.action.none,
                 nodes: this.props.nodes,
                 enableSearch: false,
-                // template: "john",
+                template: "hugo",
                 nodeMouseClick: FamilyTree.action.details,
 
                 // editForm: {titleBinding: "Name", photoBinding: "ImgUrl"},

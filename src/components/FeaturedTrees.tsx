@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import Slider from 'react-slick';
 import { Container } from 'react-bootstrap';
 import 'slick-carousel/slick/slick.css';
@@ -21,9 +21,8 @@ export function FeaturedTrees() {
                 return <img src={image64} alt={"No Image Found"} className="tree-picture"></img>
         }
     }
-
     const getiDs = async () => {
-        const tree = await axios.get<{ treeId: string; treeName: string; image64: string }[]>(backend_url + "/user/trees/shared", { withCredentials: true });
+        const tree = await axios.get<{ treeId: string; treeName: string; image64: string }[]>(backend_url + "/user/trees/ft", { withCredentials: true });
         const treeData = tree.data;
         setTreeData(treeData);
         console.log(treeData);
@@ -43,7 +42,7 @@ export function FeaturedTrees() {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
     };
 
     return (

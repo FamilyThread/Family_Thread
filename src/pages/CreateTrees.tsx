@@ -1,20 +1,22 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
-import {FormEvent, useEffect, useState} from "react";
+import React, {FormEvent, useEffect, useState} from "react";
 import {Separator} from "../components/separator.tsx";
 import importLogo from "../assets/import.png";
 import "../styles/createTrees.css";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 
-
+export const TemplateContent = React.createContext();
 
 export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
     const [importValue, setImportValue] = useState("");
+    const [template, setTemplate] = useState("hugo");
     const navigate = useNavigate();
 
+    console.log(template);
 
     const createNewTree = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -49,7 +51,7 @@ export function CreateTrees() {
                         <h5>
                             Choose a tree name:
                         </h5>
-                        <div className>
+                        <div>
                             <form onSubmit={(event) => {
                                 createNewTree(event)
                             }}>
@@ -67,17 +69,6 @@ export function CreateTrees() {
                         </div>
                     </div>
 
-                    <label className="rect-container">
-                        <h5>
-                            Import a tree:
-                        </h5>
-                        <button className="bg-white border-0"> Choose file...
-                            <input value={importValue} type="file"
-                                   style={{display: 'none'}}/>
-                        </button>
-
-
-                    </label>
                 </div>
                 <Separator/>
 
@@ -88,7 +79,7 @@ export function CreateTrees() {
                             <div className="white-box">
                                 No Preview Available
                             </div>
-                            <div className="box-caption">
+                            <div className="box-caption" onClick={() => setTemplate("sriniz")}>
                                 Template 1
                             </div>
                         </div>
