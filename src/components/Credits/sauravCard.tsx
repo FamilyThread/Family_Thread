@@ -1,6 +1,9 @@
 import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
+import image from "../../assets/cardImages/sauravImage.jpg";
+import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
+import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
 
 export function SauravCard(){
 
@@ -12,14 +15,17 @@ export function SauravCard(){
 
 
     return(
-
         <ReactCardFlip flipDirection={"horizontal"} isFlipped={isFlipped}>
             <div style={{paddingTop: 10, paddingBottom: 10}}>
 
                 {/*FRONT OF THE CARD*/}
                 <div className={"card-front"}>
-                    {/*<img src={crisImage} alt="picture"></img>*/}
-                    <h1 className={"memberName"}>
+                    <div className={"image-container"}>
+                        <div className="image">
+                            <img src={image} alt="Soney's picture" className="img" ></img>
+                        </div>
+                    </div>
+                    <h1 className={"memberName"} >
                         Saurav Lamichhane
                     </h1>
                     <h2 className={"email"}>
@@ -40,17 +46,30 @@ export function SauravCard(){
             <div style={{paddingTop: 10, paddingBottom: 10}}>
                 {/*BACK OF THE CARD*/}
                 <div className={"card-back"} onClick={flipCard}>
-                    <h1>
+                    <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3>
-                        dksjvn
-                    </h3>
+                    <div className={"summary-text"}>
+                        <p className={"summary-text"}>Computer Science BS.</p>
+
+                        <p className={"summary-text"}>Graphic Design Minor.</p>
+
+                        <p className={"summary-text"}>Java Enthusiast (both types).</p>
+                        <div className={"socialLogosContainer"} style={{marginTop:10}}>
+                            <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
+                            <h1 className={"socialName"} >Saurav L</h1>
+                        </div>
+                        <div className={"socialLogosContainer"}>
+                            <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>Saurav Lamichhane</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </ReactCardFlip>
 
 
-    );
+
+);
 }

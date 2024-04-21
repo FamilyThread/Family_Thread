@@ -1,6 +1,8 @@
 import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
+import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
+import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
 
 export function CrisCard(){
 
@@ -40,12 +42,24 @@ export function CrisCard(){
             <div style={{paddingTop: 10, paddingBottom: 10}}>
                 {/*BACK OF THE CARD*/}
                 <div className={"card-back"} onClick={flipCard}>
-                    <h1>
+                    <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3>
-                        dksjvn
-                    </h3>
+                    <div className={"summary-text"}>
+                        <p className={"summary-text"}>Computer Science BS.</p>
+
+                        <p className={"summary-text"}>Graphic Design Minor.</p>
+
+                        <p className={"summary-text"}>Mathematics Minor.</p>
+                        <div className={"socialLogosContainer"} style={{marginTop: 10}}>
+                            <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
+                            <h1 className={"socialName"}>Crislenny Uceta</h1>
+                        </div>
+                        <div className={"socialLogosContainer"}>
+                            <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>Crislenny Uceta</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 
