@@ -104,100 +104,95 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
     }, []);
 
     return (
-     <>
+        <>
 
-         <div className="shareButtonContainer">
-             <StyledButton onClick={togglePopUp}>Share</StyledButton>
+            <div className="shareButtonContainer">
+                <StyledButton onClick={togglePopUp}>Share</StyledButton>
+                <Snackbar
+                    anchorOrigin={{vertical: "bottom" ,
+                        horizontal: "center"}}
+                    open={snackBarOpen}
+                    autoHideDuration={6000}
+                    onClose={snackBarClose}
+                    message={shareMessageResponse}
+                    action={action}
+                />
+                {popup && (
+                    <div className="share-popup">
 
-             {popup && (
-                 <div className="share-popup">
+                        <div style={{
+                            width: "100%",
+                            display: "flex",
+                            justifyContent: "right"
 
-                     <div style={{
-                         width: "100%",
-                         display: "flex",
-                         justifyContent: "right"
-
-                     }}>
-                         <IconButton
-                             onClick={() => setPopup(false)}
-                             style={{
-                                 color: "white"
-                             }}
-                         >
-                             <CloseIcon
-                             />
-                         </IconButton>
-                     </div>
+                        }}>
+                            <IconButton
+                                onClick={() => setPopup(false)}
+                                style={{
+                                    color: "white"
+                                }}
+                            >
+                                <CloseIcon
+                                />
+                            </IconButton>
+                        </div>
 
 
-                     <Form style={{
-                         display: "flex",
-                         flexDirection: "column",
-                         gap: "1rem"
-                     }} onSubmit={handleSubmit}>
-                         <FormGroup>
-                             <Form.Label>Email Address</Form.Label>
-                             <Form.Control type="email"
-                                           name="email"
-                                           placeholder="enter email"
-                                           value={email}
-                                           onChange={e => setEmail(e.target.value)}
-                                           required/>
-                         </FormGroup>
+                        <Form style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "1rem"
+                        }} onSubmit={handleSubmit}>
+                            <FormGroup>
+                                <Form.Label>Email Address</Form.Label>
+                                <Form.Control type="email"
+                                              name="email"
+                                              placeholder="enter email"
+                                              value={email}
+                                              onChange={e => setEmail(e.target.value)}
+                                              required/>
+                            </FormGroup>
 
-                         <Form.Group controlId="formBasicRole">
-                             <Form.Label>Permission Role</Form.Label>
-                             <Form.Select
-                                 name="role"
-                                 value={role}
-                                 onChange={e => setRole(e.target.value)}
+                            <Form.Group controlId="formBasicRole">
+                                <Form.Label>Permission Role</Form.Label>
+                                <Form.Select
+                                    name="role"
+                                    value={role}
+                                    onChange={e => setRole(e.target.value)}
 
-                                 required>
-                                 <option value="">Select role</option>
-                                 <option value="Editor">Editor</option>
-                                 <option value="Viewer">Viewer</option>
-                             </Form.Select>
-                         </Form.Group>
-                         <OwnerEditUsersDialog treeId={treeId}/>
+                                    required>
+                                    <option value="">Select role</option>
+                                    <option value="Editor">Editor</option>
+                                    <option value="Viewer">Viewer</option>
+                                </Form.Select>
+                            </Form.Group>
+                            <OwnerEditUsersDialog treeId={treeId}/>
 
-                         <div style={{
-                             display: "flex",
-                             flexDirection: "row",
-                             justifyContent: "center",
-                             alignContent: "center"
-                         }}>
-                             <StyledButton
-                                 type="submit"
-                                 style = {{
-                                     display: "flex",
-                                     justifyContent: "center",
-                                     margin: "0"
-                                 }}
-                             >
-                                 Submit
-                             </StyledButton>
-                             {isLoading && <CircularProgress/>}
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "row",
+                                justifyContent: "center",
+                                alignContent: "center"
+                            }}>
+                                <StyledButton
+                                    type="submit"
+                                    style = {{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        margin: "0"
+                                    }}
+                                >
+                                    Submit
+                                </StyledButton>
+                                {isLoading && <CircularProgress/>}
 
-                         </div>
+                            </div>
 
-                     </Form>
+                        </Form>
+                    </div>
+                )}
 
-                     <Snackbar
-                         anchorOrigin={{vertical: "top" ,
-                             horizontal: "center"}}
-                         open={snackBarOpen}
-                         autoHideDuration={6000}
-                         onClose={snackBarClose}
-                         message={shareMessageResponse}
-                         action={action}
-                         style={{
-                             zIndex: 1
-                         }}
-                     />
-                 </div>
-             )}
-
-         </div>
-     </>
+            </div>
+        </>
     )
 }

@@ -17,8 +17,6 @@ import DialogContent from "@mui/material/DialogContent";
 import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
 import {backend_url} from "../../config/constant.ts";
 import axios from "axios";
-import DialogActions from "@mui/material/DialogActions";
-import {c} from "vite/dist/node/types.d-FdqQ54oU";
 
 interface IndividualData {
     name: string;
