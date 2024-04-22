@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {
     Button,
     DialogContentText,
     IconButton,
     MenuItem,
-    Select,
+    Select, Snackbar,
     Table,
     TableBody,
     TableCell,
@@ -18,6 +18,7 @@ import {CloseIcon} from "next/dist/client/components/react-dev-overlay/internal/
 import {backend_url} from "../../config/constant.ts";
 import axios from "axios";
 import DialogActions from "@mui/material/DialogActions";
+import {c} from "vite/dist/node/types.d-FdqQ54oU";
 
 interface IndividualData {
     name: string;
@@ -36,10 +37,11 @@ interface UserPermissionData {
 export function OwnerEditUsersDialog({ treeId }: { treeId: string }) {
 
     const [open, setOpen] = useState<boolean>(false);
-    const [confirmDialog, setConfirmDialog] = useState<boolean>(false);
 
     const [allUsers, setAllUsers] = useState<IndividualData[]>([]);
 
+    const [snackBarOpen, setSnackBarOpen] = useState<boolean>(false);
+    const [shareMessageResponse, setShareMessageResponse] = useState<string>("");
 
 
 
@@ -72,6 +74,8 @@ export function OwnerEditUsersDialog({ treeId }: { treeId: string }) {
         const indexToChange = allUsers.findIndex(element => element.userId === userId);
         const changedValue = allUsers.find(element => element.userId === userId);
 
+        console.log(changedValue)
+
 
         if (indexToChange !== -1) {
             const usersUpdate = [... allUsers];
@@ -98,19 +102,65 @@ export function OwnerEditUsersDialog({ treeId }: { treeId: string }) {
         console.log("Updated allUsers:", allUsers); // This logs whenever allUsers changes
     }, [allUsers]);
 
-    function openConfirmDialog() {
-        setConfirmDialog(true);
+    async function removeUser(userId:string) {
+        const indexToRemove = allUsers.findIndex(element => element.userId === userId);
+        const changedValue = allUsers.find(element => element.userId === userId);
+
+
+        const response = await axios.post(
+            backend_url + "/share/" + treeId + "/remove-user",
+            changedValue,
+            {withCredentials:true}
+        )
+
+
+        setAllUsers(currentItems => [
+            ...currentItems.slice(0, indexToRemove),
+            ...currentItems.slice(indexToRemove+1)
+        ]);
+
+
+
+        setSnackBarOpen(true);
+        setShareMessageResponse(response.data);
+
+        console.log(response.data);
+
     }
-    
-    function closeConfirmDialog() {
-        setConfirmDialog(false);
+
+    const snackBarClose = () => {
+        setSnackBarOpen(false);
     }
+
+    const action = (
+        <React.Fragment>
+            <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={snackBarClose}
+            >
+                <CloseIcon/>
+            </IconButton>
+        </React.Fragment>
+    );
+
+
 
     return (
         <>
             <Button variant="outlined" onClick={handleClickOpen}>
                 Edit Users
             </Button>
+            <Snackbar
+                anchorOrigin={{vertical: "bottom" ,
+                    horizontal: "center"}}
+                open={snackBarOpen}
+                autoHideDuration={6000}
+                onClose={snackBarClose}
+                message={shareMessageResponse}
+                action={action}
+            />
             <Dialog
                 open={open}
                     >
@@ -154,29 +204,8 @@ export function OwnerEditUsersDialog({ treeId }: { treeId: string }) {
                                                     <MenuItem value={"VIEWER"}>Viewer</MenuItem>
                                                 </Select>
                                                 <TableCell>
-                                                    <IconButton onClick={openConfirmDialog}>
+                                                    <IconButton onClick={() => removeUser(data.userId)}>
                                                         <CloseIcon/>
-                                                        {/*<Dialog*/}
-                                                        {/*    open={confirmDialog}*/}
-                                                        {/*    aria-labelledby="alert-dialog-title"*/}
-                                                        {/*    aria-describedby="alert-dialog-description"*/}
-                                                        {/*>*/}
-                                                        {/*    <DialogTitle id="alert-dialog-title">*/}
-                                                        {/*        {"Use Google's location service?"}*/}
-                                                        {/*    </DialogTitle>*/}
-                                                        {/*    <DialogContent>*/}
-                                                        {/*        <DialogContentText id="alert-dialog-description">*/}
-                                                        {/*            Let Google help apps determine location. This means sending anonymous*/}
-                                                        {/*            location data to Google, even when no apps are running.*/}
-                                                        {/*        </DialogContentText>*/}
-                                                        {/*    </DialogContent>*/}
-                                                        {/*    <DialogActions>*/}
-                                                        {/*        <Button onClick={() => setConfirmDialog(false)}>Disagree</Button>*/}
-                                                        {/*        <Button onClick={closeConfirmDialog} autoFocus>*/}
-                                                        {/*            Agree*/}
-                                                        {/*        </Button>*/}
-                                                        {/*    </DialogActions>*/}
-                                                        {/*</Dialog>*/}
                                                     </IconButton>
                                                 </TableCell>
                                             </TableRow>

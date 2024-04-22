@@ -108,15 +108,7 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
 
          <div className="shareButtonContainer">
              <StyledButton onClick={togglePopUp}>Share</StyledButton>
-             <Snackbar
-                 anchorOrigin={{vertical: "bottom" ,
-                     horizontal: "center"}}
-                 open={snackBarOpen}
-                 autoHideDuration={6000}
-                 onClose={snackBarClose}
-                 message={shareMessageResponse}
-                 action={action}
-             />
+
              {popup && (
                  <div className="share-popup">
 
@@ -189,6 +181,19 @@ export function SharePopUpBox({ treeId }: { treeId: string }) {
                          </div>
 
                      </Form>
+
+                     <Snackbar
+                         anchorOrigin={{vertical: "top" ,
+                             horizontal: "center"}}
+                         open={snackBarOpen}
+                         autoHideDuration={6000}
+                         onClose={snackBarClose}
+                         message={shareMessageResponse}
+                         action={action}
+                         style={{
+                             zIndex: 1
+                         }}
+                     />
                  </div>
              )}
 
