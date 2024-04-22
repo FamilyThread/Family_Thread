@@ -68,8 +68,5 @@ export function SauravCard(){
             </div>
 
         </ReactCardFlip>
-
-
-
-);
+    );
 }
