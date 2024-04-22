@@ -1,19 +1,77 @@
 
 * {
-    box-sizing: border-box;
+/*box-sizing: border-box;*/
 }
 
 .settingsContainer {
-    width: 1000px;
-    height: 500px;
+    width: 404px;
+    height: 95px;
     background-color: lightgray;
+    border-style: none;
+    border-radius: 10px;
 }
 
+.containerHeaderSettings {
+    position: relative;
+    font-size: 25px;
+    padding: 5px;
+    width: 400px;
+    height: 55px;
+    background-color: #a6a6a6;
+    border-style: solid;
+    border-color: grey;
+    border-width: 3px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-left: -16px;
+    margin-top: -54px;
+}
+
+.containerTextSettings{
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.boxDetailsSettings{
+    height: 25px;
+    width: inherit;
+    background-color: #a6a6a6;
+    margin-left: 110px;
+    margin-top: -25px;
+}
+
+.boxDetailsShortSettings{
+    height: 25px;
+    width: inherit;
+    background-color: #a6a6a6;
+    margin-left: 135px;
+    margin-top: -25px;
+}
+
+
 .btnOnPageSetting{
-    background-color: #5a856a;
+    background-color: lightgrey;
     border: 0;
     font-size: 20px;
-    padding: 8px;
-    margin-bottom: 20px;
-    margin-top: 20px;
+}
+
+.closeWindowBtnCont{
+    font-size: 30px;
+}
+
+.closeWindowBtnSettings{
+    /* radius is set for edit profile/profile settings */
+    border-style: solid;
+    background-color: #a6a6a6;
+    border-top-right-radius: 11px;
+    border-color: grey;
+    border-width: 2px;
+    height: 53px;
+    width: 63px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 143px;
+    margin-top: -7px;
+    position: absolute;
 }

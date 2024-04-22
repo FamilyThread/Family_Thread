@@ -19,11 +19,10 @@
 }
 
 .options{
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    border-radius: 8px;
     margin-top: 45px;
     margin-left: 150px;
-    height: 315px;
+    height: 250px;
     width: 445px;
     padding: 10px;
     background-color: lightgrey; /* previous: #5a856a */
@@ -31,8 +30,8 @@
 
 .header-options{
     color: white;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     border-width: 1px;
     background-color: #5a856a; /* previous: #073f3e */
     height: 65px;

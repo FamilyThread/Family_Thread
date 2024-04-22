@@ -4,6 +4,7 @@ import { NavigationBar } from "../components/NavigationBar.tsx";
 import {useEffect} from "react";
 import { Family } from './Familytree.tsx';
 import {MyAccountEditProfile} from "../components/MyAccountEditProfile.tsx";
+import {MyAccountSettings} from "../components/MyAccountSettings.tsx";
 
 // import SearchFunction from "../components/SearchPopup.tsx";
 
@@ -45,6 +46,7 @@ export function TestingGrounds() {
             <br/>
 
             <MyAccountEditProfile/>
+            <MyAccountSettings/>
 
         </>
     );

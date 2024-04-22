@@ -15,13 +15,23 @@ export function MyAccountSettings() {
 
     return (
         <>
-            <button className="btnOnPageSetting" onClick={handleClickOpen}>Open</button> {/* open */}
+            <button className="btnOnPageSetting" onClick={handleClickOpen}>Account Settings</button> {/* open */}
 
             <dialog className="settingsContainer" open={open} onClose={handleClose}>
+                {/* header */}
+                <div className="containerHeader">Account Settings
+                    <button className="closeWindowBtnSettings" onClick={handleClose}>X</button>
+                </div>
 
+                <div className="containerTextSettings">Delete Account
+                </div>
+
+
+                {/* end container */}
             </dialog>
 
-            <button className="btnOnPageSetting" onClick={handleClose}>Close</button> {/* close */}
+            <button className="btnOnPageSetting" onClick={handleClose}></button>
+            {/* close */}
 
         </>
     );

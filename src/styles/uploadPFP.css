@@ -1,0 +1,84 @@
+
+* {
+    /*box-sizing: border-box;*/
+}
+
+.uploadPFPContainer {
+    width: 350px;
+    height: 450px;
+    background-color: lightgray;
+    border-style: none;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-top: -125px;
+}
+
+.PFPHeader {
+    position: relative;
+    font-size: 25px;
+    padding: 5px;
+    width: 347px;
+    height: 55px;
+    background-color: #a6a6a6;
+    border-style: solid;
+    border-color: grey;
+    border-width: 3px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-left: -16px;
+    margin-top: -54px;
+}
+
+.closeWindowBtnPFP{
+    /* radius is set for edit profile/profile settings */
+    border-style: solid;
+    background-color: #a6a6a6;
+    border-top-right-radius: 11px;
+    border-color: grey;
+    border-width: 2px;
+    height: 53px;
+    width: 63px;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 82px;
+    margin-top: -7px;
+    position: absolute;
+}
+
+.adjustPFP{
+    margin-left: 70px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 175px;
+    height: 250px;
+}
+
+.containerTextPFP{
+    font-size: 20px;
+    padding: 5px;
+}
+
+.btnsPFP{
+    font-size: 15px;
+    text-align: center;
+}
+
+.saveBtnUploadPFP{
+    border-style: solid;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    background-color: green;
+
+}
+
+.cancelBtnUploadPFP{
+    border-style: solid;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    background-color: grey;
+    margin-top: 15px;
+    margin-left: -250px;
+    margin-bottom: 200px;
+}

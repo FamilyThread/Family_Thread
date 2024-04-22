@@ -1,13 +1,18 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
+import temppfp from '../assets/placeholderpfp.png';
+import "../styles/myaccount.css";
+import {MyAccountEditProfile} from "../components/MyAccountEditProfile.tsx";
+import {MyAccountSettings} from "../components/MyAccountSettings.tsx";
+
+/*
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {useEffect} from "react";
 import {useNavigate} from "react-router-dom";
-import temppfp from '../assets/placeholderpfp.png';
-import "../styles/myaccount.css";
-
+ */
 
 export function MyAccount() {
 
+    /*
         const navigate = useNavigate();
 
 
@@ -19,7 +24,7 @@ export function MyAccount() {
             })
 
         }, []);
-
+*/
     return (
 
         <>
@@ -51,13 +56,10 @@ export function MyAccount() {
                 <div className="options">
                     <div className="header-options">Options</div>
                     <div className="optionstxt">
-                        <a href="/MyAccountEditProfile">Edit Profile</a> {/* popup */}
+                        <MyAccountEditProfile/>{/* popup */}
                     </div>
                     <div className="optionstxt">
-                        <a href="/myaccountsettings">Account Settings</a> {/* popup */}
-                    </div>
-                    <div className="optionstxt">
-                        <a href="/mytreesviewtrees">View My Trees</a> {/* page */}
+                        <MyAccountSettings/> {/* popup */}
                     </div>
                 </div>
             </div>
