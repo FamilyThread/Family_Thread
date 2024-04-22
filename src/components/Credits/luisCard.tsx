@@ -5,16 +5,16 @@ import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
 import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
 import image from "../../assets/cardImages/luisImage.jpg"
 
-export function LuisCard(){
+export function LuisCard() {
 
     const [isFlipped, setIsFlipped] = useState(false)
 
-    function flipCard(){
+    function flipCard() {
         setIsFlipped(!isFlipped);
     }
 
 
-    return(
+    return (
 
         <ReactCardFlip flipDirection={"horizontal"} isFlipped={isFlipped}>
             <div style={{paddingTop: 10, paddingBottom: 10}}>
@@ -23,7 +23,7 @@ export function LuisCard(){
                 <div className={"card-front"}>
                     <div className={"image-container"}>
                         <div className="image">
-                            <img src={image} alt="Soney's picture" className="img" ></img>
+                            <img src={image} alt="Soney's picture" className="img"></img>
                         </div>
                     </div>
                     <h1 className={"memberName"}>
@@ -50,13 +50,14 @@ export function LuisCard(){
                     <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <div className={"summary-text"}>
+
+                    <div className={"summary-text"} style={{textAlign: "start"}}>
                         <p className={"summary-text"}>Software Engineer BS.</p>
 
                         <p className={"summary-text"}>Applied Mathematics minor.</p>
 
                         <p className={"summary-text"}>Logic minor.</p>
-                        <div className={"socialLogosContainer"} style={{marginTop:10}}>
+                        <div className={"socialLogosContainer"} style={{marginTop: 10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
                             <h1 className={"socialName"}>LuisMed674</h1>
                         </div>
