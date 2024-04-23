@@ -4,13 +4,12 @@
 
 import {backend_url} from "../config/constant.ts";
 import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import "../styles/login.css";
+import {NavigationBar} from "./NavigationBar.tsx";
 
 export function OAuthLogin() {
     const [logInStatus, setLogInStatus] = useState(false);
-    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -18,9 +17,9 @@ export function OAuthLogin() {
             try {
                 const isLoggedIn = await checkUserLogInStatus();
                 setLogInStatus(isLoggedIn);
-                if (logInStatus) {
-                    navigate("/viewtrees")
-                }
+                // if (logInStatus) {
+                //     navigate("/viewtrees")
+                // }
             } catch (error) {
                 console.error("Error checking login status:", error);
             }
@@ -33,7 +32,7 @@ export function OAuthLogin() {
     return (
         <>
             {logInStatus ?
-                <p>Already logged in</p>
+                <NavigationBar />
                 :
                 <>
                     {/*<div className="login-container">*/}

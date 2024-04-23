@@ -28,6 +28,7 @@ export function ImageConversion(treeID) {
         }
         console.log(treeID);
         try {
+            console.log(image);
             const response = await axios.post(`${backend_url}/tree/${treeID.treeId}/add-img`, {
                 image64: image
             }, {withCredentials: true});
