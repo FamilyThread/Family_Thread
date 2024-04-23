@@ -33,7 +33,7 @@ export function NavigationBar() {
                     <li><a href="/myaccount">My Account</a></li>
                     <li><a href="/viewtrees">View Trees</a></li>
                     <li><a href="/createtrees">Create Trees</a></li>
-                    <li><a href="/">About Us</a></li>
+                    <li><a href="/aboutus">About Us</a></li>
                 </ul>
                 <div className="search-container">
                     <SearchPopup />

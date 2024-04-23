@@ -2,7 +2,6 @@ import {Routes, Route} from "react-router-dom"
 import {ViewTrees} from "./pages/ViewTrees.tsx";
 import {CreateTrees} from "./pages/CreateTrees.tsx";
 import {Backend_MyAccount} from "./pages/Backend_MyAccount.tsx";
-import {Login} from "./pages/Login.tsx";
 import {DisplayTrees} from "./pages/DisplayTrees.tsx";
 import {TestingGrounds} from "./testpages/TestingGrounds.tsx";
 // import {CreateTreeTest} from "./testpages/CreateTreeTest.tsx";
@@ -11,11 +10,13 @@ import {ErrorPage} from "./pages/ErrorPage.tsx";
 import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
 import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
 import {SharedTreeTest} from "./testpages/SharedTreeTest.tsx";
+import {AboutUs} from "./pages/AboutUs.tsx";
+
 function App() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<Login />}/>
+                <Route path="/aboutus" element={<AboutUs />}/>
                 <Route path="/viewtrees" element={<ViewTrees />}/>
                 <Route path="/myaccount" element={<MyAccount />}/>
                 <Route path="/displaytrees" element={<DisplayTrees/>}/>
