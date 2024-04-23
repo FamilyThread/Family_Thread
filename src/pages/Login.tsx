@@ -3,10 +3,32 @@ import {OAuthLogin} from "../components/logInButton.tsx";
 import '../styles/login.css'
 import image from "../assets/loginLogo.svg";
 import {CardFlip} from "../components/Credits/cardFlip.tsx";
+import {useEffect, useState} from "react";
+import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 
 // import {Separator} from "../components/separator.tsx";
 
+
+
 export function Login() {
+    const [logInStatus, setLogInStatus] = useState(false);
+
+
+    useEffect(() => {
+        const checkLoginStatus = async () => {
+            try {
+                const isLoggedIn = await checkUserLogInStatus();
+                setLogInStatus(isLoggedIn);
+                // if (logInStatus) {
+                //     navigate("/viewtrees")
+                // }
+            } catch (error) {
+                console.error("Error checking login status:", error);
+            }
+        };
+        checkLoginStatus();
+    })
+
     return (
         <>
 
@@ -15,7 +37,13 @@ export function Login() {
                 <img src={image} alt="Family Thread logo" id="login-logo"></img>
                 <h1 className="name">Family Thread</h1>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center", paddingTop: 0, paddingBottom: 20}}>
-                    <OAuthLogin/>
+                    {logInStatus ?
+                        <p></p>
+                        :
+                        <OAuthLogin />
+
+                    }
+
                 </div>
             </div>
 
@@ -44,7 +72,6 @@ export function Login() {
                     <blockquote>
                         <p className={"vision-blockquote"}>
                             For genealogists or adults who might be interested in their lineage or their family’s represented as a visualization. The Family Thread is an interactive family tree that allows family members to create a family tree, add custom portraits, and work with other collaborators to create a more accurate representation while being user-friendly and visually appealing. Unlike Family Echo, our product provides more creative flexibility and allows the family tree to be pleasing to the eye.
-
                         </p>
                     </blockquote>
                 </div>
