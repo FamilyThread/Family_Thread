@@ -56,11 +56,19 @@ export function SoneyCard(){
                         <p className={"summary-text"}>Designing as a craftsmanship.</p>
                         <div className={"socialLogosContainer"} style={{marginTop:10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
-                            <h1 className={"socialName"}>sonephyo</h1>
+                            <h1 className={"socialName"}>
+                                <a className={"link"} href={"https://github.com/sonephyo"}>
+                                    sonephyo
+                                </a>
+                            </h1>
                         </div>
                         <div className={"socialLogosContainer"}>
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
-                            <h1 className={"socialName"} style={{marginTop: 24}}>Phone Pyae Sone Phyo</h1>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>
+                                <a className={"link"} href={"https://www.linkedin.com/in/soney7/"}>
+                                    Phone Pyae Sone Phyo
+                                </a>
+                            </h1>
                         </div>
                     </div>
                 </div>

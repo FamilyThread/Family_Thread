@@ -17,7 +17,7 @@ export function CardFlip() {
         speed: 500,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 3,
         adaptiveHeight: true,
     };
 

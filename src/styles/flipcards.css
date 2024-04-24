@@ -140,3 +140,11 @@
     transform: translateY(-0.5rem);
     box-shadow: 5px 5px 4rem #918d8d;
 }
+
+a {
+    color: white;
+}
+
+.link {
+    color: white;
+}

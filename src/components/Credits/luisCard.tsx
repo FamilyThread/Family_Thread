@@ -59,11 +59,19 @@ export function LuisCard() {
                         <p className={"summary-text"}>Logic minor.</p>
                         <div className={"socialLogosContainer"} style={{marginTop: 10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
-                            <h1 className={"socialName"}>LuisMed674</h1>
+                            <h1 className={"socialName"}>
+                                <a className={"link"} href={"https://github.com/LuisMed674"}>
+                                    LuisMed674
+                                </a>
+                            </h1>
                         </div>
                         <div className={"socialLogosContainer"}>
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
-                            <h1 className={"socialName"} style={{marginTop: 24}}>Luis Medina</h1>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>
+                                <a className={"link"} href={"https://www.linkedin.com/in/luis-medina-31bb39245/"}>
+                                    Luis Medina
+                                </a>
+                            </h1>
                         </div>
                     </div>
                 </div>

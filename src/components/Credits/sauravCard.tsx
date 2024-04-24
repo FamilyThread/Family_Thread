@@ -5,13 +5,17 @@ import image from "../../assets/cardImages/sauravImage.jpg";
 import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
 import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
 
-export function SauravCard(){
+
+export function SauravCard() {
 
     const [isFlipped, setIsFlipped] = useState(false)
+
+
 
     function flipCard(){
         setIsFlipped(!isFlipped);
     }
+
 
 
     return(
@@ -57,11 +61,19 @@ export function SauravCard(){
                         <p className={"summary-text"}>Java Enthusiast (both types).</p>
                         <div className={"socialLogosContainer"} style={{marginTop:10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
-                            <h1 className={"socialName"} >Saurav L</h1>
+                            <h1 className={"socialName"}>
+                                <a className={"link"} href={'https://github.com/s-Aura-v'}>
+                                    Saurav L
+                                </a>
+                            </h1>
                         </div>
                         <div className={"socialLogosContainer"}>
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
-                            <h1 className={"socialName"} style={{marginTop: 24}}>Saurav Lamichhane</h1>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>
+                                <a className={"link"} href={"https://www.linkedin.com/in/s-Aura-v/"}>
+                                    Saurav Lamichhane
+                                </a>
+                            </h1>
                         </div>
                     </div>
                 </div>

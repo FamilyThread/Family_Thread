@@ -53,11 +53,19 @@ export function CrisCard(){
                         <p className={"summary-text"}>Mathematics Minor.</p>
                         <div className={"socialLogosContainer"} style={{marginTop: 10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
-                            <h1 className={"socialName"}>Crislenny Uceta</h1>
+                            <h1 className={"socialName"}>
+                                <a className={"link"} href={"https://github.com/cuceta"}>
+                                    Crislenny Uceta
+                                </a>
+                            </h1>
                         </div>
                         <div className={"socialLogosContainer"}>
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
-                            <h1 className={"socialName"} style={{marginTop: 24}}>Crislenny Uceta</h1>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>
+                                <a className={"link"} href={"https://www.linkedin.com/in/crislenny-uceta-a7ba502a1/"}>
+                                    Crislenny Uceta
+                                </a>
+                            </h1>
                         </div>
                     </div>
                 </div>

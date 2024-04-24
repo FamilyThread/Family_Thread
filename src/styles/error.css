@@ -13,7 +13,8 @@
 }
 
 .left-error .oops {
-    font-size: 10rem;
+    margin-top: 100pt;
+    font-size: 80pt;
 }
 
 .right-error {

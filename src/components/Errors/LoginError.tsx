@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-
+import "../../styles/error.css"
 export function LoginError() {
     let navigate = useNavigate();
     const routeChange = () =>{
@@ -10,7 +10,7 @@ export function LoginError() {
     return (
         <>
             <h1>You are not logged in!</h1>
-            <h2 onClick={routeChange} className="text-decoration-underline login-link ">Please head to the login screen.</h2>
+            <h2 onClick={routeChange} className="text-decoration-underline login-link " style = {{color: "black"}}>Please head to the login screen.</h2>
         </>
     )
 }
