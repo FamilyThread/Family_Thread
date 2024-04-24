@@ -1,6 +1,7 @@
 import React, {Component, RefObject} from "react";
 import FamilyTree from "@balkangraph/familytree.js";
 import {removeNode, sendNewNodes, updateNode} from "../utils/nodeOperations.ts";
+import {handleButtonClick} from "./ImportTreeData/importJson.ts";
 
 interface ChartProps {
     nodes: any[];
@@ -9,6 +10,7 @@ interface ChartProps {
         canView: boolean;
         canDelete: boolean;
     }
+    treeId: string;
 }
 
 
@@ -22,9 +24,18 @@ export default class FamilyTreeChart extends Component<ChartProps> {
         this.divRef = React.createRef();
     }
 
+
     shouldComponentUpdate() {
         return false;
     }
+
+
+    // shouldComponentUpdate() {
+    //     if (prevProps.data !== this.props.data) {
+    //         // Assuming `this.family` has a method to update its data
+    //         this.family.load(this.props.data);
+    //     }
+    // }
 
     componentDidMount() {
         if (this.divRef.current) {
@@ -166,17 +177,8 @@ export default class FamilyTreeChart extends Component<ChartProps> {
                     img_0: 'img'
                 },
 
-                menu: {
-                    pdf: {text: "Export PDF"},
-                    png: {text: "Export PNG"},
-                    svg: {text: "Export SVG"},
-                    json: {text: "Export JSON"},
-                    importJSON: {
-                        text: "Import JSON",
-                        icon: FamilyTree.icon.json(24, 24, 'red'),
-                        onClick: this.family?.importJSON
-                    },
-                },
+
+                menu: createMenu(this, userPermission),
             });
 
             this.family.onUpdateNode((args) => {
@@ -192,10 +194,36 @@ export default class FamilyTreeChart extends Component<ChartProps> {
                     removeNode(args.removeNodeId, treeId);
                 }
             })
+
         }
     }
 
+
     render() {
-        return React.createElement('div', {id: 'tree', ref: this.divRef});
+        return <div id="tree" ref={this.divRef}></div>;
+        // return React.createElement('div', {id: 'tree', ref: this.divRef});
     }
+}
+
+const createMenu = (family: FamilyTreeChart, userPermission: { canEdit: boolean; canView: boolean; canDelete: boolean }) => {
+    const menu = {
+        pdf: {text: "Export PDF"},
+        png: {text: "Export PNG"},
+        svg: {text: "Export SVG"},
+        json: {text: "Export JSON"},
+
+    };
+
+    if (userPermission.canEdit || userPermission.canDelete) {
+        // @ts-ignore
+        menu.importJson = {
+            text: "Import JSON",
+                icon: FamilyTree.icon.json(24, 24, 'red'),
+                onClick: () => {
+                handleButtonClick(family);
+            }
+        };
+    }
+
+    return menu;
 }

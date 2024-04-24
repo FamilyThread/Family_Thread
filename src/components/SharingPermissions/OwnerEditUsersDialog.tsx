@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {
     Button,
-    DialogContentText,
     IconButton,
     MenuItem,
     Select, Snackbar,
@@ -55,7 +54,7 @@ export function OwnerEditUsersDialog({ treeId }: { treeId: string }) {
     function handleClickOpen() {
         setOpen(true);
         getTreeAssociatedUsers().then((data: UserPermissionData) => {
-            for (const [key, value] of Object.entries(data)) {
+            for (const [, value] of Object.entries(data)) {
                 setAllUsers(prevState => prevState.concat(value));
             }
         })

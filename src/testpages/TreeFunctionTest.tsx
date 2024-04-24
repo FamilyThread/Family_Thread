@@ -1,6 +1,6 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import {useEffect, useState} from "react";
-import FamilyTreeChart from "../components/FamilyTreeChart.ts";
+import FamilyTreeChart from "../components/FamilyTreeChart.tsx";
 import {getTreeDataTest} from "./getTreeTest.ts";
 
 export function TreeFunctionTest() {

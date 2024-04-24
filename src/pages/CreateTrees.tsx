@@ -3,7 +3,6 @@ import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import React, {FormEvent, useEffect, useState} from "react";
 import {Separator} from "../components/separator.tsx";
-import importLogo from "../assets/import.png";
 import "../styles/createTrees.css";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
@@ -16,16 +15,23 @@ export function CreateTrees() {
     const [template, setTemplate] = useState("hugo");
     const navigate = useNavigate();
 
-    console.log(template);
 
     const createNewTree = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const response = await axios.post(backend_url + "/tree/new", {
-            "treeName": treeName
-        },{ withCredentials: true })
-        const data = response.data;
 
-        navigate("/displayTrees/" + data.redirect);
+        if (treeName === "") {
+            alert("please enter a name");
+        } else if (treeName.length >=20) {
+            alert("please enter a name that is no more than 20 characters (spaces included)");
+            setTreeName("");
+        } else {
+            const response = await axios.post(backend_url + "/tree/new", {
+                "treeName": treeName
+            },{ withCredentials: true })
+            const data = response.data;
+
+            navigate("/displayTrees/" + data.redirect);
+        }
     }
 
     useEffect(() => {

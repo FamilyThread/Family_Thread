@@ -1,5 +1,5 @@
 import { NavigationBar } from "../../../components/NavigationBar.tsx";
-import FamilyTreeChart from "../../../components/FamilyTreeChart.ts";
+import FamilyTreeChart from "../../../components/FamilyTreeChart.tsx";
 export function DonaldTemplate() {
     // Family tree data
     const nodes = [

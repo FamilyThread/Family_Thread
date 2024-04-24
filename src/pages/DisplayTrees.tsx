@@ -1,6 +1,6 @@
 import {NavigationBar} from "../components/NavigationBar.tsx";
-import FamilyTreeChart from "../components/FamilyTreeChart.ts";
-import {useEffect, useState} from "react";
+import FamilyTreeChart from "../components/FamilyTreeChart.tsx";
+import {SetStateAction, useEffect, useState} from "react";
 import {getTreeData} from "../utils/getTree.ts";
 import {useLocation} from "react-router-dom";
 import "../styles/displayTrees.css";
@@ -20,6 +20,7 @@ export function DisplayTrees() {
 
     const location = useLocation();
     const treeId = location.pathname.split("displayTrees/")[1];
+
 
 
 
@@ -50,7 +51,7 @@ export function DisplayTrees() {
 
             <div style={{height: "100vh"}}>
                 {isOwner ? <SharePopUpBox treeId={treeId}/> : null}
-                {nodes ? <FamilyTreeChart nodes={nodes} permissions={permissions}/> : <h1>Loading ...</h1>}
+                {nodes ? <FamilyTreeChart nodes={nodes} permissions={permissions} treeId={treeId}/> : <h1>Loading ...</h1>}
             </div>
 
         </>
