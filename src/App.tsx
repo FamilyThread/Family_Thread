@@ -11,11 +11,13 @@ import {TreeFunctionTest} from "./testpages/TreeFunctionTest.tsx";
 import {AvailableTreeTest} from "./testpages/AvailableTreeTest.tsx";
 import {SharedTreeTest} from "./testpages/SharedTreeTest.tsx";
 import {AboutUs} from "./pages/AboutUs.tsx";
+import {Login} from "./pages/Login.tsx";
 
 function App() {
     return (
         <>
             <Routes>
+                <Route path="/" element={<Login />}/>
                 <Route path="/aboutus" element={<AboutUs />}/>
                 <Route path="/viewtrees" element={<ViewTrees />}/>
                 <Route path="/myaccount" element={<MyAccount />}/>
