@@ -9,6 +9,7 @@ import {SharePopUpBox} from "../components/SharingPermissions/SharePopUpBox.tsx"
 
 export function DisplayTrees() {
 
+    const [treeName, setTreeName] = useState<String>();
     const [nodes, setNodes] = useState()
     const [isOwner, setIsOwner] = useState<Boolean>(false);
     const [permissions, setPermissions] = useState({
@@ -39,6 +40,7 @@ export function DisplayTrees() {
             const jsonData = r.jsonData;
             const nodes = jsonData.map((jsonString: string) => JSON.parse(jsonString));
             setNodes(nodes);
+            setTreeName(r.treeName);
         })
 
     }, []);
@@ -51,7 +53,7 @@ export function DisplayTrees() {
 
             <div style={{height: "100vh"}}>
                 {isOwner ? <SharePopUpBox treeId={treeId}/> : null}
-                {nodes ? <FamilyTreeChart nodes={nodes} permissions={permissions} treeId={treeId}/> : <h1>Loading ...</h1>}
+                {nodes ? <FamilyTreeChart nodes={nodes} permissions={permissions} treeId={treeId} treeName={treeName}/> : <h1>Loading ...</h1>}
             </div>
 
         </>

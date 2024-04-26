@@ -2,6 +2,8 @@ import React, {Component, RefObject} from "react";
 import FamilyTree from "@balkangraph/familytree.js";
 import {removeNode, sendNewNodes, updateNode} from "../utils/nodeOperations.ts";
 import {handleButtonClick} from "./ImportTreeData/importJson.ts";
+import {handleDeleteTree} from "../utils/deleteTree.ts";
+
 
 interface ChartProps {
     nodes: any[];
@@ -11,6 +13,7 @@ interface ChartProps {
         canDelete: boolean;
     }
     treeId: string;
+    treeName: string;
 }
 
 
@@ -223,6 +226,17 @@ const createMenu = (family: FamilyTreeChart, userPermission: { canEdit: boolean;
                 handleButtonClick(family);
             }
         };
+    }
+
+    if (userPermission.canDelete) {
+        // @ts-ignore
+        menu.deleteTree = {
+            text: "Delete Tree",
+                icon: FamilyTree.icon.remove(24,24,'red'),
+                onClick: () => {
+                handleDeleteTree(family);
+            }
+        }
     }
 
     return menu;
