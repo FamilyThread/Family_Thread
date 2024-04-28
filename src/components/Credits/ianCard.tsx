@@ -59,16 +59,16 @@ export function IanCard(){
                         <div className={"socialLogosContainer"} style={{marginTop: 10}}>
                             <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
                             <h1 className={"socialName"}>
-                                <a className={"link"} href={"https://github.com/cuceta"}>
-                                    Ian Venton (GET THE LINK)
+                                <a className={"link"} href={"https://github.com/IanVenton"}>
+                                    IanVenton
                                 </a>
                             </h1>
                         </div>
                         <div className={"socialLogosContainer"}>
                             <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
                             <h1 className={"socialName"} style={{marginTop: 24}}>
-                                <a className={"link"} href={"https://www.linkedin.com/in/crislenny-uceta-a7ba502a1/"}>
-                                    Ian Venton (GET THE LINK)
+                                <a className={"link"} href={"https://www.linkedin.com/in/ian-venton-189273306/"}>
+                                    Ian Venton
                                 </a>
                             </h1>
                         </div>
