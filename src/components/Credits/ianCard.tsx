@@ -1,6 +1,9 @@
 import ReactCardFlip from "react-card-flip";
 import "../../styles/flipcards.css"
 import {useState} from "react";
+import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
+import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
+import image from "../../assets/cardImages/ianImage.jpg";
 
 export function IanCard(){
 
@@ -19,6 +22,11 @@ export function IanCard(){
                 {/*FRONT OF THE CARD*/}
                 <div className={"card-front"}>
                     {/*<img src={crisImage} alt="picture"></img>*/}
+                    <div className={"image-container"}>
+                        <div className="image">
+                            <img src={image} alt="Ian's picture" className="img"></img>
+                        </div>
+                    </div>
                     <h1 className={"memberName"}>
                         Ian Venton
                     </h1>
@@ -40,12 +48,31 @@ export function IanCard(){
             <div style={{paddingTop: 10, paddingBottom: 10}}>
                 {/*BACK OF THE CARD*/}
                 <div className={"card-back"} onClick={flipCard}>
-                    <h1>
+                    <h1 className={"summary-title"}>
                         Summary
                     </h1>
-                    <h3>
-                        dksjvn
-                    </h3>
+                    <div className={"summary-text"}>
+                        <p className={"summary-text"}>Computer Science BA.</p>
+
+                        <p className={"summary-text"}>Network Administration AS.</p>
+
+                        <div className={"socialLogosContainer"} style={{marginTop: 10}}>
+                            <img src={githubLogo} alt={"GitHub Logo"} className={"github-logos"}></img>
+                            <h1 className={"socialName"}>
+                                <a className={"link"} href={"https://github.com/cuceta"}>
+                                    Ian Venton (GET THE LINK)
+                                </a>
+                            </h1>
+                        </div>
+                        <div className={"socialLogosContainer"}>
+                            <img src={linkedInLogo} alt={"LinkedIn Logo"} className={"linkedin-logos"}></img>
+                            <h1 className={"socialName"} style={{marginTop: 24}}>
+                                <a className={"link"} href={"https://www.linkedin.com/in/crislenny-uceta-a7ba502a1/"}>
+                                    Ian Venton (GET THE LINK)
+                                </a>
+                            </h1>
+                        </div>
+                    </div>
                 </div>
             </div>
 

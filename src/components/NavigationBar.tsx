@@ -24,19 +24,19 @@ export function NavigationBar() {
     }, []);
 
 
-
     return (
         <>
             <nav className="nav">
-                <a className="nav-logo" href="/viewtrees"> <img src={logo} alt="Family Thread Logo"></img> </a>
-                <ul>
+                <a className="nav-logo" href="/viewtrees" style={{paddingLeft:20}}>
+                    <img src={logo} alt="Family Thread Logo"></img>
+                </a>
+                <ul style={{paddingLeft: 80}}>
                     <li><a href="/myaccount">My Account</a></li>
                     <li><a href="/viewtrees">View Trees</a></li>
-                    <li><a href="/createtrees">Create Trees</a></li>
                     <li><a href="/aboutus">About Us</a></li>
                 </ul>
                 <div className="search-container">
-                    <SearchPopup />
+                    <SearchPopup/>
                 </div>
                 <ProfileInfo/>
                 {loggedIn ?

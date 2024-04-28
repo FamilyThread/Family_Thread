@@ -2,7 +2,6 @@ import "../styles/sectionsInViewTrees.css"
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {useEffect, useState,} from "react";
-// import image from "../assets/ViewTreesPlaceholder.png"
 import {useNavigate} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
@@ -63,7 +62,7 @@ export function SharedTrees() {
         return (
             <>
                 <Container>
-                    <h2 style={{marginTop: 90, marginBottom: 20}}>
+                    <h2 style={{marginTop: 20, marginBottom: 20}}>
                         Shared Trees
                     </h2>
                     <div>
@@ -109,7 +108,7 @@ export function SharedTrees() {
                     alignItems: "center",
                     paddingTop: 10
                 }}>
-                    <h1> It's looking a bit empty :( Saurav says you should make some friends </h1>
+                    <h1 style={{paddingBottom: 100}}> It's looking a bit empty :( </h1>
                 </div>
             </Container>
         );

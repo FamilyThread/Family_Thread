@@ -141,19 +141,7 @@ export function MyTreesViewTrees() {
                     alignItems: "center",
                     paddingTop: 10
                 }}>
-                    <h1>You should make some trees!! Head over to the Create Trees tab!</h1>
-                </div>
-
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}>
-                    <a href={"/createtrees"}>
-                        <button className="button-view-trees" >
-                            Create Trees
-                        </button>
-                    </a>
+                    <h1>It looks empty here. Try making some trees!</h1>
                 </div>
             </Container>
         );
