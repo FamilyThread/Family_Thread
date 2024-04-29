@@ -24,7 +24,7 @@ export function MyAccount() {
 
         <>
             <style>
-                {document.body.style.backgroundColor = '#6EA07F'};
+                {document.body.style.backgroundColor = '#F0E7D8'};
             </style>
 
             <NavigationBar/>
@@ -46,18 +46,6 @@ export function MyAccount() {
                     <div className="infoboxes">
                         <div className="infoboxestxt">Email</div>
                         [User's Email]
-                    </div>
-                </div>
-                <div className="options">
-                    <div className="header-options">Options</div>
-                    <div className="optionstxt">
-                        <a href="/MyAccountEditProfile">Edit Profile</a> {/* popup */}
-                    </div>
-                    <div className="optionstxt">
-                        <a href="/myaccountsettings">Account Settings</a> {/* popup */}
-                    </div>
-                    <div className="optionstxt">
-                        <a href="/mytreesviewtrees">View My Trees</a> {/* page */}
                     </div>
                 </div>
             </div>

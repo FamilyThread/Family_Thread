@@ -1,17 +1,13 @@
 .accContainer{
-    margin-left: 20px;
-    margin-top: -30px;
-    margin-bottom: 100px; /* extra scroll */
+    margin-left: 100px;
     display: flex;
-    background-color: #6EA07F;
+    background-color: #F0E7D8;
 }
 .accheader{
     margin-left: 100px; /* align text header */
 }
 
 .userinfo {
-    margin-top: 45px;
-    margin-left: 100px;
     height: 250px;
     width: 200px;
     padding: 10px;
