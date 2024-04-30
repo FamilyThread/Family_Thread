@@ -1,19 +1,14 @@
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
-import React, {FormEvent, useEffect, useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
 import "../styles/createTrees.css";
 import {useNavigate} from "react-router-dom";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
 import {Container} from "react-bootstrap";
 
-export const TemplateContent = React.createContext();
-
 export function CreateTrees() {
     const [treeName, setTreeName] = useState("");
-    const [importValue, setImportValue] = useState("");
-    const [template, setTemplate] = useState("hugo");
     const navigate = useNavigate();
-
 
     const createNewTree = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();

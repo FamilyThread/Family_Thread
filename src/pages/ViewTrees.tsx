@@ -21,6 +21,7 @@ export function ViewTrees() {
                 <MyTreesViewTrees/>
                 <Separator/>
                 <SharedTrees />
+                {/*Deprecated */}
                 {/*<Separator/>*/}
                 {/*<FeaturedTrees/>*/}
             </div>

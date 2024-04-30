@@ -23,7 +23,7 @@ function App() {
                 <Route path="*" element={<ErrorPage />}/>
                 <Route path="/error" element={<ErrorPage />} />
 
-            {/*    Testing Routes*/}
+            {/* Testing Routes*/}
                 <Route path="/myaccounttest" element={<Backend_MyAccount />}/>
             </Routes>
         </>
