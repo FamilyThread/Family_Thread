@@ -1,14 +1,9 @@
-// import {NavigationBar} from "../components/NavigationBar.tsx";
 import {OAuthLogin} from "../components/logInButton.tsx";
 import '../styles/login.css'
 import image from "../assets/loginLogo.svg";
 import {CardFlip} from "../components/Credits/cardFlip.tsx";
 import {useEffect, useState} from "react";
 import {checkUserLogInStatus} from "../utils/checkUserLoginStatus.ts";
-
-// import {Separator} from "../components/separator.tsx";
-
-
 
 export function Login() {
     const [logInStatus, setLogInStatus] = useState(false);
@@ -31,7 +26,6 @@ export function Login() {
 
     return (
         <>
-
             <div className="top">
                 <OAuthLogin/>
                 <img src={image} alt="Family Thread logo" id="login-logo"></img>
@@ -47,8 +41,6 @@ export function Login() {
                 </div>
             </div>
 
-
-
             <div className="mission">
                 <div className="text">
                     <h2 className="text-lg-start" style={{fontSize: 60, marginLeft:10}}>Our Mission</h2>
@@ -63,8 +55,6 @@ export function Login() {
                 </div>
             </div>
 
-
-
             <div className="vision">
                 <div className="text">
                     <h2 className="text-lg-end" style={{fontSize: 60, marginRight:10}}>Our Vision</h2>
@@ -76,8 +66,6 @@ export function Login() {
                     </blockquote>
                 </div>
             </div>
-
-
 
             <div className="team">
                 <div className="text">

@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { NavigationBar } from "../components/NavigationBar.tsx";
 import { backend_url } from "../config/constant.ts";

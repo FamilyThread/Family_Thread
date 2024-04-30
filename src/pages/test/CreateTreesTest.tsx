@@ -3,12 +3,10 @@ import axios from "axios";
 import {useState} from "react";
 import {Col, Container, Row} from "react-bootstrap";
 import Empty from "../../data/UploadTree.json";
-import {BlankImport} from "../../components/BlankImport.tsx";
 import previewFile from "../../data/previewFile.json";
 import {backend_url} from "../../config/constant.ts";
 
 export function CreateTreeTest() {
-
     const [treeName, setTreeName] = useState("");
 
     const createNewTree = async () => {

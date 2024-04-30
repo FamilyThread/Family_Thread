@@ -20,7 +20,7 @@ export function CreateTrees() {
 
         if (treeName === "") {
             alert("please enter a name");
-        } else if (treeName.length >= 20) {
+        } else if (treeName.length >= 40) {
             alert("please enter a name that is no more than 20 characters (spaces included)");
             setTreeName("");
         } else {

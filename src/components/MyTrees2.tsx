@@ -2,7 +2,6 @@ import "../styles/sectionsInViewTrees.css"
 import axios from "axios";
 import {backend_url} from "../config/constant.ts";
 import {useEffect, useState, } from "react";
-// import image from "../assets/ViewTreesPlaceholder.png"
 import {useNavigate} from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"

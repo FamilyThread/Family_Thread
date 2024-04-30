@@ -1,14 +1,14 @@
 import {NavigationBar} from "../components/NavigationBar";
-import {LoginError} from '../components/Errors/LoginError.tsx'; // Import the error components
+import {LoginError} from '../components/Errors/LoginError.tsx';
 import {PermissionError} from '../components/Errors/PermissionError';
-import "../styles/error.css"
-import logo from "../assets/csc380Logo_Logo-31.svg"
 import {useLocation} from "react-router-dom";
 import {Suspense} from "react";
+import logo from "../assets/csc380Logo_Logo-31.svg"
+import "../styles/error.css"
+
 export function ErrorPage() {
     const location = useLocation();
     const errorType = location.pathname.split("/")[1];
-
 
     function displayError() {
         switch (errorType) {
@@ -38,7 +38,7 @@ export function ErrorPage() {
                     </Suspense>
                 </div>
                 <div className="right-error">
-                    <img src={logo} alt="Family Thread Tree" className="error-img" />
+                    <img src={logo} alt="Family Thread Tree" className="error-img"/>
                 </div>
             </div>
         </>
