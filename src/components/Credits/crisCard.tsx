@@ -3,6 +3,7 @@ import "../../styles/flipcards.css"
 import {useState} from "react";
 import githubLogo from "../../assets/cardIcons/github-142-svgrepo-com.svg";
 import linkedInLogo from "../../assets/cardIcons/linked-in-logo-of-two-letters-svgrepo-com.svg";
+import image from "../../assets/cardImages/crisImage.jpg";
 
 export function CrisCard(){
 
@@ -20,7 +21,11 @@ export function CrisCard(){
 
                 {/*FRONT OF THE CARD*/}
                 <div className={"card-front"}>
-                    {/*<img src={crisImage} alt="picture"></img>*/}
+                    <div className={"image-container"}>
+                        <div className="image">
+                            <img src={image} alt="Cris's picture" className="img"></img>
+                        </div>
+                    </div>
                     <h1 className={"memberName"}>
                         Crislenny Uceta
                     </h1>
