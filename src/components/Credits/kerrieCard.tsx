@@ -44,7 +44,6 @@ export function KerrieCard(){
                         Summary
                     </h1>
                     <h3>
-                        dksjvn
                     </h3>
                 </div>
             </div>
