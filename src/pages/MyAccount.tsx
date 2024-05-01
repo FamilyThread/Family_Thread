@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {NavigationBar} from "../components/NavigationBar.tsx";
 import {backend_url} from "../config/constant.ts";
 import temppfp from "../assets/placeholderpfp.png";
+import image from "../assets/logo.png";
 import '../styles/myaccount.css';
 
 
@@ -50,16 +51,17 @@ export function MyAccount() {
                     <div><img src={profilePicture} alt="temppfp" className="portrait"/></div>
                 </div>
                 <div className="adjust">
-                    <div className="infoboxes">
+                    <div className="newinfobox1">
                         <div className="infoboxestxt">Name</div>
                         {name}
                     </div>
-                    <div className="infoboxes">
+                    <div className="newinfobox2">
                         <div className="infoboxestxt">Email</div>
                         {email}
                     </div>
                 </div>
-            </div>
+                <img src={image} alt="Family Thread logo" className="alignimg"></img>
+                </div>
 
 
         </>
