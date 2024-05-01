@@ -38,7 +38,7 @@ h2 {
 .tree-picture{
     margin-top: 20px;
     box-shadow: 0 0 7px #b2a99a;
-    height: inherit;
+    height: 290px;
     width: 100%;
     border: solid 1px black;
 }
