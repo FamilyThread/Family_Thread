@@ -5,7 +5,7 @@
     display: flex;
 }
 .accheader{
-    margin-left: 100px; /* align text header */
+    margin-left: 125px; /* align text header */
 }
 
 .userinfo {
@@ -36,7 +36,7 @@
     border-radius: 5px;
     margin-left: 325px;
     background-color: #cfcecc;
-    height: 45px;
+    height: 35px;
     width: 185px;
 }
 
@@ -47,7 +47,7 @@
     border-radius: 5px;
     margin-left: 600px;
     background-color: #cfcecc;
-    height: 45px;
+    height: 35px;
     width: 185px;
 }
 
